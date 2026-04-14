@@ -25,5 +25,4 @@ First autonomous-plus deployment in Metro Manila. Client wants full camera cover
 
 ## Status Update
 - Site survey done. Cabling complete.
-- ABM enrollment: ✅ Complete
 - Blocked on: legal paperwork
