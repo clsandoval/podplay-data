@@ -24,4 +24,6 @@ First autonomous-plus deployment in Metro Manila. Client wants full camera cover
 - Building power capacity needs verification during site survey
 
 ## Status Update
-- Site survey done. Cabling complete. Blocked on ABM arrival and legal paperwork.
+- Site survey done. Cabling complete.
+- ABM enrollment: ✅ Complete
+- Blocked on: legal paperwork
