@@ -1,7 +1,7 @@
 ---
 type: project
 name: Tela Park
-status: procurement
+status: deployment
 tier: autonomous_plus
 client: "[[tela-park-client]]"
 venue: "[[tela-park-venue]]"
@@ -22,3 +22,6 @@ First autonomous-plus deployment in Metro Manila. Client wants full camera cover
 ## Risks
 - ISP installation scheduled for April 20 — tight timeline before deployment
 - Building power capacity needs verification during site survey
+
+## Status Update
+- Site survey done. Cabling complete. Blocked on ABM arrival and legal paperwork.
