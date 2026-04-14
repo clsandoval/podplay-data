@@ -1,23 +1,24 @@
 ---
 type: project
 name: Tela Park
-status: active
+status: procurement
+tier: autonomous_plus
 client: "[[tela-park-client]]"
 venue: "[[tela-park-venue]]"
-tier: autonomous-plus
-start_date: 2026-04-01
-target_completion: 2026-05-15
-pm: agustin-reyes
-tags: [manila, installation, autonomous-plus]
+deployment_date: 2026-04-28
+installer: "[[juan-dela-cruz]]"
+isp_type: dedicated
+revenue_stage: deposit_paid
+tags: [manila, flagship]
 ---
 
-# Tela Park — Installation Project
+First autonomous-plus deployment in Metro Manila. Client wants full camera coverage with replay capabilities across all courts. ISP is PLDT dedicated fiber — 100Mbps symmetric confirmed.
 
-First PodPlay Autonomous Plus deployment. Indoor sports facility in Manila.
+## Key Decisions
+- Going with Ubiquiti U6-Pro APs (24 units) for full venue coverage
+- Mac Mini M4 as the compute node for replay processing
+- 8x displays for live court feeds and replay stations
 
-## Status
-
-- Site survey: complete
-- BOM: finalized
-- Hardware: on order
-- Deployment: scheduled May 2026
+## Risks
+- ISP installation scheduled for April 20 — tight timeline before deployment
+- Building power capacity needs verification during site survey

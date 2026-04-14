@@ -1,0 +1,36 @@
+# Bill of Materials — Pro Tier
+# Standard BOM for a pro deployment.
+# Simpler than autonomous-plus — no replay, fewer cameras.
+
+tier: pro
+items:
+  - name: Ubiquiti U6-Pro
+    sku: U6-PRO
+    category: networking
+    default_qty: 12
+    notes: "1 per 20sqm coverage area"
+  - name: Ubiquiti USW-Lite-16-PoE
+    sku: USW-LITE-16-POE
+    category: networking
+    default_qty: 1
+    notes: "Single switch for smaller venues"
+  - name: Ubiquiti UDR
+    sku: UDR
+    category: networking
+    default_qty: 1
+    notes: "Dream Router — gateway + controller"
+  - name: Ubiquiti G4 Instant
+    sku: G4-INSTANT
+    category: networking
+    default_qty: 4
+    notes: "Key areas only"
+  - name: Display 43-inch
+    sku: DISPLAY-43
+    category: display
+    default_qty: 4
+    notes: "Court feeds"
+  - name: Apple TV 4K
+    sku: APPLE-TV-4K
+    category: display
+    default_qty: 4
+    notes: "1 per display"

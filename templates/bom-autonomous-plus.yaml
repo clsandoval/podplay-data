@@ -1,0 +1,46 @@
+# Bill of Materials — Autonomous Plus Tier
+# This template defines the standard BOM for an autonomous-plus deployment.
+# Adjust quantities based on venue size and court count.
+
+tier: autonomous_plus
+items:
+  - name: Ubiquiti U6-Pro
+    sku: U6-PRO
+    category: networking
+    default_qty: 24
+    notes: "1 per 20sqm coverage area"
+  - name: Ubiquiti USW-Pro-24-PoE
+    sku: USW-PRO-24-POE
+    category: networking
+    default_qty: 2
+    notes: "Main + backup switch"
+  - name: Ubiquiti UDM-Pro
+    sku: UDM-PRO
+    category: networking
+    default_qty: 1
+    notes: "Network controller + gateway"
+  - name: Ubiquiti G4 Bullet
+    sku: G4-BULLET
+    category: networking
+    default_qty: 8
+    notes: "1 per court + common areas"
+  - name: Mac Mini M4
+    sku: MAC-MINI-M4
+    category: compute
+    default_qty: 1
+    notes: "Replay processing node"
+  - name: Display 55-inch
+    sku: DISPLAY-55
+    category: display
+    default_qty: 8
+    notes: "Court feeds + replay stations"
+  - name: Apple TV 4K
+    sku: APPLE-TV-4K
+    category: display
+    default_qty: 8
+    notes: "1 per display"
+  - name: iPad 10th Gen
+    sku: IPAD-10
+    category: display
+    default_qty: 2
+    notes: "Reception kiosk + court control"
