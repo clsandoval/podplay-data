@@ -1,46 +1,57 @@
 # Bill of Materials — Autonomous Plus Tier
-# This template defines the standard BOM for an autonomous-plus deployment.
-# Adjust quantities based on venue size and court count.
+# Autonomous Plus includes everything in the Pro tier BOM (bom-pro.yaml)
+# PLUS the additional items listed here.
+# Do not duplicate Pro items — apply both BOMs together for a full equipment list.
 
 tier: autonomous_plus
-items:
-  - name: Ubiquiti U6-Pro
-    sku: U6-PRO
-    category: networking
-    default_qty: 24
-    notes: "1 per 20sqm coverage area"
-  - name: Ubiquiti USW-Pro-24-PoE
-    sku: USW-PRO-24-POE
-    category: networking
-    default_qty: 2
-    notes: "Main + backup switch"
-  - name: Ubiquiti UDM-Pro
-    sku: UDM-PRO
-    category: networking
-    default_qty: 1
-    notes: "Network controller + gateway"
-  - name: Ubiquiti G4 Bullet
-    sku: G4-BULLET
-    category: networking
-    default_qty: 8
-    notes: "1 per court + common areas"
-  - name: Mac Mini M4
-    sku: MAC-MINI-M4
+extends: bom-pro.yaml
+
+venue_items:
+
+  # Access Control — per venue
+  - sku: AC-KISI-CONTROLLER
+    name: Kisi Controller Pro 2
+    category: access_control
+    qty: 1
+    notes: "1 per venue. Connected via 10ft Cat6 patch cable (NET-PATCH-10FT) from switch."
+
+  - sku: AC-KISI-READER
+    name: Kisi Reader Pro 2
+    category: access_control
+    qty: 1
+    notes: "1 per access-controlled door. Adjust qty to match door count."
+
+  # Surveillance NVR — per venue
+  - sku: SURV-UNVR
+    name: UniFi UNVR 4-Bay NVR
     category: compute
-    default_qty: 1
-    notes: "Replay processing node"
-  - name: Display 55-inch
-    sku: DISPLAY-55
-    category: display
-    default_qty: 8
-    notes: "Court feeds + replay stations"
-  - name: Apple TV 4K
-    sku: APPLE-TV-4K
-    category: display
-    default_qty: 8
-    notes: "1 per display"
-  - name: iPad 10th Gen
-    sku: IPAD-10
-    category: display
-    default_qty: 2
-    notes: "Reception kiosk + court control"
+    qty: 1
+    notes: "For up to 4 security cameras. Swap for SURV-UNVR-PRO (7-bay) for 5+ cameras."
+
+  - sku: SURV-HDD
+    name: WD Purple 8TB Surveillance HDD
+    category: compute
+    qty: 4
+    notes: "4x for UNVR (4-bay). Use 7x for SURV-UNVR-PRO (7-bay)."
+
+  # Uplink — NVR to switch
+  - sku: NET-SFP-DAC
+    name: UniFi SFP+ DAC Cable 0.5m
+    category: networking
+    qty: 1
+    notes: "Additional DAC for switch-to-NVR uplink (Pro BOM covers UDM-to-switch)."
+
+per_court_items:
+
+  # Surveillance — per court
+  - sku: SURV-CAMERA-WHITE
+    name: UniFi G5 Turret Ultra Camera
+    category: compute
+    qty: 1
+    notes: "White (SURV-CAMERA-WHITE) or black (SURV-CAMERA-BLACK) to match ceiling. 1 per court."
+
+  - sku: SURV-CAMERA-JB-WHITE
+    name: UniFi Camera Junction Box
+    category: compute
+    qty: 1
+    notes: "Match housing color to camera (WHITE or BLACK)."
