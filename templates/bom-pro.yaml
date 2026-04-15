@@ -1,36 +1,140 @@
 # Bill of Materials — Pro Tier
-# Standard BOM for a pro deployment.
-# Simpler than autonomous-plus — no replay, fewer cameras.
+# Standard BOM for a Pro tier venue deployment.
+# venue_items are fixed per venue; per_court_items multiply by court count.
 
 tier: pro
-items:
-  - name: Ubiquiti U6-Pro
-    sku: U6-PRO
+
+venue_items:
+
+  # Network Rack
+  - sku: NET-UDM-SE
+    name: UniFi UDM-SE Gateway
     category: networking
-    default_qty: 12
-    notes: "1 per 20sqm coverage area"
-  - name: Ubiquiti USW-Lite-16-PoE
-    sku: USW-LITE-16-POE
+    qty: 1
+    notes: "Default gateway. Swap for NET-UDM-PRO-MAX for 12+ courts."
+
+  - sku: NET-USW-PRO-24-POE
+    name: UniFi USW-Pro-24-POE Switch
     category: networking
-    default_qty: 1
-    notes: "Single switch for smaller venues"
-  - name: Ubiquiti UDR
-    sku: UDR
+    qty: 1
+    notes: "Default for up to 8 courts. Swap for NET-USW-PRO-48-POE for 9+ courts."
+
+  - sku: NET-SFP-DAC
+    name: UniFi SFP+ DAC Cable 0.5m
     category: networking
-    default_qty: 1
-    notes: "Dream Router — gateway + controller"
-  - name: Ubiquiti G4 Instant
-    sku: G4-INSTANT
+    qty: 1
+    notes: "UDM to switch uplink."
+
+  - sku: NET-PDU
+    name: TrippLite 12-Outlet Rack PDU
+    category: power
+    qty: 1
+
+  - sku: NET-PATCH-PANEL-24
+    name: iwillink 24-Port Patch Panel
     category: networking
-    default_qty: 4
-    notes: "Key areas only"
-  - name: Display 43-inch
-    sku: DISPLAY-43
+    qty: 1
+
+  # Infrastructure
+  - sku: INFRA-UPS
+    name: APC 1500VA Rack-Mount UPS
+    category: power
+    qty: 1
+    notes: "2U, mounted at bottom of rack."
+
+  - sku: INFRA-RACK
+    name: 12U Network Rack Enclosure
+    category: networking
+    qty: 1
+
+  - sku: INFRA-RACK-SHELF
+    name: Pyle 19-Inch 1U Vented Rack Shelf
+    category: networking
+    qty: 1
+    notes: "For Mac Mini."
+
+  # Replay System — venue-level
+  - sku: REPLAY-MACMINI
+    name: Mac Mini 16GB 256GB
+    category: compute
+    qty: 1
+    notes: "Fixed IP 192.168.32.100 on REPLAY VLAN 32."
+
+  - sku: REPLAY-SSD-1TB
+    name: Samsung T7 1TB External SSD
+    category: compute
+    qty: 1
+    notes: "For 1–4 courts. Swap for REPLAY-SSD-2TB (5–8 courts) or REPLAY-SSD-4TB (9+ courts)."
+
+per_court_items:
+
+  # Replay System — per court
+  - sku: REPLAY-CAMERA-WHITE
+    name: EmpireTech Replay Camera
+    category: compute
+    qty: 1
+    notes: "White (REPLAY-CAMERA-WHITE) or black (REPLAY-CAMERA-BLACK) to match ceiling. 1 per court."
+
+  - sku: REPLAY-CAMERA-JB-WHITE
+    name: EmpireTech Junction Box
+    category: compute
+    qty: 1
+    notes: "Match housing color to camera (WHITE or BLACK)."
+
+  - sku: REPLAY-FLIC
+    name: Flic Button
+    category: compute
+    qty: 2
+    notes: "2 per court for scoring/replay trigger."
+
+  - sku: REPLAY-SIGN
+    name: Aluminum Printed Sign 6x8
+    category: signage
+    qty: 1
+    notes: "Flic button mounting surface. 1 per court."
+
+  # Displays — per court
+  - sku: DISPLAY-TV-65
+    name: 65 inch TV Display
     category: display
-    default_qty: 4
-    notes: "Court feeds"
-  - name: Apple TV 4K
-    sku: APPLE-TV-4K
+    qty: 1
+    notes: "VESA 400x300. Mounted at 8 ft 9 in AFF."
+
+  - sku: DISPLAY-TV-MOUNT
+    name: VESA 400x300 TV Tilt Wall Mount
     category: display
-    default_qty: 4
-    notes: "1 per display"
+    qty: 1
+
+  - sku: DISPLAY-APPLETV
+    name: Apple TV 4K with Ethernet
+    category: display
+    qty: 1
+    notes: "Mosyle MDM enrolled."
+
+  - sku: DISPLAY-HDMI-3FT
+    name: Amazon Basics 3ft HDMI Cable
+    category: display
+    qty: 1
+
+  - sku: DISPLAY-ATV-MOUNT
+    name: HIDEit Apple TV Wall Mount
+    category: display
+    qty: 1
+
+  - sku: DISPLAY-IPAD
+    name: iPad 128GB WiFi+Cellular
+    category: display
+    qty: 1
+    notes: "Mosyle enrolled. PoE-powered."
+
+  - sku: DISPLAY-IPAD-POE
+    name: iPad PoE Adapter
+    category: display
+    qty: 1
+    notes: "PoE-to-USB-C."
+
+  - sku: DISPLAY-IPAD-CASE
+    name: iPad Kiosk Case with Lock
+    category: display
+    qty: 1
+    notes: "Mounted at 4 ft 8 in AFF."
