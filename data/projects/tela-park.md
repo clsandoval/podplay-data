@@ -6,7 +6,7 @@ tier: autonomous_plus
 client: "[[tela-park-client]]"
 venue: "[[tela-park-venue]]"
 deployment_date: 2026-04-28
-installer: "[[juan-dela-cruz]]"
+installer: ""
 isp_type: dedicated
 revenue_stage: deposit_paid
 tags: [manila, flagship, demo-site]
