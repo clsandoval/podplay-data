@@ -6,7 +6,7 @@ tier: autonomous_plus
 client: "[[tela-park-client]]"
 venue: "[[tela-park-venue]]"
 deployment_date: 2026-04-28
-installer: "[[juan-dela-cruz]]"
+installer: ""
 isp_type: dedicated
 revenue_stage: deposit_paid
 tags: [manila, flagship, demo-site]
@@ -30,7 +30,7 @@ Tela Park has agreed to be a PodPlay demo site in the Philippines.
 - Payment processor: Magpie (~5% per transaction); client to adjust court pricing accordingly
 
 ## Hardware Sourcing
-- Tela Park / Cosmas self-sourcing hardware from PodPlay's provided lists
+- Tela Park / Kosmas self-sourcing hardware from PodPlay's provided lists
 - PodPlay providing: (1) $2,500 setup component list, (2) per-court hardware list
 - Client responsible for sourced hardware warranty
 - Hard requirement: Tela Park server must be separate from PodPlay's infrastructure
@@ -47,12 +47,12 @@ Tela Park has agreed to be a PodPlay demo site in the Philippines.
 
 ## Risks
 - ISP installation scheduled for April 20 — tight timeline before deployment
-- Booking system blocked pending Cosmas go-signal and contract signature
+- Booking system blocked pending Kosmas go-signal and contract signature
 - Membership revenue leaking: only 63 of 111 members billed in April; system urgently needed
 - Magpie transaction fee (~5%) requires client to reprice courts before go-live
 - Residential TV risk — client must use commercial-grade displays
 
 ## Status Updates
-- **2026-04-15:** Partnership negotiation meeting at venue. Pricing and scope agreed verbally. Booking system activation unblocked pending Cosmas signal. Contract to be signed within 1–2 weeks. Court layout walked through on-site.
+- **2026-04-15:** Partnership negotiation meeting at venue. Pricing and scope agreed verbally. Booking system activation unblocked pending Kosmas signal. Contract to be signed within 1–2 weeks. Court layout walked through on-site.
 - Site survey done. Cabling complete.
-- Blocked on: contract signature + Cosmas go-signal for environment spin-up
+- Blocked on: contract signature + Kosmas go-signal for environment spin-up

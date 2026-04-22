@@ -16,9 +16,9 @@ tags: [negotiation, pricing, hardware, booking-system]
 
 ## Attendees
 - **Speaker 1** — Tela Park (owner/operator, likely Jonel/Ned)
-- **Speaker 2** — Cosmas representative (Ernesto/Dicky)
+- **Speaker 2** — Kosmas ([[ernesto-ebuen]] / [[richard-bachmann]] "Dicky")
 - **Speaker 4** — PodPlay lead
-- **Speaker 5** — PodPlay technical (Carlos/Marco)
+- **Speaker 5** — Kosmas technical ([[carlos-sandoval]] / [[marco-basug]])
 
 ## Notes
 
@@ -30,7 +30,7 @@ tags: [negotiation, pricing, hardware, booking-system]
 - **New additions:** Stock room / dressing room added. IT room has PA system, all wiring (including fiber) centralized there.
 
 ### Pricing Agreed
-- **6 Basic Plus courts:** Originally $460/month ($100 venue + $60/court × 6). Cosmas negotiated down to **$259/month all-in**.
+- **6 Basic Plus courts:** Originally $460/month ($100 venue + $60/court × 6). Kosmas negotiated down to **$259/month all-in**.
 - **8 Pro courts:** **$1,500/month** ($300 venue fee + $150/court × 8). To activate when Pro hardware is ready.
 - **Setup fee (one-time):** **$2,500** — combination of software + hardware components. PodPlay to share breakdown: software portion vs. hardware list that client can self-source.
 - **Per-court Pro setup (one-time):** ~$285,000 setup fee + ~$142,500/court hardware (historical reference from prior SOW).
@@ -38,7 +38,7 @@ tags: [negotiation, pricing, hardware, booking-system]
 - **Payment processing:** Moving from Stripe to **Magpie** (~5% per transaction fee). Client needs to adjust court pricing to absorb this.
 
 ### Hardware Sourcing Approach
-- Tela Park / Cosmas will **self-source hardware** from PodPlay's lists.
+- Tela Park / Kosmas will **self-source hardware** from PodPlay's lists.
 - PodPlay will share two lists: (1) $2,500 setup component list, (2) per-court hardware list (iPad, Apple TV, cameras, clickers, monitors/TVs).
 - **PodPlay not responsible for warranty** on client-sourced hardware.
 - **Hard requirement:** Tela Park server must be **separate from PodPlay's server** — cannot share infrastructure for supportability reasons.
@@ -48,7 +48,7 @@ tags: [negotiation, pricing, hardware, booking-system]
 - **Power per court:** 3 power outlets + 3 cable cuts. PoE switches to be added at far court corners to avoid long power runs.
 - **iPad:** PoE-powered. Monitor and Apple TV need dedicated power outlets.
 - **Clickers/flick buttons:** Placement TBD — options are back or side of court; PodPlay will recommend.
-- Cosmas has pricing from a supplier for 14 units; waiting on final quote for larger volumes.
+- Kosmas has pricing from a supplier for 14 units; waiting on final quote for larger volumes.
 
 ### Booking System (Urgent)
 - Tela Park has been running **manual Excel-based operations for 4 months**.
@@ -56,7 +56,7 @@ tags: [negotiation, pricing, hardware, booking-system]
 - **Membership issue:** 111 active members; only 63 of 111 were charged for April. ~48 members not billed = significant lost recurring revenue. Down from 180 members due to lack of system.
 - **Decision:** Activate booking system (software only) **immediately**, contract to follow in 1–2 weeks.
 - New system: PurePH platform + GCash / other PH payment methods (no longer Messenger-based).
-- Cosmas to signal PodPlay to expand/spin up the environment.
+- Kosmas to signal PodPlay to expand/spin up the environment.
 
 ### Plan: SOW for 14 Courts
 - Start all 14 courts as **Basic Plus** (since Pro hardware not yet ready).
@@ -75,17 +75,17 @@ tags: [negotiation, pricing, hardware, booking-system]
 
 ### Content & Monetization
 - Weekly highlights for social media from replays.
-- Scoreboard shows ads + watermarks (Cosmos logo example shown).
+- Scoreboard shows ads + watermarks (Kosmas logo example shown).
 - Replay/video can be sold per clip; transaction fee applies.
 
 ## Action Items
 - [ ] PodPlay to share $2,500 setup component breakdown (software vs. hardware)
 - [ ] PodPlay to share per-court hardware list (iPad, cameras, clickers, Apple TV, monitors)
-- [ ] Cosmas to share supplier quote for 14-unit hardware batch
-- [ ] Cosmas to signal PodPlay to expand environment (unblock booking system)
+- [ ] Kosmas to share supplier quote for 14-unit hardware batch
+- [ ] Kosmas to signal PodPlay to expand environment (unblock booking system)
 - [ ] PodPlay (Vicky) to draft SOW for 14 Basic Plus courts with 8 Pro acknowledgment
 - [ ] Tela Park to decide pricing adjustment to absorb ~5% Magpie transaction fee
 - [ ] PodPlay to confirm exact Magpie transaction fee %
-- [ ] Determine commercial TV supplier (Samsung contact from Cosmas mentioned)
+- [ ] Determine commercial TV supplier (Samsung contact from Kosmas mentioned)
 - [ ] Clicker placement recommendation from PodPlay (back vs. side of court)
 - [ ] PodPlay to share Ubiquiti-compatible firewall/NVR specs for Tela Park to source

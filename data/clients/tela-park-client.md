@@ -1,16 +1,11 @@
 ---
 type: client
 name: Tela Park Holdings
-contact_name: Maria Santos
-contact_email: maria@telapark.ph
-contact_phone: +63-917-555-1234
+contact_name: ""
+contact_email: ""
+contact_phone: ""
 venue: "[[tela-park-venue]]"
 tags: [manila, flagship]
 ---
 
-Primary contact for the Tela Park venue project. Maria is the operations director, decision maker on tech deployments. Prefers email communication, responds within 24h. Available for site visits on weekdays.
-
-## Preferences
-- Wants minimal visible cabling — aesthetic is important
-- Interested in branded splash page for guest WiFi
-- Monthly reporting on network health
+Tela Park Holdings — owner/operator of the Tela Park venue. Treated as an entity for now; individual point-of-contact TBD.

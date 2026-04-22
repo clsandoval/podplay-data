@@ -37,7 +37,7 @@ tags: [infrastructure, replay, philippines, training]
 ### Escalation Path
 - Tier 1: PH on-site team
 - Tier 2: [[nico]]
-- Tier 3: [[patrick]] (engineering escalation)
+- Tier 3: PodPlay engineering (contact TBD)
 
 ## Action Items
 - [ ] Confirm Mosyle Asia instance setup before first Philippines deployment
