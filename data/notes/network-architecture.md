@@ -38,12 +38,12 @@ This isolates PodPlay equipment from general venue or ISP traffic and provides a
 ## Equipment
 
 - Gateway: UniFi UDM-SE (default) — see `templates/bom-pro.yaml` for full rack layout
-- Switch: See switch selection guidance below
+- Switch: **USW-Pro-48-POE (default)** — see switch selection guidance below
 - NVR (Autonomous Plus only): connected to switch via SFP+ DAC
 
 ## Switch Selection
 
-Court count alone is not a sufficient basis for switch selection. The following all consume ports on the main switch and must be tallied together:
+The **USW-Pro-48-POE is the default switch for all deployments.** Court count alone is not a sufficient basis for switch selection. The following all consume ports on the main switch and must be tallied together:
 
 | Device | Ports per unit |
 |---|---|
@@ -53,12 +53,12 @@ Court count alone is not a sufficient basis for switch selection. The following 
 | iPad (via PoE adapter) | 1 |
 | Mac Mini | 1 |
 | Edge switch uplink (far court corners) | 1 |
-| Security camera (Autonomous Plus) | 1 |
+| Security camera (Autonomous Plus, variable) | 1 |
 
-**Rule of thumb:**
-- Use **USW-Pro-24-POE** only for small, low-AP-density deployments where total port count is confirmed to be ≤20 (leaving headroom for future devices).
-- Use **USW-Pro-48-POE** as the default for any venue with 8+ courts or 10+ APs, regardless of tier.
-- At very high densities (24+ APs + full per-court stack), verify that a single 48-port switch is sufficient or plan for a second switch.
+**Rules:**
+- **USW-Pro-48-POE is the default.** Only downgrade to USW-Pro-24-POE if total port count is confirmed ≤20.
+- Always reserve **2–3 vacant ports** in the port assignment template for future expansion and troubleshooting headroom.
+- At very high densities where a single 48-port switch is insufficient, plan for a second switch with an SFP+ DAC uplink between them.
 
 **Example — 8-court Pro deployment with 24 APs:**
 
@@ -69,11 +69,13 @@ Court count alone is not a sufficient basis for switch selection. The following 
 | Apple TVs | 8 | 8 |
 | iPads (PoE) | 8 | 8 |
 | Mac Mini | 1 | 1 |
-| **Total** | | **49** |
+| Reserved (vacant) | — | 3 |
+| **Total** | | **52 → use 48-port + edge switch** |
 
-This exceeds the USW-Pro-24-POE capacity even without security cameras or edge switch uplinks — the USW-Pro-48-POE is required.
+See `templates/switch-port-template.yaml` for the standard port assignment template.
 
 ## Related
 - `data/meetings/2026-02-25-nico-pre-training-infrastructure-call.md`
 - `templates/bom-pro.yaml`
+- `templates/switch-port-template.yaml`
 - `data/checklists/tela-park-deployment.yaml`
