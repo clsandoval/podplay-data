@@ -1,0 +1,109 @@
+# Switch Port Assignment Template — USW-Pro-48-POE
+# Use this template when documenting port assignments for a venue deployment.
+# Fill in device, location, VLAN, and PoE fields per port.
+# Always leave 2–3 ports as VACANT at the end for expansion and troubleshooting headroom.
+#
+# VLAN reference:
+#   32  = REPLAY (all PodPlay gear)
+#   1   = Management / native
+#
+# PoE: true if device is PoE-powered, false otherwise
+
+switch: USW-Pro-48-POE
+project: "[[replace-with-project]]"
+total_ports: 48
+
+ports:
+  # ── Uplinks ──────────────────────────────────────────────────────────────
+  - port: 1
+    device: UDM-SE
+    location: rack
+    vlan: management
+    poe: false
+    notes: "SFP+ DAC uplink — use SFP+ port, not RJ45"
+
+  # ── Compute ──────────────────────────────────────────────────────────────
+  - port: 2
+    device: Mac Mini
+    location: rack
+    vlan: 32
+    poe: false
+    notes: "Fixed IP 192.168.32.100"
+
+  # ── NVR (Autonomous Plus only — remove if not applicable) ────────────────
+  - port: 3
+    device: UNVR / UNVR-Pro
+    location: rack
+    vlan: 32
+    poe: false
+    notes: "SFP+ DAC uplink — use SFP+ port, not RJ45. Remove row if not Autonomous Plus."
+
+  # ── Access Points ─────────────────────────────────────────────────────────
+  # Repeat block for each AP. Label by zone/location.
+  - port: 4
+    device: U6-Pro AP
+    location: "zone-1"
+    vlan: 32
+    poe: true
+  - port: 5
+    device: U6-Pro AP
+    location: "zone-2"
+    vlan: 32
+    poe: true
+  # ... continue for all APs
+
+  # ── Per-Court Devices ─────────────────────────────────────────────────────
+  # Pattern per court: replay camera → Apple TV → iPad
+  # Adjust court numbering to match venue layout.
+  - port: 10
+    device: Replay Camera
+    location: "court-1"
+    vlan: 32
+    poe: true
+  - port: 11
+    device: Apple TV
+    location: "court-1"
+    vlan: 32
+    poe: false
+  - port: 12
+    device: iPad (PoE adapter)
+    location: "court-1"
+    vlan: 32
+    poe: true
+  # ... repeat block for each court
+
+  # ── Access Control (Autonomous / Autonomous Plus only) ────────────────────
+  - port: 40
+    device: Kisi Controller Pro 2
+    location: rack
+    vlan: 32
+    poe: true
+    notes: "Remove row if not Autonomous tier."
+
+  # ── Edge Switch Uplinks (if applicable) ──────────────────────────────────
+  - port: 41
+    device: Edge Switch (far courts)
+    location: "court-corner"
+    vlan: 32
+    poe: false
+    notes: "Uplink from PoE switch at far court corners. Remove if not needed."
+
+  # ── RESERVED — do not assign ─────────────────────────────────────────────
+  - port: 46
+    device: VACANT
+    location: ""
+    vlan: ""
+    poe: false
+    notes: "Reserved for expansion"
+  - port: 47
+    device: VACANT
+    location: ""
+    vlan: ""
+    poe: false
+    notes: "Reserved for expansion"
+  - port: 48
+    device: VACANT
+    location: ""
+    vlan: ""
+    poe: false
+    notes: "Reserved for troubleshooting"
