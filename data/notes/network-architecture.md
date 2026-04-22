@@ -57,25 +57,30 @@ The **USW-Pro-48-POE is the default switch for all deployments.** Court count al
 
 **Rules:**
 - **USW-Pro-48-POE is the default.** Only downgrade to USW-Pro-24-POE if total port count is confirmed ≤20.
-- Always reserve **2–3 vacant ports** in the port assignment template for future expansion and troubleshooting headroom.
+- Always reserve **3 vacant ports** at the end of every port assignment — 2 for expansion, 1 for troubleshooting.
 - At very high densities where a single 48-port switch is insufficient, plan for a second switch with an SFP+ DAC uplink between them.
 
-**Example — 8-court Pro deployment with 24 APs:**
+## Port Assignment Template Generator
 
-| Device | Count | Ports |
-|---|---|---|
-| U6-Pro APs | 24 | 24 |
-| Replay cameras | 8 | 8 |
-| Apple TVs | 8 | 8 |
-| iPads (PoE) | 8 | 8 |
-| Mac Mini | 1 | 1 |
-| Reserved (vacant) | — | 3 |
-| **Total** | | **52 → use 48-port + edge switch** |
+Use the generator script to produce a per-project port assignment file:
 
-See `templates/switch-port-template.yaml` for the standard port assignment template.
+```bash
+python scripts/generate-port-template.py --project <slug>
+
+# Mixed-tier venues require explicit court counts:
+python scripts/generate-port-template.py --project tela-park \
+  --pro-courts 8 --basic-courts 6 --aps 24 \
+  --security-cameras 8 --edge-switches 2
+```
+
+Output is written to `data/switch-ports/<project>-switch-ports.yaml`. The generator:
+- Always sets USW-Pro-48-POE as the switch
+- Assigns ports in a consistent order (uplinks → compute → NVR → APs → per-court → access control → edge switches)
+- Appends 3 VACANT ports at the end
+- Warns if total port count exceeds 48
 
 ## Related
 - `data/meetings/2026-02-25-nico-pre-training-infrastructure-call.md`
 - `templates/bom-pro.yaml`
-- `templates/switch-port-template.yaml`
+- `scripts/generate-port-template.py`
 - `data/checklists/tela-park-deployment.yaml`
