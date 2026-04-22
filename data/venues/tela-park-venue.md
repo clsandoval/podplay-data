@@ -1,7 +1,7 @@
 ---
 type: venue
 name: Tela Park Venue
-address: "123 Sports Ave, Makati City"
+address: "Las Piñas, Metro Manila"
 floor_area_sqm: 500
 power_standard: 220v_60hz
 isp_provider: PLDT
@@ -11,7 +11,7 @@ display_count: 14
 tags: [manila, indoor, multi-court, padel]
 ---
 
-Multi-court indoor padel facility in Makati. 14 padel courts total: 6 Basic Plus, 8 Pro. High ceilings — good for AP and camera placement but requires ladder/rigging work for installation.
+Multi-court indoor padel facility in Las Piñas. 14 padel courts total: 6 Basic Plus, 8 Pro. High ceilings — good for AP and camera placement but requires ladder/rigging work for installation.
 
 ## Facility Notes
 - IT room on-site: PA system, all wiring centralized (fiber, power, network)
