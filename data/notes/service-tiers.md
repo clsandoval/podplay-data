@@ -12,7 +12,7 @@ Core replay + display package. Suitable for venues wanting the full player exper
 - TV display (65") with Apple TV
 - iPad kiosk (court booking + check-in)
 - Replay camera
-- Flic button scoreboard (mounted on aluminum sign)
+- Flic button (mounted on aluminum sign, for scoreboard)
 
 **Pricing:**
 - Venue fee: $5,000

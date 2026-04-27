@@ -29,4 +29,3 @@ The replay system is always running once set up by the installation team. Player
 - `data/notes/network-architecture.md`
 - `data/inventory/samsung-t7-1tb.md`
 - `data/inventory/mac-mini-16gb.md`
-- `data/inventory/ipad-128gb-wifi-cellular.md`
