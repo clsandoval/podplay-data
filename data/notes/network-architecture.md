@@ -38,8 +38,46 @@ This isolates PodPlay equipment from general venue or ISP traffic and provides a
 ## Equipment
 
 - Gateway: UniFi UDM-SE (default) — see `templates/bom-pro.yaml` for full rack layout
-- Switch: UniFi USW-Pro-24-POE (≤8 courts) or USW-Pro-48-POE (9+ courts)
+- Switch: See switch sizing guidance below
 - NVR (Autonomous Plus only): connected to switch via SFP+ DAC
+
+## Switch Sizing
+
+**Default: USW-Pro-48-POE** for any venue with 8+ courts or 10+ APs.
+
+The old rule (24-POE for ≤8 courts) was too simple — it doesn't account for AP density, edge switches, or security cameras. Count ports before committing to a switch.
+
+### Port consumption per device type
+
+| Device | Ports per unit | Notes |
+|--------|---------------|-------|
+| Replay camera | 1 | Per court |
+| iPad (PoE) | 1 | Per court |
+| Apple TV | 1 | Per court |
+| UniFi AP | 1 | Coverage-based, not per court |
+| Edge PoE switch | 1 (uplink) | For far court clusters |
+| Mac Mini | 1 | Venue-level |
+| NVR (Autonomous Plus) | 1 | Via SFP+ DAC |
+| UDM gateway | 1 (uplink) | Via SFP+ DAC |
+
+### Worked example — Tela Park (8 Pro courts, 24 APs)
+
+| Device | Qty | Ports |
+|--------|-----|-------|
+| Replay cameras | 8 | 8 |
+| iPads | 8 | 8 |
+| Apple TVs | 8 | 8 |
+| UniFi APs | 24 | 24 |
+| Mac Mini | 1 | 1 |
+| **Total** | | **49** |
+
+49 ports required — exceeds the USW-Pro-24-POE's 24 ports even before adding cameras (Autonomous Plus) or edge switch uplinks. USW-Pro-48-POE is the correct choice.
+
+### Rule of thumb
+
+- **USW-Pro-48-POE** — default for 8+ courts or 10+ APs
+- **USW-Pro-24-POE** — only for small venues with fewer than 8 courts and fewer than 10 APs
+- When in doubt, do a port count before ordering
 
 ## Related
 - `data/meetings/2026-02-25-nico-pre-training-infrastructure-call.md`
