@@ -13,11 +13,11 @@ venue_items:
     qty: 1
     notes: "Default gateway. Swap for NET-UDM-PRO-MAX for 12+ courts."
 
-  - sku: NET-USW-PRO-24-POE
-    name: UniFi USW-Pro-24-POE Switch
+  - sku: NET-USW-PRO-48-POE
+    name: UniFi USW-Pro-48-POE Switch
     category: networking
     qty: 1
-    notes: "Default for up to 8 courts. Swap for NET-USW-PRO-48-POE for 9+ courts."
+    notes: "Default for 8+ courts or 10+ APs. USW-Pro-24-POE only for small venues with <8 courts and <10 APs. Do a port count before ordering."
 
   - sku: NET-SFP-DAC
     name: UniFi SFP+ DAC Cable 0.5m
@@ -85,7 +85,7 @@ per_court_items:
     name: Flic Button
     category: compute
     qty: 2
-    notes: "2 per court for scoring/replay trigger."
+    notes: "2 per court for scoreboard."
 
   - sku: REPLAY-SIGN
     name: Aluminum Printed Sign 6x8
