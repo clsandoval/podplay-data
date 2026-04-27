@@ -28,5 +28,4 @@ The replay system is always running once set up by the installation team. Player
 ## Related
 - `data/notes/network-architecture.md`
 - `data/inventory/samsung-t7-1tb.md`
-- `data/inventory/flic-button.md`
 - `data/inventory/mac-mini-16gb.md`

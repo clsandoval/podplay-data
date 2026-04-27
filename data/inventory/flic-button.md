@@ -11,4 +11,4 @@ on_order: 0
 reorder_point: 4
 ---
 
-Bluetooth button for player-triggered scoring and replay capture. 2 per court, mounted on the printed aluminum sign.
+Bluetooth button for scoreboard. 2 per court, mounted on the printed aluminum sign.
