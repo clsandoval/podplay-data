@@ -1,7 +1,7 @@
 ---
 type: note
 title: Replay Flow
-tags: [replay, player-experience, flic, samsung-ssd, mac-mini]
+tags: [replay, player-experience, ipad, samsung-ssd, mac-mini]
 ---
 
 ## Overview
@@ -11,13 +11,13 @@ The replay system is always running once set up by the installation team. Player
 ## How It Works
 
 1. **Cameras run continuously** in the background — no player action needed to start recording.
-2. **Player presses the Flic button** on the court to save a clip. This captures the **last ~1 minute** of footage (rolling buffer — no need to press before the moment happens).
+2. **Player saves a clip from the iPad** on the court. This captures the **last ~1 minute** of footage (rolling buffer — no need to trigger before the moment happens).
 3. **Clip is stored locally** on a Samsung SSD connected to the Mac Mini on-site.
 4. **Player retrieves their clip** via the **venue's own website** or receives it by email.
 
 ## Consumer Explanation
 
-> "Cameras are always running at the court. Press the button when something good happens and it saves the last minute of footage automatically. After your session, your clips are waiting for you on your venue's website or in your email."
+> "Cameras are always running at the court. Tap the iPad when something good happens and it saves the last minute of footage automatically. After your session, your clips are waiting for you on your venue's website or in your email."
 
 ## Key Points
 
