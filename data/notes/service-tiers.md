@@ -42,6 +42,8 @@ Core replay + display package. Suitable for venues wanting the full player exper
 
 Pro tier plus automated door access. Venues can operate with minimal staff — doors are controlled via Kisi and managed remotely.
 
+> ⚠️ **Pricing not confirmed.** We haven't closed a contract with a site using this tier yet — the figures below may be inaccurate and should be validated before quoting.
+
 **Adds on top of Pro:**
 - Kisi Controller Pro 2 (1 per venue)
 - Kisi Reader Pro 2 (1 per access-controlled door)
@@ -51,6 +53,8 @@ Pro tier plus automated door access. Venues can operate with minimal staff — d
 ## Autonomous Plus
 
 Autonomous tier plus full security camera recording via UniFi NVR. Provides on-site video retention for liability coverage and incident review.
+
+> ⚠️ **Pricing not confirmed.** We haven't closed a contract with a site using this tier yet — the figures below may be inaccurate and should be validated before quoting.
 
 **Adds on top of Autonomous:**
 - UniFi UNVR 4-bay NVR (up to 4 cameras) or UNVR-Pro 7-bay (5+ cameras)
