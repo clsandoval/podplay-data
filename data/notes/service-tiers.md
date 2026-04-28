@@ -4,6 +4,17 @@ title: Service Tiers
 tags: [tiers, pricing, product]
 ---
 
+## Basic+
+
+Entry-level tier for venues that want core PodPlay features with a simple flat monthly fee.
+
+**Pricing:**
+- Monthly venue fee: $259
+- One-time setup fees: none
+- Per-court charges: none
+
+---
+
 ## Pro
 
 Core replay + display package. Suitable for venues wanting the full player experience without access control or security recording.
@@ -14,9 +25,14 @@ Core replay + display package. Suitable for venues wanting the full player exper
 - Replay camera
 - Flic button (mounted on aluminum sign, for scoreboard)
 
-**Pricing:**
-- Venue fee: $5,000
-- Per-court fee: $2,500
+**One-Time Setup:**
+- Podplay System: $2,500
+- Hardware: $2,500
+- Per-court setup: $2,500
+
+**Monthly (billed after one-time setup):**
+- Monthly venue fee: $300
+- Per-court fee: $150/month
 
 **BOM reference:** `templates/bom-pro.yaml`
 
@@ -29,10 +45,6 @@ Pro tier plus automated door access. Venues can operate with minimal staff — d
 **Adds on top of Pro:**
 - Kisi Controller Pro 2 (1 per venue)
 - Kisi Reader Pro 2 (1 per access-controlled door)
-
-**Pricing:**
-- Venue fee: $7,500
-- Per-court fee: $2,500
 
 ---
 
