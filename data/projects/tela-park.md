@@ -30,17 +30,40 @@ Tela Park has agreed to be a PodPlay demo site in the Philippines.
 - Payment processor: Magpie (~5% per transaction); client to adjust court pricing accordingly
 
 ## Hardware Sourcing
-- Tela Park / Kosmas self-sourcing hardware from PodPlay's provided lists
-- PodPlay providing: (1) $2,500 setup component list, (2) per-court hardware list
+- **Network hardware: Tela Park self-sourcing entirely** — do not include in any BOM or hardware lists for this project. This covers all Ubiquiti networking gear (UDM, switches, APs, patch panels, rack, PDU, UPS, DAC cables, etc.)
+- PodPlay provides only the items listed below for the 8 Pro courts
 - Client responsible for sourced hardware warranty
 - Hard requirement: Tela Park server must be separate from PodPlay's infrastructure
-- Network: Ubiquiti (client sourcing); PodPlay configuring
 - Cameras: ceiling/overhead mount preferred; existing 6 cable cuts in place
-- PoE switches to be added at far court corners
+- PoE switches to be added at far court corners (client sourcing)
 - Commercial-grade TVs required (55–65 inch)
 
+## PodPlay-Provided Hardware (8 Pro Courts)
+
+### Venue-Level (×1)
+| Item | Qty |
+|---|---|
+| Mac Mini 16GB | 1 |
+| Samsung T7 2TB SSD | 1 |
+
+### Per-Court (×8)
+| Item | Per Court | Total |
+|---|---|---|
+| EmpireTech Replay Camera | 1 | 8 |
+| EmpireTech Junction Box | 1 | 8 |
+| Flic Button | 2 | 16 |
+| Aluminum Sign 6x8 | 1 | 8 |
+| 65" TV Display | 1 | 8 |
+| VESA 400x300 TV Tilt Wall Mount | 1 | 8 |
+| Apple TV 4K with Ethernet | 1 | 8 |
+| Amazon Basics 3ft HDMI Cable | 1 | 8 |
+| HIDEit Apple TV Wall Mount | 1 | 8 |
+| iPad 128GB WiFi+Cellular | 1 | 8 |
+| iPad PoE Adapter | 1 | 8 |
+| iPad Kiosk Case with Lock | 1 | 8 |
+
 ## Key Decisions
-- Going with Ubiquiti U6-Pro APs (24 units) for full venue coverage
+- Going with Ubiquiti U6-Pro APs (24 units) for full venue coverage (client sourcing)
 - Mac Mini M4 as the compute node for replay processing
 - 14 courts total; monitors back-to-back per court
 - PodPlay control center must retain remote access for replay/support
