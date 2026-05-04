@@ -13,3 +13,7 @@ tags: [demo, one-court]
 ---
 
 One-off demo launch at Atleta 63, Bridgetowne, Pasig City. Single court. Starting with 1x Mac Mini 16GB as compute unit.
+
+## Notes
+- Tied to the **temporary facility media launch** ([[temporary-facility]]) — September 2026 target
+- Deployment date TBD pending temporary facility opening
