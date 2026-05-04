@@ -79,3 +79,4 @@ Tela Park has agreed to be a PodPlay demo site in the Philippines.
 - **2026-04-15:** Partnership negotiation meeting at venue. Pricing and scope agreed verbally. Booking system activation unblocked pending Kosmas signal. Contract to be signed within 1–2 weeks. Court layout walked through on-site.
 - Site survey done. Cabling complete.
 - Blocked on: contract signature + Kosmas go-signal for environment spin-up
+- **2026-05-04:** Client has received lab network hardware (APC UPS, Unifi 24-port switch, Unifi UDM gateway) — all client-sourced as expected. Still pending: iPad PoE adapters. Replay camera: planning to order 1 unit as a test before full order.
