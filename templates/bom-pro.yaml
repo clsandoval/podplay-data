@@ -62,7 +62,7 @@ venue_items:
     notes: "Fixed IP 192.168.32.100 on REPLAY VLAN 32."
 
   - sku: REPLAY-SSD-1TB
-    name: Samsung T7 1TB External SSD
+    name: Samsung T7 External SSD
     category: compute
     qty: 1
     notes: "For 1–4 courts. Swap for REPLAY-SSD-2TB (5–8 courts) or REPLAY-SSD-4TB (9+ courts)."
