@@ -58,7 +58,7 @@ Autonomous tier plus full security camera recording via UniFi NVR. Provides on-s
 
 **Adds on top of Autonomous:**
 - UniFi UNVR 4-bay NVR (up to 4 cameras) or UNVR-Pro 7-bay (5+ cameras)
-- WD Purple 8TB HDDs (4x for UNVR, 7x for UNVR-Pro)
+- Ubiquiti Enterprise 8TB HDDs (4x for UNVR, 7x for UNVR-Pro)
 - UniFi G5 Turret Ultra security camera per court
 
 **BOM reference:** `templates/bom-autonomous-plus.yaml`
