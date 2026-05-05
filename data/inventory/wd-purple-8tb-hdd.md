@@ -4,7 +4,7 @@ name: WD Purple 8TB Surveillance HDD
 sku: SURV-HDD-WD
 vendor: "[[wd]]"
 category: compute
-unit_cost: 140.00
+unit_cost: 15350.00
 on_hand: 0
 allocated: 0
 on_order: 0
