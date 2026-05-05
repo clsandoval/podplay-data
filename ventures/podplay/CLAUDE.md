@@ -1,6 +1,6 @@
-# PodPlay Data — Agent Instructions
+# PodPlay venture — Agent Guidance
 
-You are the PodPlay ops assistant. This repo is the single source of truth for all PodPlay operational data. Every entity is a markdown file with YAML frontmatter.
+This file extends the root `/CLAUDE.md`. Read it after the root has identified the routed venture as `podplay`. PodPlay = Pod Play Southeast Asia — venue installations across Asia.
 
 ## Write Path
 
@@ -13,7 +13,7 @@ PodPlay users are operators, not engineers. Default to **doing the thing**, not 
 | New entity file in `data/*/` | Commit directly to `main` |
 | Edit to existing entity file in `data/*/` | Branch → PR → **auto-merge (squash)** in the same flow |
 | Delete any file | Branch → PR → **ask user before merging** |
-| Change to `CLAUDE.md`, `templates/`, `skills/`, `dashboards/` | Branch → PR → **ask user before merging** |
+| Change to this `CLAUDE.md`, `templates/`, `skills/`, `dashboards/` | Branch → PR → **ask user before merging** |
 | Bulk change (>5 files in one pass) | Branch → PR → **ask user before merging** |
 
 Use GitHub MCP tools: `create_branch` → `create_or_update_file` → `create_pull_request` → (when auto-merging) `merge_pull_request` with squash.
@@ -29,27 +29,28 @@ Use GitHub MCP tools: `create_branch` → `create_or_update_file` → `create_pu
 
 When the user describes a change, **make it**. Don't open an issue asking them to confirm. Don't bounce it back as "do you want me to…" unless the change lands in the ask-before-merging column above.
 
-## Directory Structure
+## Directory Structure (this venture)
 
 | Directory | Entity Type | Description |
 |-----------|-------------|-------------|
 | `data/projects/` | Project | Venue installations with multi-stage workflow |
 | `data/inventory/` | Inventory Item | Hardware stock tracking |
-| `data/vendors/` | Vendor | Supplier directory |
-| `data/clients/` | Client | Customer contacts and relationship notes |
+| `data/vendors/` | Vendor | Pod-play-specific vendor directory (cross-venture vendors → root `general/vendors/`) |
+| `data/clients/` | Client | Pod Play customer contacts |
 | `data/installers/` | Installer | Contractor pool |
 | `data/invoices/` | Invoice | Deposit, final, change-order invoices |
 | `data/expenses/` | Expense | Per-project costs |
 | `data/meetings/` | Meeting | Call notes, site visits, vendor check-ins |
-| `data/leads/` | Lead | CRM pipeline — prospects not yet projects |
-| `data/team/` | Team Member | Internal roster |
+| `data/leads/` | Lead | Pod Play CRM pipeline — prospects not yet projects |
 | `data/contracts/` | Contract | SOWs, MSAs, NDA summaries |
 | `data/tickets/` | Ticket | Support issues, punch list items, warranty claims |
 | `data/checklists/` | Checklist | Deployment phase templates (YAML) |
 | `data/recurring-fees/` | Recurring Fee | Monthly/quarterly subscriptions per venue |
 | `data/venues/` | Venue | Physical site specs |
 | `data/shipping/` | Shipment | Shipment tracking, packing lists |
-| `data/notes/` | Note | Freeform — ideas, research, anything |
+| `data/notes/` | Note | Freeform — ideas, research, anything pod-play-flavored |
+
+> **Team profiles live at root `general/people/`**, not here. They're Kosmas-wide.
 
 ## File Naming
 
@@ -334,8 +335,9 @@ Packing list and delivery notes.
 ## Linking
 
 Use `[[wikilinks]]` to reference other entities by filename (without extension):
-- `"[[tela-park]]"` links to `data/projects/tela-park.md`
-- `"[[ubiquiti]]"` links to `data/vendors/ubiquiti.md`
+- `"[[tela-park]]"` → `data/projects/tela-park.md`
+- `"[[ubiquiti]]"` → `data/vendors/ubiquiti.md`
+- **Cross-venture link:** `"[[helios]]"` may resolve to either `ventures/podplay/data/projects/helios.md` (the Pod Play install) or `ventures/helios-pickleball-center/...` (the venture itself). When ambiguity matters, qualify the link target by including the venture path. See `data/projects/helios.md` for the cross-reference pattern.
 
 ## Revisioning client-facing artifacts
 
@@ -351,22 +353,23 @@ When you create a new file in `data/*/`, update any directory-level index or das
 
 ## Pricing
 
-`pricing/rate-card.md` is the single source of truth for tier pricing. Proposals, invoices, and contracts must align with it. When it changes, cascade updates to active drafts in the same PR.
+`pricing/rate-card.md` is the single source of truth for Pod Play tier pricing (Pro / Autonomous / Autonomous+ / PBK). Proposals, invoices, and contracts must align with it. When it changes, cascade updates to active drafts in the same PR.
 
-## Skills
+## Skills (this venture)
 
-Skills live in `skills/`. Read the skill file before acting when a request matches:
-
-- **New meeting / call notes to process** → `skills/meeting-to-tickets.md`
-- **Drafting a SOW or proposal** → `skills/proposal-writing.md`
-- **First call / site visit prep or debrief** → `skills/discovery-call.md`
 - **Audit a project / lead for drift** (runs automatically before stage transitions) → `skills/consistency-check.md`
-- **Proactive gap-watching during conversations** → `skills/ingestion.md`
 
-## Templates
+Other relevant skills (proposal-writing, discovery-call, meeting-to-tickets, ingestion, slack-file-reading) live at root `/skills/` and are shared across ventures.
 
-Templates in `templates/` define defaults for new entities. Use them when creating new records.
+## Templates (this venture)
 
-## Dashboards
+- `templates/bom-pro.yaml` — Pod Play Pro tier bill of materials
+- `templates/bom-autonomous-plus.yaml` — Autonomous+ tier BOM
+- `templates/checklist-deployment.yaml` — Deployment phase checklist
+
+## Dashboards (this venture)
 
 YAML files in `dashboards/` define aggregation views. The React app reads these to render summary pages.
+
+- `dashboards/pipeline.yaml` — Project pipeline by stage
+- `dashboards/revenue.yaml` — Pod Play revenue rollup
