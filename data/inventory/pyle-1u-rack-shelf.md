@@ -4,7 +4,7 @@ name: Pyle 19-Inch 1U Vented Rack Shelf
 sku: INFRA-RACK-SHELF
 vendor: "[[pyle]]"
 category: networking
-unit_cost: 20.00
+unit_cost: 2000.00
 on_hand: 0
 allocated: 0
 on_order: 0

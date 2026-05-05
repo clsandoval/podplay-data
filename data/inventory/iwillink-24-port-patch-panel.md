@@ -4,7 +4,7 @@ name: iwillink 24-Port Patch Panel
 sku: NET-PATCH-PANEL-24
 vendor: "[[iwillink]]"
 category: networking
-unit_cost: 30.00
+unit_cost: 2240.00
 on_hand: 0
 allocated: 0
 on_order: 0

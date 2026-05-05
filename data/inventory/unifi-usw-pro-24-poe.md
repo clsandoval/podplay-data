@@ -4,7 +4,7 @@ name: UniFi USW-Pro-24-POE Switch
 sku: NET-USW-PRO-24-POE
 vendor: "[[ubiquiti]]"
 category: networking
-unit_cost: 249.00
+unit_cost: 56448.00
 on_hand: 0
 allocated: 0
 on_order: 0
