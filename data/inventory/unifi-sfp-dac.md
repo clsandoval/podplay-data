@@ -4,7 +4,7 @@ name: UniFi SFP+ DAC Cable 0.5m
 sku: NET-SFP-DAC
 vendor: "[[ubiquiti]]"
 category: networking
-unit_cost: 12.00
+unit_cost: 1750.00
 on_hand: 0
 allocated: 0
 on_order: 0

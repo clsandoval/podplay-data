@@ -4,7 +4,7 @@ name: UniFi UDM-SE Gateway
 sku: NET-UDM-SE
 vendor: "[[ubiquiti]]"
 category: networking
-unit_cost: 379.00
+unit_cost: 38200.00
 on_hand: 0
 allocated: 0
 on_order: 0
