@@ -4,7 +4,7 @@ name: UniFi Camera Junction Box White
 sku: SURV-CAMERA-JB-WHITE
 vendor: "[[ubiquiti]]"
 category: compute
-unit_cost: 12.00
+unit_cost: 4400.00
 on_hand: 0
 allocated: 0
 on_order: 0
