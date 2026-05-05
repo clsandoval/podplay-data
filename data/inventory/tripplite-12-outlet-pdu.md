@@ -4,7 +4,7 @@ name: TrippLite 12-Outlet Rack PDU
 sku: NET-PDU
 vendor: "[[tripplite]]"
 category: power
-unit_cost: 45.00
+unit_cost: 952.00
 on_hand: 0
 allocated: 0
 on_order: 0

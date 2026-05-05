@@ -4,7 +4,7 @@ name: 12U Network Rack Enclosure
 sku: INFRA-RACK
 vendor: ""
 category: networking
-unit_cost: 180.00
+unit_cost: 8400.00
 on_hand: 0
 allocated: 0
 on_order: 0

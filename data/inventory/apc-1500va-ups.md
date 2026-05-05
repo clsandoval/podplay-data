@@ -4,7 +4,7 @@ name: APC 1500VA Rack-Mount UPS
 sku: INFRA-UPS
 vendor: "[[apc]]"
 category: power
-unit_cost: 250.00
+unit_cost: 105840.00
 on_hand: 0
 allocated: 0
 on_order: 0
