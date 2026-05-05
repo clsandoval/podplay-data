@@ -11,4 +11,4 @@ on_order: 0
 reorder_point: 1
 ---
 
-4-bay network video recorder for Autonomous+ tier. Supports up to 4x WD Purple 8TB HDDs.
+4-bay network video recorder for Autonomous+ tier. Supports up to 4x Ubiquiti Enterprise 8TB HDDs.

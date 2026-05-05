@@ -29,7 +29,7 @@ venue_items:
     notes: "For up to 4 security cameras. Swap for SURV-UNVR-PRO (7-bay) for 5+ cameras."
 
   - sku: SURV-HDD
-    name: WD Purple 8TB Surveillance HDD
+    name: Ubiquiti Enterprise 8TB HDD
     category: compute
     qty: 4
     notes: "4x for UNVR (4-bay). Use 7x for SURV-UNVR-PRO (7-bay)."
