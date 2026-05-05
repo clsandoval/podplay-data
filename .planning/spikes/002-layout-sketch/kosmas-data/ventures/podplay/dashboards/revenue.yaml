@@ -1,0 +1,14 @@
+# Revenue Dashboard — Financial Summary
+# The React app reads this to render the financials view.
+
+type: revenue
+sections:
+  - name: Invoices
+    source: data/invoices
+    columns: [project, invoice_type, amount, status, due_date]
+  - name: Expenses
+    source: data/expenses
+    columns: [project, category, amount, vendor, date]
+  - name: Recurring Fees
+    source: data/recurring-fees
+    columns: [project, description, amount, frequency, status]

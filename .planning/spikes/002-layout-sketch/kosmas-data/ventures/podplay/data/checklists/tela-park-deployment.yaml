@@ -1,0 +1,126 @@
+project: "[[tela-park]]"
+type: checklist
+phase: deployment
+
+categories:
+
+  - name: Court Information
+    items:
+      - label: Total court count confirmed
+        done: true
+        notes: "8 courts, Pro tier"
+      - label: Court numbering scheme defined
+        done: false
+      - label: Court dimensions documented
+        done: false
+      - label: Layout diagram with cable run distances
+        done: false
+
+  - name: Camera Mounting
+    items:
+      - label: Custom mounts in fabrication
+        done: true
+        notes: "May use a different camera model depending on mount design"
+      - label: Cabling run under concrete by facility owners
+        done: true
+      - label: Mounting height confirmed per court
+        done: false
+      - label: Obstructions check completed
+        done: false
+      - label: Surface material assessed for each mount location
+        done: false
+
+  - name: TV / Monitor (Instant Replay)
+    items:
+      - label: TV availability confirmed per court
+        done: false
+      - label: TV location is visible to players
+        done: false
+      - label: HDMI port accessibility verified
+        done: false
+      - label: Power outlet near each TV confirmed
+        done: false
+
+  - name: Network & Internet
+    items:
+      - label: ISP confirmed as PLDT Beyond Fiber
+        done: true
+        notes: "Static IP required for port 4000 forwarding"
+      - label: Static IP provisioned
+        done: false
+      - label: Port 4000 forwarding confirmed
+        done: false
+      - label: Plan speed confirmed
+        done: false
+      - label: ISP admin access credentials obtained
+        done: false
+      - label: Cable standard confirmed (Cat5e or Cat6)
+        done: false
+        notes: "Cabling installed under concrete by owners — must verify grade"
+      - label: Minimum 3 ethernet drops per court verified (camera, iPad PoE, Apple TV)
+        done: false
+
+  - name: Equipment Room
+    items:
+      - label: Dedicated room location identified
+        done: false
+      - label: Power outlets available for PDU and ISP equipment
+        done: false
+      - label: Ventilation / cooling adequate
+        done: false
+      - label: Room is physically secure and lockable
+        done: false
+      - label: Rack space sufficient for UDM, switch, PDU, NVR, Mac Mini, and SSD
+        done: false
+
+  - name: Power
+    items:
+      - label: Voltage confirmed as 220V / 60Hz
+        done: true
+        notes: "Philippines standard. PDU swap required; all other gear is 100–240V auto-switching"
+      - label: Power stability assessment completed
+        done: false
+      - label: Power outlets confirmed at each court location
+        done: false
+      - label: PoE port count sufficient for iPads and cameras
+        done: false
+
+  - name: iPad Placement
+    items:
+      - label: Mounting location identified per court
+        done: false
+      - label: PoE ethernet drop at each iPad location confirmed
+        done: false
+      - label: Security bracket / kiosk enclosure confirmed
+        done: false
+
+  - name: Facility Access
+    items:
+      - label: Facility contact person identified
+        done: false
+      - label: Access hours confirmed
+        done: false
+      - label: Loading and delivery access confirmed
+        done: false
+      - label: Construction status assessed
+        done: false
+      - label: Shared space coordination completed
+        done: false
+
+  - name: Signage & Branding
+    items:
+      - label: Venue logo file received (for replay overlay)
+        done: false
+      - label: Exact venue name confirmed for dashboard and DDNS
+        done: false
+
+  - name: Regional (Philippines)
+    items:
+      - label: Timezone confirmed as Asia/Manila (UTC+8)
+        done: true
+      - label: Video standard clarified (PAL 25fps vs NTSC 30fps)
+        done: false
+      - label: Camera compatibility with PAL confirmed
+        done: false
+      - label: Payment terminal configured for GCash / Magpie
+        done: false

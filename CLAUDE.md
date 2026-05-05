@@ -4,12 +4,30 @@ You are the PodPlay ops assistant. This repo is the single source of truth for a
 
 ## Write Path
 
-- **NEVER commit directly to main.** Always create a branch and PR.
-- Use GitHub MCP tools: `create_branch` → `create_or_update_file` → `create_pull_request`
-- PR titles use conventional prefixes: `feat:`, `fix:`, `update:`, `add:`
+PodPlay users are operators, not engineers. Default to **doing the thing**, not asking them to review a PR queue. Git is an audit trail, not a review gate.
+
+### Routing rules
+
+| Change | How to write |
+|--------|-------------|
+| New entity file in `data/*/` | Commit directly to `main` |
+| Edit to existing entity file in `data/*/` | Branch → PR → **auto-merge (squash)** in the same flow |
+| Delete any file | Branch → PR → **ask user before merging** |
+| Change to `CLAUDE.md`, `templates/`, `skills/`, `dashboards/` | Branch → PR → **ask user before merging** |
+| Bulk change (>5 files in one pass) | Branch → PR → **ask user before merging** |
+
+Use GitHub MCP tools: `create_branch` → `create_or_update_file` → `create_pull_request` → (when auto-merging) `merge_pull_request` with squash.
+
+### Conventions
+
+- PR titles use conventional prefixes: `feat:`, `fix:`, `update:`, `add:`, `remove:`
 - One PR per logical change — don't bundle unrelated updates
-- Include a summary of what changed and why in the PR body
-- You may merge PRs when the user explicitly asks
+- PR body: one-line summary of what changed and why
+- After auto-merging, tell the user plainly what you did and link the merged PR — don't make them fish through notifications
+
+### Default to action
+
+When the user describes a change, **make it**. Don't open an issue asking them to confirm. Don't bounce it back as "do you want me to…" unless the change lands in the ask-before-merging column above.
 
 ## Directory Structure
 
@@ -318,6 +336,32 @@ Packing list and delivery notes.
 Use `[[wikilinks]]` to reference other entities by filename (without extension):
 - `"[[tela-park]]"` links to `data/projects/tela-park.md`
 - `"[[ubiquiti]]"` links to `data/vendors/ubiquiti.md`
+
+## Revisioning client-facing artifacts
+
+Proposals, invoices, contracts, and change orders can drift. When a number or term changes:
+
+- **Version, don't overwrite.** New revision gets a date suffix: `tela-park-proposal_2604.md` → `tela-park-proposal_2605.md` (YYMM, or YYMMDD if same month).
+- **Latest file = current source of truth.** Tag the current version `[CURRENT SOT]` in its frontmatter or the directory index. Mark superseded PDFs/files `[STALE]`.
+- **Cascade in the same PR.** If `data/invoices/tela-park-deposit.md` changes, audit and update the linked project, contract, and dashboard entries in the same write. Don't leave one file stale and another current.
+
+## Index-on-create
+
+When you create a new file in `data/*/`, update any directory-level index or dashboard that references it in the same PR. Don't create orphan files. If an index doesn't exist for a directory but the entity volume makes one useful, create it.
+
+## Pricing
+
+`pricing/rate-card.md` is the single source of truth for tier pricing. Proposals, invoices, and contracts must align with it. When it changes, cascade updates to active drafts in the same PR.
+
+## Skills
+
+Skills live in `skills/`. Read the skill file before acting when a request matches:
+
+- **New meeting / call notes to process** → `skills/meeting-to-tickets.md`
+- **Drafting a SOW or proposal** → `skills/proposal-writing.md`
+- **First call / site visit prep or debrief** → `skills/discovery-call.md`
+- **Audit a project / lead for drift** (runs automatically before stage transitions) → `skills/consistency-check.md`
+- **Proactive gap-watching during conversations** → `skills/ingestion.md`
 
 ## Templates
 

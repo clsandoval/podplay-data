@@ -1,0 +1,113 @@
+# Deployment Checklist — 16 Phases
+# Each project tracks progress through these phases.
+
+phases:
+  - id: 0
+    name: Pre-Purchase & Planning
+    tasks:
+      - Confirm BOM with client
+      - Verify budget approval
+      - Set deployment timeline
+  - id: 1
+    name: Pre-Configuration (Office)
+    tasks:
+      - Unbox and label all equipment
+      - Update firmware on all devices
+      - Pre-configure UniFi network
+  - id: 2
+    name: Unboxing & Labeling
+    tasks:
+      - Verify all items received against BOM
+      - Label each device with venue + zone ID
+      - Photo-document serial numbers
+  - id: 3
+    name: Network Rack Assembly
+    tasks:
+      - Mount rack if needed
+      - Install switch(es)
+      - Install patch panel
+      - Cable management
+  - id: 4
+    name: Networking Setup (UniFi)
+    tasks:
+      - Adopt all devices in UniFi
+      - Configure VLANs
+      - Set up SSIDs (private + guest)
+      - Configure firewall rules
+  - id: 5
+    name: ISP Router Configuration
+    tasks:
+      - Connect ISP circuit
+      - Configure WAN settings
+      - Speed test baseline
+      - Set up failover if applicable
+  - id: 6
+    name: Camera Configuration
+    tasks:
+      - Mount cameras
+      - Adopt in UniFi Protect
+      - Configure recording schedules
+      - Verify coverage zones
+  - id: 7
+    name: DDNS Setup (FreeDNS)
+    tasks:
+      - Register DDNS hostname
+      - Configure on UDM/UDR
+      - Verify remote access
+  - id: 8
+    name: Mac Mini Setup
+    tasks:
+      - Install macOS and updates
+      - Install replay service
+      - Configure auto-login
+      - Test replay capture
+  - id: 9
+    name: Replay Service Deployment (V1)
+    tasks:
+      - Deploy replay app
+      - Configure camera feeds
+      - Test instant replay workflow
+      - Performance tuning
+  - id: 10
+    name: iPad Setup
+    tasks:
+      - Configure guided access
+      - Install PodPlay app
+      - Mount in kiosk enclosure
+  - id: 11
+    name: Apple TV Setup
+    tasks:
+      - Configure each Apple TV
+      - Pair with displays
+      - Install PodPlay channel
+      - Test court feed switching
+  - id: 12
+    name: Physical Installation (On-Site)
+    tasks:
+      - Run all cable drops
+      - Mount APs
+      - Mount displays
+      - Mount cameras
+      - Connect to rack
+  - id: 13
+    name: Testing & Verification
+    tasks:
+      - Full WiFi coverage test
+      - Speed test all zones
+      - Camera coverage verification
+      - Replay end-to-end test
+      - Client walkthrough
+  - id: 14
+    name: Health Monitoring Setup
+    tasks:
+      - Configure alerts in UniFi
+      - Set up uptime monitoring
+      - Document baseline metrics
+      - Train client on dashboard
+  - id: 15
+    name: Packaging & Shipping
+    tasks:
+      - Pack remaining equipment
+      - Create shipping manifest
+      - Arrange courier
+      - Confirm delivery

@@ -1,0 +1,23 @@
+# Pipeline Dashboard — Lead → Project Conversion
+# The React app reads this to render the pipeline view.
+
+type: pipeline
+stages:
+  - name: Initial Contact
+    field: stage
+    value: initial_contact
+  - name: Qualified
+    field: stage
+    value: qualified
+  - name: Proposal Sent
+    field: stage
+    value: proposal_sent
+  - name: Negotiating
+    field: stage
+    value: negotiating
+  - name: Won
+    field: stage
+    value: won
+  - name: Lost
+    field: stage
+    value: lost
