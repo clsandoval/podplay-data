@@ -4,7 +4,7 @@ name: Apple TV 4K with Ethernet
 sku: DISPLAY-APPLETV
 vendor: "[[apple]]"
 category: display
-unit_cost: 130.00
+unit_cost: 8990.00
 on_hand: 0
 allocated: 0
 on_order: 0

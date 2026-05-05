@@ -4,7 +4,7 @@ name: iPad 128GB WiFi+Cellular
 sku: DISPLAY-IPAD
 vendor: "[[apple]]"
 category: display
-unit_cost: 729.00
+unit_cost: 24990.00
 on_hand: 0
 allocated: 0
 on_order: 0

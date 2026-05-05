@@ -4,7 +4,7 @@ name: 65 inch TV Display
 sku: DISPLAY-TV-65
 vendor: ""
 category: display
-unit_cost: 500.00
+unit_cost: 36399.00
 on_hand: 0
 allocated: 0
 on_order: 0
