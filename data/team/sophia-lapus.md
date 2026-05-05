@@ -1,6 +1,6 @@
 ---
 type: team
-name: Sophia Lapuz
+name: Sophia Lapus
 role: ""
 email: ""
 phone: ""
