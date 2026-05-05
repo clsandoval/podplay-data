@@ -4,7 +4,7 @@ name: Amazon Basics 3ft HDMI Cable
 sku: DISPLAY-HDMI-3FT
 vendor: "[[amazon-basics]]"
 category: display
-unit_cost: 7.00
+unit_cost: 300.00
 on_hand: 0
 allocated: 0
 on_order: 0
