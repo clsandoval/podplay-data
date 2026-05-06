@@ -23,17 +23,34 @@ Generated from `templates/bom-pro.yaml`. Two BOM-level upgrades applied for 14 c
 
 ## Per-Court Items (× 14 Courts)
 
+### Replay
+
 | SKU | Item | Qty/Court | Total Qty | Unit Cost | Line Total |
 |-----|------|----------:|----------:|----------:|-----------:|
 | REPLAY-CAMERA-WHITE | EmpireTech Replay Camera | 1 | 14 | 120.00 | 1,680.00 |
 | REPLAY-CAMERA-JB-WHITE | EmpireTech Junction Box | 1 | 14 | 15.00 | 210.00 |
+
+### Scoreboard
+
+| SKU | Item | Qty/Court | Total Qty | Unit Cost | Line Total |
+|-----|------|----------:|----------:|----------:|-----------:|
 | REPLAY-FLIC | Flic Button | 2 | 28 | 35.00 | 980.00 |
 | REPLAY-SIGN | Aluminum Printed Sign 6x8 | 1 | 14 | 25.00 | 350.00 |
+
+### Display
+
+| SKU | Item | Qty/Court | Total Qty | Unit Cost | Line Total |
+|-----|------|----------:|----------:|----------:|-----------:|
 | DISPLAY-TV-65 | 65 inch TV Display | 1 | 14 | 36,399.00 | 509,586.00 |
 | DISPLAY-TV-MOUNT | VESA 400x300 TV Tilt Wall Mount | 1 | 14 | 30.00 | 420.00 |
 | DISPLAY-APPLETV | Apple TV 4K with Ethernet | 1 | 14 | 8,990.00 | 125,860.00 |
 | DISPLAY-HDMI-3FT | Amazon Basics 3ft HDMI Cable | 1 | 14 | 7.00 | 98.00 |
 | DISPLAY-ATV-MOUNT | HIDEit Apple TV Wall Mount | 1 | 14 | 25.00 | 350.00 |
+
+### Kiosk
+
+| SKU | Item | Qty/Court | Total Qty | Unit Cost | Line Total |
+|-----|------|----------:|----------:|----------:|-----------:|
 | DISPLAY-IPAD | iPad 128GB WiFi+Cellular | 1 | 14 | 24,990.00 | 349,860.00 |
 | DISPLAY-IPAD-POE | iPad PoE Adapter | 1 | 14 | 40.00 | 560.00 |
 | DISPLAY-IPAD-CASE | iPad Kiosk Case with Lock | 1 | 14 | 80.00 | 1,120.00 |
