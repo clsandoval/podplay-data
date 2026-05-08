@@ -11,7 +11,7 @@ tags: [pickleball, podplay-service, facility, philippines]
 ---
 
 ## Summary
-Reset Pickleball is a new pickleball facility located in Alabang (Filinvest), Philippines, with an outdoor-inspired design. The facility is operated by a friend's project and is actively planning their opening. They've expressed strong interest in PodPlay's platform to manage their operations and community.
+Reset Pickleball is a new pickleball facility located in Alabang (Filinvest), Philippines, with an outdoor-inspired design. The facility is operated by a friend's project and is actively planning their opening. **They have an existing contract with Play by Point system for core facility management** (court booking, member management, operations). PodPlay's value now centers on complementary services: Helios tournament management, leaderboards, and consulting support for community events.
 
 ## Facility Details
 - **Location:** Alabang, Filinvest, Metro Manila, Philippines
@@ -25,10 +25,14 @@ Reset Pickleball is a new pickleball facility located in Alabang (Filinvest), Ph
 - **Partnership Angle:** Discussed potential consulting support for tournaments, event management, and RacketProp community integration
 - **Next Steps:** Schedule 2nd meeting with Reset and their partners to discuss facility specifications and integration requirements
 
+## Current Tech Stack
+- **Core Operations:** Play by Point (existing contract) — booking, court scheduling, member management
+- **PodPlay Opportunity:** Helios for tournaments/leaderboards and consulting services (complementary, not replacement)
+
 ## Service Offerings Discussed
-- **Core PodPlay Platform** — booking system, court scheduling, member management
-- **Helios** — leaderboards and tournament management (primary interest)
+- **Helios** — leaderboards and tournament management (primary interest, no conflict with Play by Point)
 - **Consulting Services** — tournament organization, community building, RacketProp event integration
+- **Core PodPlay Platform** — NOT needed (Play by Point already fills this role)
 
 ## Collaboration Opportunities
 1. **Event Management & Scheduling** — Use PodPlay for their tournament scheduling and leaderboard management
