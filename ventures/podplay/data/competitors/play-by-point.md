@@ -18,10 +18,10 @@ Play by Point is a facility management platform for racquet sports (pickleball, 
 Play by Point focuses on **facility management and core operations**—the booking system, court scheduling, and member check-in layer. This is foundational infrastructure that many facilities need.
 
 ## Differentiation from Helios
-**Play by Point:** Facility operations, booking, scheduling, member management  
-**Helios (PodPlay):** Facility management for structured play (tournaments, leagues, leaderboards)
+**Play by Point:** Facility operations software — booking, scheduling, member check-in, club management  
+**Helios:** A physical pickleball facility (20-court flagship in Manila, Robinsons Land JV)
 
-These are **complementary, not competing** services. A facility can use Play by Point for core operations and Helios for organized competitive play management.
+These are separate business contexts. Play by Point is a software platform; Helios is the actual venue. PodPlay technology deploys *at* Helios (not in competition with it).
 
 ## Known Deployments
 - Reset Pickleball (signed contract)
