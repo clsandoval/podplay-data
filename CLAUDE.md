@@ -103,7 +103,7 @@ When a request matches one of these, read the skill file before acting.
 - **kebab-case filenames.** `tela-park.md`, not `TelaPark.md`.
 - **YAML frontmatter on every entity** with `type:` set.
 - **`[[wikilinks]]` for cross-references**, including across ventures (e.g., `[[helios]]` in `ventures/podplay/data/projects/` resolves to whichever Helios entity wins by filename).
-- **Brand:** Kosmas Athletic Ventures — orange `#d67e4b`, dark `#282d27`, Bebas Neue (display) + Plus Jakarta Sans (body). Logo lives at `general/company/brand/` (when added). Never recreate as SVG; use the actual file.
+- **Brand:** Kosmas Athletic Ventures — navy `#005490`, red `#E31F26`, gold `#D2AB67`. Bebas Neue (display) + Plus Jakarta Sans (body). Logo lives at `general/company/brand/` (when added). Never recreate as SVG; use the actual file.
 
 ## Branch & PR Conventions
 
