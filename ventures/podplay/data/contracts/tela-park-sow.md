@@ -6,9 +6,12 @@ contract_type: sow
 start_date: 2026-04-15
 end_date: null
 value: 0.00
-status: draft
+status: in_negotiation
+jira: KAN-2
 tags: [manila, flagship]
 ---
+
+> **Status (2026-05-08, [KAN-2](https://kosmaskavc.atlassian.net/browse/KAN-2)):** Terms aligned — 1-year term, 6-month introductory pricing, post-6mo rates expected to hold (verbal with Kim, not in contract), Magpie included in setup. Lawyer drafting; not yet circulated to Tela Park.
 
 Scope of Work for Tela Park — 14 courts total (6 Basic Plus + 8 Pro).
 

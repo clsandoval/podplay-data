@@ -1,14 +1,17 @@
 ---
 type: lead
 name: Reset Pickleball
-contact_name: ""
+contact_name: Karen Cacho
 contact_email: ""
 source: referral
-stage: initial_contact
+stage: on_hold
 estimated_value: null
 expected_close: null
-tags: [pickleball, podplay-service, facility, philippines]
+jira: CRM-2
+tags: [pickleball, podplay-service, facility, philippines, on-hold]
 ---
+
+> **Status (2026-05-11):** ON HOLD per [CRM-2](https://kosmaskavc.atlassian.net/browse/CRM-2). Client already has a Play by Point contract — no near-term PodPlay opportunity. Future angle is **consultancy for tournaments**. No follow-up meeting scheduled.
 
 ## Summary
 Reset Pickleball is a new pickleball facility located in Alabang (Filinvest), Philippines, with an outdoor-inspired design. The facility is operated by a friend's project and is actively planning their opening. They've expressed strong interest in PodPlay's platform to manage their operations and community.
