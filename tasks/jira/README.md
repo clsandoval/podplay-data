@@ -7,7 +7,7 @@ Jira is the source of truth. This directory mirrors current ticket state for in-
 ## Projects
 
 - **CRM** — Sales Pipeline (4 tickets)
-- **KAN** — Kosmas KAVC (20 tickets)
+- **KAN** — Kosmas KAVC (21 tickets)
 - **TC** — My Calendar (0 tickets)
 
 ## All tickets
@@ -38,3 +38,4 @@ Jira is the source of truth. This directory mirrors current ticket state for in-
 | [KAN-19](./KAN-19-meet-with-spanish-td.md) | KAN | Subtask | To Do | Medium | JC Golez | — | KAN-16 | Meet with Spanish TD |
 | [KAN-20](./KAN-20-pickle-crew-ph.md) | KAN | Task | Review & Alignment | Medium | — | — | — | Pickle Crew PH |
 | [KAN-21](./KAN-21-mlp-philippines.md) | KAN | Task | To Do | Medium | Richard Bachmann | — | — | MLP Philippines |
+| [KAN-22](./KAN-22-kosmas-website.md) | KAN | Task | In Progress | Medium | Carlos Sandoval | — | — | Kosmas Website |

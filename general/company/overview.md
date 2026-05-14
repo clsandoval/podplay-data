@@ -4,10 +4,10 @@ Holding company operating multiple athletic-facility-related ventures, primarily
 
 ## Brand
 
-- **Colors:** Orange `#d67e4b`, Dark `#282d27`
+- **Colors:** Navy `#005490`, Red `#E31F26`, Gold `#D2AB67`
 - **Typography:** Bebas Neue (display headings), Plus Jakarta Sans (body)
 - **Personality:** Bold, Athletic, Premium
-- **Aesthetic:** Light backgrounds, dark text, orange accents used sparingly
+- **Aesthetic:** Navy primary, red as energy accent, gold for premium highlights
 - **Anti-references:** No corporate/boring, no cheap/amateur, no techy/neon, no playful/cartoonish
 - **Logo:** `cs/monorepo/projects/kosmas/brand/logokosmasfinal.jpg` (move to `general/company/brand/` when this repo becomes canonical) — never recreate as SVG, use the actual file
 
