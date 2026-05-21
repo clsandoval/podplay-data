@@ -8,10 +8,10 @@ stage: on_hold
 estimated_value: null
 expected_close: null
 jira: CRM-2
-tags: [pickleball, podplay-service, facility, philippines, on-hold]
+tags: [pickleball, podplay-service, facility, philippines, on-hold, nurture]
 ---
 
-> **Status (2026-05-11):** ON HOLD per [CRM-2](https://kosmaskavc.atlassian.net/browse/CRM-2). Client already has a Play by Point contract — no near-term PodPlay opportunity. Future angle is **consultancy for tournaments**. No follow-up meeting scheduled.
+> **Status (2026-05-21):** NURTURE in Jira per [CRM-2](https://kosmaskavc.atlassian.net/browse/CRM-2) (priority Low). Client already has a Play by Point contract — no near-term PodPlay opportunity. Future angle is **consultancy for tournaments**. No follow-up meeting scheduled.
 
 ## Summary
 Reset Pickleball is a new pickleball facility located in Alabang (Filinvest), Philippines, with an outdoor-inspired design. The facility is operated by a friend's project and is actively planning their opening. They've expressed strong interest in PodPlay's platform to manage their operations and community.

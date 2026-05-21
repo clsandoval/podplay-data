@@ -80,3 +80,9 @@ Tela Park has agreed to be a PodPlay demo site in the Philippines.
 - Site survey done. Cabling complete.
 - Blocked on: contract signature + Kosmas go-signal for environment spin-up
 - **2026-05-04:** Client has received lab network hardware (APC UPS, Unifi 24-port switch, Unifi UDM gateway) — all client-sourced as expected. Still pending: iPad PoE adapters. Replay camera: planning to order 1 unit as a test before full order.
+- **2026-05-21 (per [KAN-2](https://kosmaskavc.atlassian.net/browse/KAN-2), Waiting/Blocked, due 2026-05-22):** Contract terms aligned:
+  - 1-year term
+  - Introductory pricing for first 6 months
+  - Pricing after 6 months may be reviewed (likely unchanged per Kim — verbal-only, not in contract)
+  - Magpie included in setup
+  - **Open item:** Magpie transaction fees — QRPH 4.5%, Credit Card 6.5%, PodCredits still being finalized

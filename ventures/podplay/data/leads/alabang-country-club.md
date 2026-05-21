@@ -8,10 +8,10 @@ stage: on_hold
 estimated_value: null
 expected_close: null
 jira: CRM-3
-tags: [manila, alabang, philippines, on-hold]
+tags: [manila, alabang, philippines, on-hold, nurture]
 ---
 
-> **Status (2026-05-12):** ON HOLD per [CRM-3](https://kosmaskavc.atlassian.net/browse/CRM-3). ACC has already adopted Play by Point. We will revisit later to offer PodPlay for tennis and other sports.
+> **Status (2026-05-21):** NURTURE in Jira per [CRM-3](https://kosmaskavc.atlassian.net/browse/CRM-3). ACC has adopted Play by Point. We will revisit later to offer PodPlay for tennis and other sports.
 
 ## Venue
 - **Location:** Ayala Alabang Village
