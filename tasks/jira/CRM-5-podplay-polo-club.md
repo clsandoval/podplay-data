@@ -6,12 +6,12 @@ type: jira-issue
 issue_type: Customer
 status: DEMO SCHEDULED
 priority: Medium
-assignee: 
+assignee: Avvy Lapus
 reporter: Avvy Lapus
 labels: []
 created: 2026-05-20T14:36:21.825+0800
-updated: 2026-05-20T15:26:03.356+0800
-synced_at: 2026-05-21
+updated: 2026-05-22T11:34:05.305+0800
+synced_at: 2026-05-28
 ---
 
 # CRM-5: Podplay - Polo CLub
