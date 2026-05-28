@@ -4,14 +4,14 @@ jira_url: https://kosmaskavc.atlassian.net/browse/KAN-24
 project: KAN
 type: jira-issue
 issue_type: Task
-status: This Week
+status: COMPLETED
 priority: Medium
 assignee: Richard Bachmann
 reporter: Richard Bachmann
 labels: []
 created: 2026-05-17T18:44:02.133+0800
-updated: 2026-05-17T19:24:13.508+0800
-synced_at: 2026-05-21
+updated: 2026-05-24T18:12:35.346+0800
+synced_at: 2026-05-28
 ---
 
 # KAN-24: Send Formal Notice to PPF
@@ -22,4 +22,6 @@ Officially inform PPF that after internal discussions, we have decided to move f
 
 ## Comments
 
-_(no comments)_
+### Richard Bachmann — 2026-05-24
+
+We had already emailed the letter to PPF, so this task is considered completed. Mr. Kim directly messaged Chairman Pato regarding assistance for the event, and after receiving a response, a meeting was arranged to take place following the Palarong Pambansa Opening.
