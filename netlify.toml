@@ -5,3 +5,20 @@
   command = ""
   # Only redeploy when the site itself changes, not on every data/task sync commit.
   ignore = "git diff --quiet $CACHED_COMMIT_REF $COMMIT_REF -- general/company/website/site netlify.toml"
+
+# Images change rarely; cache for a week, serve stale while revalidating.
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=604800, stale-while-revalidate=86400"
+
+# Code files: cache briefly so fixes propagate fast.
+[[headers]]
+  for = "/*.jsx"
+  [headers.values]
+    Cache-Control = "public, max-age=300, must-revalidate"
+
+[[headers]]
+  for = "/styles.css"
+  [headers.values]
+    Cache-Control = "public, max-age=300, must-revalidate"
