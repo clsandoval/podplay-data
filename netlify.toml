@@ -1,0 +1,7 @@
+# Kosmas marketing site (KAN-22) — plain static site, no build step.
+# Netlify publishes only general/company/website/site/ ; working/ artifacts stay private.
+[build]
+  publish = "general/company/website/site"
+  command = ""
+  # Only redeploy when the site itself changes, not on every data/task sync commit.
+  ignore = "git diff --quiet $CACHED_COMMIT_REF $COMMIT_REF -- general/company/website/site netlify.toml"
