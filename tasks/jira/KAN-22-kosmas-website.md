@@ -73,6 +73,10 @@ Follow-up- [ ] Source portfolio card images: Helios, Atleta63, PodPlay
 
 - [ ] Collect team feedback pass
 
+## Repo Notes (local, not synced to Jira)
+
+- **2026-06-03:** Website source imported into this repo at `general/company/website/` (`site/` = Netlify publish dir, `working/` = non-deployed artifacts). Root `netlify.toml` configures the deploy. Live at https://kosmas.com.ph/ (Netlify site `lighthearted-tapioca-ca567a`). Once the Netlify site is linked to this GitHub repo, pushes to `main` touching `site/` auto-redeploy.
+
 ## Comments
 
 ### Marco Van Basug — 2026-05-15

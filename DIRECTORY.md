@@ -4,6 +4,7 @@
 ```
 podplay-data/
 ├── CLAUDE.md                 # Task tracking & context (what we're working on)
+├── netlify.toml              # Netlify config for the Kosmas website (publishes general/company/website/site/)
 ├── .env.example              # Environment variables template
 ├── .gitignore                # Git ignore rules
 ├── general/                  # Kosmas company-wide data
@@ -18,6 +19,10 @@ podplay-data/
 
 ### `general/company/`
 - `overview.md` - Company overview & context
+- `website/` - Kosmas marketing site source (KAN-22; live at https://kosmas.com.ph/)
+  - `site/` - what Netlify publishes (pushes to main auto-deploy)
+  - `working/` - non-deployed artifacts (image prompts, brand PDF, QA screenshots)
+  - See `general/company/website/README.md`
 
 ### `general/people/`
 Team members (12 people documented):

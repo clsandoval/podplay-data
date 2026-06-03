@@ -1,0 +1,757 @@
+/* ============================================================
+   KOSMAS ATHLETIC VENTURES — Visual System
+   ============================================================ */
+
+:root {
+  /* Brand palette — official Kosmas Brand Book 2026 */
+  --kosmas-blue: #005490;
+  --kosmas-blue-deep: #003C68;
+  --kosmas-blue-ink: #002A48;
+  --kosmas-red: #E31F26;
+  --kosmas-red-deep: #B8161D;
+  --kosmas-gold: #D2AB67;
+  --kosmas-gold-soft: #E2C28F;
+
+  /* Tints (per brand book — "tints may be used") */
+  --blue-tint-1: #E5EEF5;
+  --blue-tint-2: #B3CCDF;
+  --red-tint-1: #FCE7E8;
+  --gold-tint-1: #F4E9D5;
+
+  /* Neutrals — text/ink is now drawn from brand blue family, not generic black */
+  --bone: #FFFFFF;
+  --bone-2: #F4F2EC;
+  --paper: #FAFAF8;
+  --ink: #002A48;            /* was #1A1A1A — now deepest brand blue */
+  --ink-2: #3A6A8A;          /* was #4A4A4A — now mid brand blue, supports hierarchy */
+  --line: #DCE5EC;           /* was #E4E2DC — cool, sits in the blue family */
+  --line-dark: rgba(255, 255, 255, 0.16);
+
+  /* Type — Source Sans is the brand font for everything */
+  --font-display: "Source Sans 3", "Source Sans Pro", system-ui, sans-serif;
+  --font-body: "Source Sans 3", "Source Sans Pro", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+
+  /* Spacing rhythm */
+  --pad-x: clamp(20px, 4vw, 64px);
+  --pad-y: clamp(64px, 9vw, 140px);
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background: var(--bone);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a { color: inherit; text-decoration: none; }
+button { font-family: inherit; cursor: pointer; border: none; background: none; color: inherit; }
+img { max-width: 100%; display: block; }
+
+/* ---------- Type scale (Source Sans — light at display sizes per brand book) ---------- */
+.display, h1, h2, h3 {
+  font-family: var(--font-display);
+  font-weight: 300;
+  letter-spacing: -0.01em;
+  line-height: 1.05;
+  text-transform: none;
+  text-wrap: balance;
+}
+
+.display-xl { font-size: clamp(40px, 6vw, 104px); font-weight: 300; letter-spacing: -0.025em; line-height: 1.0; }
+.display-l  { font-size: clamp(32px, 4.2vw, 68px); font-weight: 300; letter-spacing: -0.02em; line-height: 1.05; }
+.display-m  { font-size: clamp(24px, 3vw, 44px); font-weight: 300; letter-spacing: -0.015em; line-height: 1.1; }
+.display-s  { font-size: clamp(20px, 2.2vw, 30px); font-weight: 400; line-height: 1.15; }
+
+.eyebrow {
+  font-family: var(--font-display);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--kosmas-red);
+}
+.eyebrow.on-light { color: var(--kosmas-red); }
+.eyebrow .dot { display: inline-block; width: 6px; height: 6px; background: currentColor; margin: 0 10px 2px 0; vertical-align: middle; }
+
+/* Section-label eyebrows (the "■ Label" pattern above every headline) — removed sitewide.
+   Plain .eyebrow without a dot (stat labels, info-row keys) is preserved. */
+.eyebrow:has(.dot) { display: none; }
+
+.lede { font-size: clamp(18px, 1.5vw, 22px); line-height: 1.5; max-width: 60ch; text-wrap: pretty; font-weight: 300; }
+.body-l { font-size: 17px; line-height: 1.6; font-weight: 300; }
+.body-m { font-size: 15px; line-height: 1.6; font-weight: 300; }
+.body-s { font-size: 13px; line-height: 1.5; font-weight: 400; }
+
+/* Emphasis follows brand book: subheads/highlighted = heavier weight */
+strong, b, .emph { font-weight: 600; }
+
+/* ---------- Layout primitives ---------- */
+.container {
+  width: 100%;
+  max-width: 1480px;
+  margin: 0 auto;
+  padding-left: var(--pad-x);
+  padding-right: var(--pad-x);
+}
+.section { padding-top: var(--pad-y); padding-bottom: var(--pad-y); }
+.section--tight { padding-top: clamp(48px, 6vw, 96px); padding-bottom: clamp(48px, 6vw, 96px); }
+
+.hr {
+  height: 1px;
+  background: var(--line);
+  width: 100%;
+}
+.hr--dark { background: var(--line-dark); }
+
+/* ---------- Buttons — brand book uses red wedge with diagonal cut, no chiseled corners ---------- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 22px;
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 13px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  background: var(--ink);
+  color: var(--bone);
+  clip-path: polygon(0 0, 100% 0, calc(100% - 14px) 100%, 0 100%);
+  padding-right: 36px;
+  transition: transform 0.15s ease, background 0.15s ease;
+}
+.btn:hover { transform: translate(-1px, -1px); }
+.btn--red    { background: var(--kosmas-red); color: #fff; }
+.btn--red:hover { background: var(--kosmas-red-deep); }
+.btn--blue   { background: var(--kosmas-blue); color: #fff; }
+.btn--blue:hover { background: var(--kosmas-blue-deep); }
+.btn--ghost  { background: transparent; color: var(--ink); border: 1.5px solid var(--ink); clip-path: none; padding-right: 22px; }
+.btn--ghost:hover { background: var(--ink); color: var(--bone); }
+.btn--ghost-light { background: transparent; color: var(--bone); border: 1.5px solid rgba(255,255,255,0.4); clip-path: none; padding-right: 22px; }
+.btn--ghost-light:hover { background: var(--bone); color: var(--ink); border-color: var(--bone); }
+
+.arrow {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  position: relative;
+}
+.arrow::before, .arrow::after {
+  content: "";
+  position: absolute;
+  background: currentColor;
+}
+.arrow::before { left: 0; top: 50%; height: 1.5px; width: 100%; transform: translateY(-50%); }
+.arrow::after { right: 0; top: 50%; width: 8px; height: 8px; border-top: 1.5px solid currentColor; border-right: 1.5px solid currentColor; transform: translateY(-50%) rotate(45deg); background: transparent; }
+
+/* ---------- Surfaces ---------- */
+.bg-bone { background: var(--bone); color: var(--ink); }
+.bg-paper { background: var(--paper); color: var(--ink); }
+.bg-blue { background: var(--kosmas-blue); color: var(--bone); }
+.bg-blue-deep { background: var(--kosmas-blue-deep); color: var(--bone); }
+.bg-ink { background: var(--ink); color: var(--bone); }
+.bg-ink-deep { background: var(--kosmas-blue-ink); color: var(--bone); }
+
+/* ---------- Image placeholder ---------- */
+.imgph {
+  position: relative;
+  background:
+    repeating-linear-gradient(
+      135deg,
+      rgba(0, 84, 144, 0.05) 0,
+      rgba(0, 84, 144, 0.05) 1px,
+      transparent 1px,
+      transparent 9px
+    ),
+    var(--bone-2);
+  overflow: hidden;
+  border: 1px solid var(--line);
+}
+.imgph--dark {
+  background:
+    repeating-linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.04) 0,
+      rgba(255, 255, 255, 0.04) 1px,
+      transparent 1px,
+      transparent 9px
+    ),
+    var(--kosmas-blue-deep);
+  border: 1px solid var(--line-dark);
+  color: rgba(255,255,255,0.6);
+}
+.imgph .imgph__label {
+  position: absolute;
+  bottom: 14px;
+  left: 14px;
+  right: 14px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(0, 42, 72, 0.6);
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+.imgph--dark .imgph__label { color: rgba(255,255,255,0.6); }
+.imgph .imgph__label::before {
+  content: "";
+  width: 6px;
+  height: 6px;
+  background: currentColor;
+  transform: rotate(45deg);
+  flex-shrink: 0;
+}
+.imgph .imgph__corner {
+  position: absolute;
+  top: 12px; right: 12px;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  color: rgba(0, 42, 72, 0.45);
+}
+.imgph--dark .imgph__corner { color: rgba(255,255,255,0.4); }
+
+/* When ImgPh has a real image, suppress the placeholder pattern + add a
+   readability gradient under any overlay caption */
+.imgph--filled { background-color: #0b0d10; border-color: rgba(255,255,255,0.08); }
+.imgph--filled::after {
+  content: "";
+  position: absolute;
+  left: 0; right: 0; bottom: 0;
+  height: 40%;
+  background: linear-gradient(180deg, transparent 0%, rgba(0,0,0,0.55) 100%);
+  pointer-events: none;
+}
+.imgph .imgph__corner--over,
+.imgph .imgph__label--over {
+  color: rgba(255,255,255,0.85);
+  z-index: 1;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.6);
+}
+
+/* angled corner clips — echo brand book's diagonal cut motif */
+.clip-tl { clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%, 0 32px); }
+.clip-br { clip-path: polygon(0 0, 100% 0, 100% calc(100% - 32px), calc(100% - 32px) 100%, 0 100%); }
+.clip-bl { clip-path: polygon(0 0, 100% 0, 100% 100%, 32px 100%, 0 calc(100% - 32px)); }
+
+/* The signature brand-book wedge: red angled cut top-left of page */
+.brand-corner {
+  position: absolute;
+  top: 0; left: 0;
+  width: 120px; height: 90px;
+  background: var(--kosmas-red);
+  clip-path: polygon(0 0, 100% 0, 0 100%);
+  pointer-events: none;
+  z-index: 1;
+}
+.brand-corner--small { width: 80px; height: 60px; }
+
+/* Blue diagonal section divider — like the brand book footers */
+.blue-wedge {
+  position: relative;
+  background: var(--kosmas-blue);
+  height: 80px;
+  clip-path: polygon(0 100%, 100% 100%, 100% 30%, 0 70%);
+}
+
+/* ---------- Marquee ---------- */
+.marquee {
+  overflow: hidden;
+  display: flex;
+  white-space: nowrap;
+  border-top: 1px solid currentColor;
+  border-bottom: 1px solid currentColor;
+  padding: 18px 0;
+}
+.marquee__track {
+  display: flex;
+  gap: 56px;
+  animation: marquee 40s linear infinite;
+  flex-shrink: 0;
+  padding-right: 56px;
+  align-items: center;
+}
+.marquee__item {
+  font-family: var(--font-display);
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  display: inline-flex;
+  align-items: center;
+  gap: 56px;
+}
+.marquee__item .sep {
+  display: inline-block;
+  width: 1px; height: 16px;
+  opacity: 0.45;
+  background: currentColor;
+}
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+/* ---------- Header / Nav ---------- */
+.kav-header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: var(--bone);
+  border-bottom: 1px solid var(--line);
+  transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+.kav-header.is-dark {
+  background: var(--ink);
+  color: var(--bone);
+  border-bottom-color: var(--line-dark);
+}
+.kav-header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 76px;
+  gap: 32px;
+}
+.kav-logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+}
+.kav-logo img { height: 36px; width: auto; }
+.kav-nav { display: flex; gap: 28px; align-items: center; }
+.kav-nav a {
+  font-family: var(--font-display);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  position: relative;
+  padding: 6px 0;
+}
+.kav-nav a::after {
+  content: "";
+  position: absolute;
+  left: 0; bottom: 0;
+  width: 0;
+  height: 2px;
+  background: var(--kosmas-red);
+  transition: width 0.2s ease;
+}
+.kav-nav a:hover::after, .kav-nav a.active::after { width: 100%; }
+
+/* Nav submenu (hover-revealed) */
+.kav-nav__group {
+  position: relative;
+  display: inline-block;
+}
+.kav-nav__group > a {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+.kav-nav__caret {
+  display: inline-flex;
+  align-items: center;
+  color: currentColor;
+  opacity: 0.75;
+  transition: transform 0.18s ease, opacity 0.18s ease;
+}
+.kav-nav__group:hover .kav-nav__caret {
+  transform: rotate(180deg);
+  opacity: 1;
+}
+.kav-submenu {
+  position: absolute;
+  top: 100%;
+  left: -24px;
+  min-width: 280px;
+  background: var(--bone);
+  color: var(--ink);
+  border: 1px solid var(--line);
+  box-shadow: 0 24px 48px -10px rgba(0, 42, 72, 0.18);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(4px);
+  transition: opacity 0.16s ease, transform 0.16s ease, visibility 0.16s ease;
+  z-index: 60;
+  display: flex;
+  flex-direction: column;
+}
+.kav-header.is-dark .kav-submenu {
+  background: var(--ink);
+  color: var(--bone);
+  border-color: var(--line-dark);
+  box-shadow: 0 24px 48px -10px rgba(0, 0, 0, 0.45);
+}
+.kav-submenu.open { opacity: 1; visibility: visible; transform: translateY(0); }
+.kav-submenu a {
+  display: block;
+  padding: 16px 22px;
+  text-transform: none;
+  letter-spacing: 0;
+  font-weight: 300;
+  border-bottom: 1px solid var(--line);
+  transition: background 0.15s ease;
+  white-space: nowrap;
+}
+.kav-header.is-dark .kav-submenu a { border-bottom-color: var(--line-dark); }
+.kav-submenu a:last-child { border-bottom: none; }
+.kav-submenu a:hover { background: var(--bone-2); }
+.kav-header.is-dark .kav-submenu a:hover { background: rgba(255,255,255,0.05); }
+.kav-submenu a::after { display: none; }
+.kav-submenu__title {
+  font-family: var(--font-display);
+  font-size: 16px;
+  font-weight: 300;
+  letter-spacing: -0.005em;
+  line-height: 1.3;
+  color: inherit;
+}
+.kav-submenu__title strong { font-weight: 600; color: var(--kosmas-red); }
+.kav-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 30px 10px 16px;
+  font-family: var(--font-display);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  background: var(--kosmas-red);
+  color: #fff;
+  clip-path: polygon(0 0, 100% 0, calc(100% - 12px) 100%, 0 100%);
+  transition: background 0.15s ease;
+}
+.kav-cta:hover { background: var(--kosmas-red-deep); }
+
+/* mobile nav toggle */
+.kav-burger {
+  display: none;
+  width: 44px;
+  height: 44px;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border: 1px solid var(--line);
+  color: var(--ink);
+  cursor: pointer;
+  margin-left: 8px;
+  transition: background 0.15s ease, border-color 0.15s ease;
+}
+.kav-header.is-dark .kav-burger { border-color: rgba(255,255,255,0.3); color: var(--bone); }
+.kav-burger:hover { background: var(--bone-2); }
+.kav-header.is-dark .kav-burger:hover { background: rgba(255,255,255,0.06); }
+.kav-burger__bars {
+  position: relative;
+  width: 18px;
+  height: 12px;
+}
+.kav-burger__bars::before,
+.kav-burger__bars::after,
+.kav-burger__bars span {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 1.5px;
+  background: currentColor;
+  transition: transform 0.22s ease, opacity 0.18s ease, top 0.22s ease;
+}
+.kav-burger__bars::before { top: 0; }
+.kav-burger__bars span    { top: 50%; transform: translateY(-50%); }
+.kav-burger__bars::after  { top: 100%; transform: translateY(-100%); }
+.kav-burger[aria-expanded="true"] .kav-burger__bars::before { top: 50%; transform: translateY(-50%) rotate(45deg); }
+.kav-burger[aria-expanded="true"] .kav-burger__bars span    { opacity: 0; }
+.kav-burger[aria-expanded="true"] .kav-burger__bars::after  { top: 50%; transform: translateY(-50%) rotate(-45deg); }
+
+/* Mobile drawer */
+.kav-drawer {
+  position: fixed;
+  inset: 0;
+  background: var(--ink);
+  color: var(--bone);
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  padding: 24px var(--pad-x) 48px;
+  transform: translateX(100%);
+  transition: transform 0.28s ease;
+  overflow-y: auto;
+}
+.kav-drawer.open { transform: translateX(0); }
+.kav-drawer__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 32px;
+  min-height: 52px;
+}
+.kav-drawer__close {
+  width: 44px; height: 44px;
+  border: 1px solid rgba(255,255,255,0.3);
+  background: transparent;
+  color: var(--bone);
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.kav-drawer nav {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-top: 16px;
+}
+.kav-drawer nav > a,
+.kav-drawer__group > .kav-drawer__trigger {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 18px 0;
+  border-bottom: 1px solid var(--line-dark);
+  background: transparent;
+  color: var(--bone);
+  font-family: var(--font-display);
+  font-size: 22px;
+  font-weight: 300;
+  letter-spacing: -0.01em;
+  text-align: left;
+  cursor: pointer;
+}
+.kav-drawer nav > a.active { color: var(--kosmas-red); }
+.kav-drawer__group { display: flex; flex-direction: column; }
+.kav-drawer__sub {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.28s ease;
+}
+.kav-drawer__group.open .kav-drawer__sub { max-height: 480px; }
+.kav-drawer__sub a {
+  padding: 14px 0 14px 18px;
+  border-bottom: 1px solid var(--line-dark);
+  font-family: var(--font-display);
+  font-size: 15px;
+  font-weight: 300;
+  color: rgba(255,255,255,0.78);
+  letter-spacing: 0;
+  text-transform: none;
+}
+.kav-drawer__sub a strong { color: var(--kosmas-gold); font-weight: 600; }
+.kav-drawer__caret {
+  width: 14px; height: 14px;
+  display: inline-flex; align-items: center; justify-content: center;
+  color: rgba(255,255,255,0.6);
+  transition: transform 0.22s ease;
+}
+.kav-drawer__group.open .kav-drawer__caret { transform: rotate(180deg); color: var(--kosmas-gold); }
+.kav-drawer__cta { margin-top: 32px; align-self: flex-start; }
+
+@media (max-width: 960px) {
+  .kav-nav { display: none; }
+  .kav-header__inner { height: 64px; }
+  .kav-logo img { height: 28px; }
+  .kav-burger { display: inline-flex; }
+  /* Header CTA pill hides on phones — drawer is the action surface */
+  .kav-header__inner > .kav-cta { display: none; }
+}
+@media (min-width: 961px) {
+  .kav-drawer { display: none; }
+}
+
+/* ---------- Footer ---------- */
+.kav-footer {
+  background: var(--ink);
+  color: var(--bone);
+  padding: 80px 0 32px;
+}
+.kav-footer__grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 48px;
+  padding-bottom: 56px;
+  border-bottom: 1px solid var(--line-dark);
+}
+.kav-footer h4 {
+  font-family: var(--font-display);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--kosmas-gold);
+  margin: 0 0 18px;
+}
+.kav-footer ul { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 10px; }
+.kav-footer ul a { color: rgba(255,255,255,0.75); font-size: 14px; transition: color 0.15s ease; }
+.kav-footer ul a:hover { color: var(--bone); }
+.kav-footer__bottom {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 32px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.5);
+}
+.kav-footer__logo { display: flex; align-items: center; gap: 12px; margin-bottom: 24px; }
+.kav-footer__logo img { height: 40px; filter: brightness(1.05); }
+@media (max-width: 800px) {
+  .kav-footer__grid { grid-template-columns: 1fr 1fr; }
+  .kav-footer__bottom { flex-direction: column; gap: 12px; }
+}
+
+/* ---------- Generic grid helpers ---------- */
+.grid { display: grid; gap: 24px; }
+.grid-2 { grid-template-columns: repeat(2, 1fr); }
+.grid-3 { grid-template-columns: repeat(3, 1fr); }
+.grid-4 { grid-template-columns: repeat(4, 1fr); }
+.grid-12 { grid-template-columns: repeat(12, 1fr); }
+@media (max-width: 800px) {
+  .grid-3, .grid-4 { grid-template-columns: 1fr; }
+  .grid-2 { grid-template-columns: 1fr; }
+}
+
+/* fade-in on view */
+.fade-in {
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+.fade-in.in { opacity: 1; transform: none; }
+
+/* selection */
+::selection { background: var(--kosmas-red); color: #fff; }
+
+/* ============================================================
+   RESPONSIVE OVERRIDES
+   The desktop layouts use `<div class="grid grid-12">` with children
+   styled inline (gridColumn: "span N"). Inline styles win over normal
+   CSS, so the only way to collapse them on mobile is `!important`.
+   ============================================================ */
+
+/* Tablet: ease grid-4 / grid-3 to 2-up before fully stacking */
+@media (max-width: 1080px) {
+  .grid-4 { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 900px) {
+  /* Type scale tightens slightly so display-xl doesn't overrun */
+  .display-xl { font-size: clamp(38px, 9vw, 72px); }
+  .display-l  { font-size: clamp(30px, 7vw, 52px); }
+  .display-m  { font-size: clamp(24px, 5.5vw, 36px); }
+  .lede       { font-size: 17px; }
+}
+
+@media (max-width: 800px) {
+  /* All grid-3 / grid-4 / grid-2 collapse to single column.
+     Already in base CSS but reinforce here. */
+  .grid-2, .grid-3, .grid-4 { grid-template-columns: 1fr !important; }
+
+  /* Design/Activate/Operate pillars: reset desktop's asymmetric left-padding
+     and vertical column dividers so stacked cells align flush left with a
+     clean top divider between each. */
+  .pillar-cell { padding: 24px 0 !important; border-right: none !important; border-top: 1px solid var(--line); }
+  .pillar-cell:first-child { border-top: none; }
+
+  /* The 12-col grid is what gets used with inline span declarations.
+     Collapse to one column AND force every child to fill it,
+     overriding inline `style={{ gridColumn: "span N" }}`. */
+  .grid-12 { grid-template-columns: 1fr !important; gap: 32px !important; }
+  .grid-12 > * { grid-column: 1 / -1 !important; min-width: 0 !important; }
+
+  /* Heroes: tighten vertical padding */
+  .section { padding-top: clamp(48px, 11vw, 96px); padding-bottom: clamp(48px, 11vw, 96px); }
+
+  /* Container side padding holds at the clamp's floor (20px), good */
+
+  /* Stats: drop oversized display values to fit two-up cleanly */
+  .display.stat-value, .grid-4 .display { font-size: clamp(44px, 10vw, 72px) !important; }
+
+  /* Section header rows that use justify-content: space-between
+     need their action buttons to drop below the title */
+  .section-header-row { flex-direction: column !important; align-items: flex-start !important; }
+
+  /* CTA strip — title + button stack neatly (already wraps, but constrain) */
+  .bg-blue .display-m, .bg-blue h2 { max-width: 100% !important; }
+
+  /* Forms: 2-col field grids stack */
+  form .grid-2 { grid-template-columns: 1fr !important; }
+
+  /* Buttons: ensure they're tap-friendly */
+  .btn { padding-top: 16px; padding-bottom: 16px; min-height: 48px; }
+  .kav-cta { padding-top: 12px; padding-bottom: 12px; min-height: 44px; }
+
+  /* InfoRow: stack key above value instead of fighting in a 120px column */
+  .info-row { grid-template-columns: 1fr !important; gap: 6px !important; }
+
+  /* Project cards on dark background — tighten image height */
+  .imgph[style*="height: 520px"],
+  .imgph[style*="height: 540px"],
+  .imgph[style*="height: 560px"] {
+    height: 280px !important;
+  }
+  .imgph[style*="height: 420px"] { height: 240px !important; }
+  .imgph[style*="height: 300px"] { height: 220px !important; }
+
+  /* Helios book schedule — horizontal scroll container */
+  .helios-schedule-scroll {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    margin: 0 calc(-1 * var(--pad-x)); /* let it bleed to viewport edge */
+    padding: 0 var(--pad-x);
+    min-width: 0;
+    max-width: 100%;
+  }
+  .helios-schedule-scroll > * { min-width: 560px; }
+
+  /* Marquee: slow down + smaller text */
+  .marquee__item { font-size: 14px; gap: 32px; }
+  .marquee__item .sep { width: 1px; height: 12px; }
+
+  /* AudienceDropdown two-tile selector stacks */
+  .audience-dropdown { grid-template-columns: 1fr !important; }
+  .audience-dropdown > button + button { border-left: none !important; border-top: 1px solid var(--line-dark); }
+
+  /* Submenu styles inside drawer */
+  .kav-submenu { display: none !important; } /* not used on mobile — drawer replaces it */
+
+  /* Helios sub-nav "Section:" button row */
+  .helios-section-bar { width: 100%; }
+  .helios-section-bar button { width: 100%; justify-content: space-between; }
+  .helios-section-bar ul { width: 100%; }
+}
+
+@media (max-width: 560px) {
+  /* Footer: collapse to a single column entirely */
+  .kav-footer__grid { grid-template-columns: 1fr !important; gap: 36px !important; }
+
+  /* Display sizes step down once more on small phones */
+  .display-xl { font-size: clamp(34px, 10vw, 56px); }
+
+  /* Stat numbers shouldn't dominate */
+  .grid-4 .display { font-size: clamp(40px, 12vw, 56px) !important; }
+
+  /* Buttons go full-width when they're in a hero action row */
+  .hero-actions .btn { width: 100%; justify-content: center; }
+  .hero-actions { gap: 10px !important; width: 100%; }
+}
+
+/* Lock body scroll while the drawer is open */
+body.kav-drawer-open { overflow: hidden; }
