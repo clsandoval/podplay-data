@@ -130,8 +130,8 @@ function Home({ go, density }) {
               code="01 / Pickleball"
               title="Helios"
               kicker="Joint Venture · Robinsons Land"
-              copy="A 14-court professional-grade complex in Bridgetowne, leading toward a 6-story flagship arena in 2028."
-              imgLabel="flagship · exterior · bridgetowne"
+              copy="Helios Beta — a 14-court professional-grade complex in Bridgetowne, opening soon — leads toward the 10-story, 20-court flagship arena in 2028."
+              imgLabel="helios flagship · concept render · bridgetowne"
               src="assets/helios-exterior-card.jpg"
               go={() => go("helios")}
               accent="var(--kosmas-red)"
@@ -171,7 +171,7 @@ function Home({ go, density }) {
           </Reveal>
           <Reveal delay={120}>
             <div className="grid grid-4" style={{ marginTop: 72, gap: 32 }}>
-              <Stat value="14" label="Pro courts · Bridgetowne" suffix="" />
+              <Stat value="14" label="Pro courts · Helios Beta" suffix="" />
               <Stat value="1" label="FIFA Quality Pro pitch" suffix=" of 1" color="var(--kosmas-gold)" />
               <Stat value="SE" label="PodPlay distribution" suffix=" Asia" color="var(--kosmas-blue)" />
               <Stat value="2028" label="Helios flagship arena" suffix="" />
@@ -229,7 +229,7 @@ function About({ go }) {
       n: "01",
       t: "Facility Development",
       d: "State-of-the-art sports complexes, wellness centers, and recreational hubs across the Philippines — multi-court sports halls, outdoor fields, fitness centers, wellness lounges, and specialized training zones.",
-      label: "facility · multi-court hall · interior",
+      label: "facility · concept render · helios flagship",
       img: "assets/helios-centre-court.jpg",
     },
     {
@@ -243,7 +243,7 @@ function About({ go }) {
       n: "03",
       t: "Sports Leagues & Community Programs",
       d: "Competitive leagues and tournaments in basketball, volleyball, pickleball, and football — across youth, adult, corporate, and elite divisions. Raising the standard for grassroots sports.",
-      label: "league night · pickleball · helios",
+      label: "helios flagship · concept render",
       img: "assets/helios-exterior.jpg",
     },
     {
