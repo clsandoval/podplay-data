@@ -10,7 +10,7 @@ function Projects({ go }) {
           <Reveal>
             <div className="eyebrow on-light"><span className="dot" />Portfolio</div>
             <h1 className="display display-l" style={{ marginTop: 18, maxWidth: "18ch" }}>
-              Three flagships shaping <span style={{ color: "var(--kosmas-red)", fontWeight: 600 }}>Filipino sport.</span>
+              Four projects shaping <span style={{ color: "var(--kosmas-red)", fontWeight: 600 }}>Filipino sport.</span>
             </h1>
           </Reveal>
         </div>
@@ -20,35 +20,46 @@ function Projects({ go }) {
         <div className="container" style={{ display: "flex", flexDirection: "column", gap: 24 }}>
           <BigProjectRow
             n="01"
-            kicker="Pickleball · Joint Venture · Robinsons Land"
-            title="Helios"
+            kicker="Pickleball · Opening Soon · Bridgetowne"
+            title="Helios Beta"
             tag="The chic, premium face of Philippine pickleball."
-            copy="A 14-court professional-grade complex in Bridgetowne — full hospitality, dedicated centre court, café and pro shop. The temporary residency is a runway to a 6-story flagship arena in 2028."
-            label="exterior · flagship render · bridgetowne"
+            copy="A 14-court professional-grade complex in Bridgetowne — full hospitality, dedicated centre court, café and pro shop. Opening soon as the runway to the Helios flagship arena."
+            label="helios beta · imagery coming soon"
             accent="var(--kosmas-red)"
-            src="assets/helios-exterior-card.jpg"
             onGo={() => go("helios")}
           />
           <BigProjectRow
             n="02"
+            kicker="Pickleball · Joint Venture · Robinsons Land"
+            title="Helios"
+            tag="A 10-story flagship arena. The future home of Philippine pickleball."
+            copy="Rising at Bridgetowne in 2028 — 20 championship courts across a 10-story flagship arena, the permanent home of the Helios brand and the showcase venue for Philippine pickleball."
+            label="helios flagship · concept render · bridgetowne"
+            accent="var(--kosmas-red)"
+            reverse
+            src="assets/helios-exterior-card.jpg"
+            onGo={() => go("helios")}
+          />
+          <BigProjectRow
+            n="03"
             kicker="Football · FIFA Quality Pro"
             title="Atleta63"
             tag="The only FIFA Quality Pro pitch in the Philippines."
             copy="An all-weather, professional-grade stage at Bridgetowne that eliminates seasonal unpredictability for elite performance. Bar and recreation built into the experience."
             label="match day · atleta63"
             accent="var(--kosmas-gold)"
-            reverse
             src="assets/atleta63-pitch-card.jpg"
             onGo={() => go("atleta63")}
           />
           <BigProjectRow
-            n="03"
+            n="04"
             kicker="Technology · Exclusive Asian distribution"
             title="PodPlay"
             tag="The operating system of our venues."
             copy="An integrated booking and instant-replay platform — cloud reservations plus on-premises IP cameras and AI. Our primary competitive moat for the Filipino market."
             label="control room · venue ops"
             accent="var(--kosmas-blue)"
+            reverse
             src="assets/podplay-venue-card.jpg"
             onGo={() => go("podplay")}
           />
@@ -110,15 +121,8 @@ function Helios({ go }) {
       <section className="bg-ink-deep" style={{ position: "relative", paddingTop: "clamp(72px, 8vw, 120px)", paddingBottom: 0 }}>
         {/* Decorative backdrop — clipped to the hero bounds */}
         <div aria-hidden style={{ position: "absolute", inset: 0, overflow: "hidden" }}>
-          {/* Exterior render — atmospheric backdrop */}
-          <div aria-hidden style={{
-            position: "absolute", inset: 0,
-            backgroundImage: 'url("assets/helios-exterior.jpg")',
-            backgroundSize: "cover",
-            backgroundPosition: "center 30%",
-            opacity: 0.42,
-            filter: "saturate(0.9) contrast(1.05)",
-          }} />
+          {/* Flat brand backdrop — Beta photography pending; flagship renders intentionally
+              not used here to avoid conflating Beta (14 courts) with the 2028 flagship */}
           <div aria-hidden style={{
             position: "absolute", inset: 0,
             background:
@@ -134,7 +138,7 @@ function Helios({ go }) {
         <div className="container" style={{ position: "relative" }}>
           <Reveal>
             <div className="eyebrow" style={{ color: "var(--kosmas-gold)" }}>
-              <span className="dot" />Helios Pickleball · Bridgetowne, Pasig
+              <span className="dot" />Helios Beta · Bridgetowne, Pasig · Opening Soon
             </div>
           </Reveal>
           <Reveal delay={80}>
@@ -145,8 +149,9 @@ function Helios({ go }) {
           </Reveal>
           <Reveal delay={180}>
             <p className="lede" style={{ color: "rgba(255,255,255,0.78)", maxWidth: "60ch", marginBottom: 56 }}>
-              A 14-court professional-grade complex designed for the full athlete lifecycle —
-              from high-intensity competitive play to social recovery. The Gold Standard of Play.
+              Helios Beta — a 14-court professional-grade complex designed for the full athlete
+              lifecycle, from high-intensity competitive play to social recovery. Opening soon,
+              ahead of the 10-story Helios flagship arena in 2028. The Gold Standard of Play.
             </p>
             <div className="hero-actions helios-section-bar" style={{ display: "flex", gap: 12, flexWrap: "wrap", marginBottom: 56, alignItems: "center" }}>
               <a className="btn btn--red" onClick={() => setSection("2028")}>
@@ -277,30 +282,29 @@ function HeliosOverview() {
             </Reveal>
             <Reveal delay={120} style={{ gridColumn: "span 7" }}>
               <p className="lede">
-                Unlike a standard pop-up, Helios at Bridgetowne offers full-service hospitality —
+                Unlike a standard pop-up, Helios Beta offers full-service hospitality —
                 a dedicated centre court, premium restrooms and showers, a lounge area, café,
                 and pro shop. Designed for the player, the spectator, and everything in between.
               </p>
               <p className="body-l" style={{ marginTop: 16, color: "var(--ink-2)" }}>
-                A residency built to establish a dominant market presence and cultivate
+                Helios Beta is built to establish a dominant market presence and cultivate
                 high-value brand equity ahead of the Helios flagship arena launch in 2028.
               </p>
             </Reveal>
           </div>
 
           <div className="grid grid-12" style={{ gap: 24, marginTop: 80 }}>
+            {/* Beta photography pending — flagship renders removed to avoid scale confusion */}
             <ImgPh
-              src="assets/helios-centre-court.jpg"
-              alt="Helios centre court — pro-grade pickleball court with stadium seating and broadcast cameras"
-              label="centre court · seating · broadcast cameras"
-              code="HERO"
+              label="helios beta · centre court · imagery coming soon"
+              code="BETA / SOON"
               h={520}
               style={{ gridColumn: "span 8" }}
               clip="clip-tl"
             />
             <div style={{ gridColumn: "span 4", display: "flex", flexDirection: "column", gap: 24 }}>
-              <ImgPh label="lounge area" code="LNG" h={248} clip="clip-tl" src="assets/helios-lounge-tile.jpg" alt="Helios lounge — deep navy sectional, brass floor lamp, court view through window" />
-              <ImgPh label="café" code="CAF" h={248} clip="clip-tl" src="assets/helios-cafe-tile.jpg" alt="Helios café — navy stone counter, brass espresso machine, gold pendants, court view" />
+              <ImgPh label="lounge area · coming soon" code="LNG" h={248} clip="clip-tl" />
+              <ImgPh label="café · coming soon" code="CAF" h={248} clip="clip-tl" />
             </div>
           </div>
         </div>
@@ -452,10 +456,11 @@ function HeliosProgramming() {
 
 function HeliosAmenities() {
   const items = [
-    { t: "The Café",          d: "Locally-sourced fuel for athletes and spectators alike.", l: "café · counter",       src: "assets/helios-cafe-tile.jpg" },
-    { t: "The Pro Shop",      d: "Paddles, apparel, and on-court essentials — curated.",     l: "pro shop · paddle wall", src: "assets/helios-amenities-proshop.jpg" },
-    { t: "The Lounge",        d: "Premium social area for between-match recovery.",          l: "lounge · seating",       src: "assets/helios-amenities-lounge.jpg" },
-    { t: "Wellness & Recovery", d: "Showers, recovery zone, and post-match programming.",     l: "wellness · recovery",    src: "assets/helios-amenities-wellness.jpg" },
+    /* Beta photography pending — flagship renders removed to avoid scale confusion */
+    { t: "The Café",          d: "Locally-sourced fuel for athletes and spectators alike.", l: "café · coming soon" },
+    { t: "The Pro Shop",      d: "Paddles, apparel, and on-court essentials — curated.",     l: "pro shop · coming soon" },
+    { t: "The Lounge",        d: "Premium social area for between-match recovery.",          l: "lounge · coming soon" },
+    { t: "Wellness & Recovery", d: "Showers, recovery zone, and post-match programming.",     l: "wellness · coming soon" },
   ];
   return (
     <section className="section bg-bone">
@@ -560,11 +565,13 @@ function Helios2028() {
             <div className="eyebrow" style={{ color: "var(--kosmas-gold)" }}><span className="dot" />Helios 2028 · Flagship Arena</div>
             <h2 className="display display-xl" style={{ color: "var(--bone)", marginTop: 24, marginBottom: 24 }}>
               The Future is<br/>
-              <span style={{ color: "var(--kosmas-red)" }}>6 Stories</span> High.
+              <span style={{ color: "var(--kosmas-red)" }}>10 Stories</span> High.
             </h2>
             <p className="lede" style={{ color: "rgba(255,255,255,0.78)", maxWidth: "52ch" }}>
-              Our Bridgetowne residency is just the beginning. Be the first to receive exclusive
-              updates and founding membership access for the 2028 flagship arena.
+              Helios Beta is just the beginning. The flagship Helios arena — 20 championship
+              courts across 10 stories at Bridgetowne, in joint venture with Robinsons Land —
+              arrives in 2028. Be the first to receive exclusive updates and founding
+              membership access.
             </p>
           </Reveal>
           <Reveal delay={120} style={{ gridColumn: "span 5" }}>
