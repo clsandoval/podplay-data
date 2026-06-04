@@ -33,7 +33,7 @@ function Projects({ go }) {
             kicker="Pickleball · Joint Venture · Robinsons Land"
             title="Helios"
             tag="A 10-story flagship arena. The future home of Philippine pickleball."
-            copy="Rising at Bridgetowne in 2028 — 20 championship courts across a 10-story flagship arena, the permanent home of the Helios brand and the showcase venue for Philippine pickleball."
+            copy="Rising at Bridgetowne in 2028 — 24 championship courts across a 10-story flagship arena, the permanent home of the Helios brand and the showcase venue for Philippine pickleball."
             label="helios flagship · concept render · bridgetowne"
             accent="var(--kosmas-red)"
             reverse
@@ -568,7 +568,7 @@ function Helios2028() {
               <span style={{ color: "var(--kosmas-red)" }}>10 Stories</span> High.
             </h2>
             <p className="lede" style={{ color: "rgba(255,255,255,0.78)", maxWidth: "52ch" }}>
-              Helios Beta is just the beginning. The flagship Helios arena — 20 championship
+              Helios Beta is just the beginning. The flagship Helios arena — 24 championship
               courts across 10 stories at Bridgetowne, in joint venture with Robinsons Land —
               arrives in 2028. Be the first to receive exclusive updates and founding
               membership access.
