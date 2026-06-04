@@ -1,6 +1,6 @@
 # Helios Pickleball Center
 
-Kosmas + Robinsons Land Corporation joint venture. 10-story flagship facility in Manila with 20 courts. Estimated opening 2028. The intended showcase deployment for everything Kosmas does — Pod Play tech, Ping Pod retail, pickleball programming.
+Kosmas + Robinsons Land Corporation joint venture. Asia's first tournament-grade pickleball center: an 8-story flagship in Bridgetowne, Pasig City with 24 courts (including a dedicated stadium court), targeted for completion 2027. A single-floor 14-court interim facility ("Helios Beta") opens first as the runway — tracked in podplay as `[[temporary-facility]]`. The intended showcase deployment for everything Kosmas does — Pod Play tech, Ping Pod retail, pickleball programming.
 
 **Status:** Stub — early-stage venture. Detailed planning resumes closer to construction.
 

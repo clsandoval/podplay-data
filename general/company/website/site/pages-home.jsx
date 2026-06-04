@@ -130,7 +130,7 @@ function Home({ go, density }) {
               code="01 / Pickleball"
               title="Helios"
               kicker="Joint Venture · Robinsons Land"
-              copy="A 14-court professional-grade complex in Bridgetowne, leading toward a 6-story flagship arena in 2028."
+              copy="Asia's first tournament-grade pickleball center — a 24-court flagship rising in Bridgetowne for 2027, with a 14-court beta open now as the runway."
               imgLabel="flagship · exterior · bridgetowne"
               src="assets/helios-exterior-card.jpg"
               go={() => go("helios")}
@@ -171,10 +171,10 @@ function Home({ go, density }) {
           </Reveal>
           <Reveal delay={120}>
             <div className="grid grid-4" style={{ marginTop: 72, gap: 32 }}>
-              <Stat value="14" label="Pro courts · Bridgetowne" suffix="" />
+              <Stat value="24" label="Pro courts · Bridgetowne" suffix="" />
               <Stat value="1" label="FIFA Quality Pro pitch" suffix=" of 1" color="var(--kosmas-gold)" />
               <Stat value="SE" label="PodPlay distribution" suffix=" Asia" color="var(--kosmas-blue)" />
-              <Stat value="2028" label="Helios flagship arena" suffix="" />
+              <Stat value="2027" label="Helios flagship center" suffix="" />
             </div>
           </Reveal>
         </div>

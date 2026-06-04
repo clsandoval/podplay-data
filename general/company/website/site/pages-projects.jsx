@@ -23,7 +23,7 @@ function Projects({ go }) {
             kicker="Pickleball · Joint Venture · Robinsons Land"
             title="Helios"
             tag="The chic, premium face of Philippine pickleball."
-            copy="A 14-court professional-grade complex in Bridgetowne — full hospitality, dedicated centre court, café and pro shop. The temporary residency is a runway to a 6-story flagship arena in 2028."
+            copy="Asia's first tournament-grade pickleball center — a 24-court flagship in Bridgetowne with a dedicated stadium court, café and pro shop, opening 2027. A 14-court beta is open now as the runway."
             label="exterior · flagship render · bridgetowne"
             accent="var(--kosmas-red)"
             src="assets/helios-exterior-card.jpg"
@@ -83,7 +83,7 @@ function BigProjectRow({ n, kicker, title, tag, copy, label, accent, reverse, on
 }
 
 /* ============================================================
-   HELIOS — has its own sub-nav (Home, Book, Programming, Amenities, Visit, 2028)
+   HELIOS — has its own sub-nav (Home, Book, Programming, Amenities, Visit, 2027)
    ============================================================ */
 function Helios({ go }) {
   const [section, setSection] = useState("home");
@@ -95,7 +95,7 @@ function Helios({ go }) {
     { id: "programming", label: "Programming" },
     { id: "amenities", label: "Amenities" },
     { id: "visit", label: "Visit" },
-    { id: "2028", label: "Helios 2028" },
+    { id: "2027", label: "Helios 2027" },
   ];
   useEffect(() => {
     const onClick = (e) => { if (secRef.current && !secRef.current.contains(e.target)) setSecOpen(false); };
@@ -145,11 +145,11 @@ function Helios({ go }) {
           </Reveal>
           <Reveal delay={180}>
             <p className="lede" style={{ color: "rgba(255,255,255,0.78)", maxWidth: "60ch", marginBottom: 56 }}>
-              A 14-court professional-grade complex designed for the full athlete lifecycle —
-              from high-intensity competitive play to social recovery. The Gold Standard of Play.
+              A tournament-grade home for Philippine pickleball — a 14-court beta open now in Bridgetowne,
+              building toward the 24-court flagship in 2027. The Gold Standard of Play.
             </p>
             <div className="hero-actions helios-section-bar" style={{ display: "flex", gap: 12, flexWrap: "wrap", marginBottom: 56, alignItems: "center" }}>
-              <a className="btn btn--red" onClick={() => setSection("2028")}>
+              <a className="btn btn--red" onClick={() => setSection("2027")}>
                 Get notified <span className="arrow" />
               </a>
 
@@ -242,7 +242,7 @@ function Helios({ go }) {
       {section === "programming" && <HeliosProgramming />}
       {section === "amenities" && <HeliosAmenities />}
       {section === "visit" && <HeliosVisit />}
-      {section === "2028" && <Helios2028 />}
+      {section === "2027" && <HeliosFlagship />}
 
       <CTAStrip go={go} />
     </main>
@@ -277,13 +277,13 @@ function HeliosOverview() {
             </Reveal>
             <Reveal delay={120} style={{ gridColumn: "span 7" }}>
               <p className="lede">
-                Unlike a standard pop-up, Helios at Bridgetowne offers full-service hospitality —
+                Unlike a standard pop-up, the Helios beta at Bridgetowne offers full-service hospitality —
                 a dedicated centre court, premium restrooms and showers, a lounge area, café,
                 and pro shop. Designed for the player, the spectator, and everything in between.
               </p>
               <p className="body-l" style={{ marginTop: 16, color: "var(--ink-2)" }}>
                 A residency built to establish a dominant market presence and cultivate
-                high-value brand equity ahead of the Helios flagship arena launch in 2028.
+                high-value brand equity ahead of the 24-court Helios flagship launch in 2027.
               </p>
             </Reveal>
           </div>
@@ -545,7 +545,7 @@ function InfoRow({ k, v, mono }) {
   );
 }
 
-function Helios2028() {
+function HeliosFlagship() {
   const [email, setEmail] = useState("");
   const [submitted, setSubmitted] = useState(false);
   return (
@@ -557,14 +557,15 @@ function Helios2028() {
       <div className="container" style={{ position: "relative" }}>
         <div className="grid grid-12" style={{ gap: 48, alignItems: "center" }}>
           <Reveal style={{ gridColumn: "span 7" }}>
-            <div className="eyebrow" style={{ color: "var(--kosmas-gold)" }}><span className="dot" />Helios 2028 · Flagship Arena</div>
+            <div className="eyebrow" style={{ color: "var(--kosmas-gold)" }}><span className="dot" />Helios 2027 · Flagship Center</div>
             <h2 className="display display-xl" style={{ color: "var(--bone)", marginTop: 24, marginBottom: 24 }}>
               The Future is<br/>
-              <span style={{ color: "var(--kosmas-red)" }}>6 Stories</span> High.
+              <span style={{ color: "var(--kosmas-red)" }}>8 Stories</span> High.
             </h2>
             <p className="lede" style={{ color: "rgba(255,255,255,0.78)", maxWidth: "52ch" }}>
-              Our Bridgetowne residency is just the beginning. Be the first to receive exclusive
-              updates and founding membership access for the 2028 flagship arena.
+              Our 14-court Bridgetowne beta is just the beginning. Be the first to receive exclusive
+              updates and founding membership access for the 24-court flagship — Asia's first
+              tournament-grade pickleball center, opening 2027.
             </p>
           </Reveal>
           <Reveal delay={120} style={{ gridColumn: "span 5" }}>
@@ -599,7 +600,7 @@ function Helios2028() {
               ) : (
                 <div>
                   <div className="eyebrow" style={{ color: "var(--kosmas-gold)" }}>✓ You're on the list</div>
-                  <h3 className="display display-m" style={{ color: "var(--bone)", marginTop: 12 }}>See you in 2028.</h3>
+                  <h3 className="display display-m" style={{ color: "var(--bone)", marginTop: 12 }}>See you in 2027.</h3>
                   <p className="body-m" style={{ color: "rgba(255,255,255,0.7)", marginTop: 16 }}>
                     We'll be in touch from <span style={{ color: "var(--bone)", fontFamily: "var(--font-mono)" }}>founding@helios.ph</span>.
                   </p>
@@ -614,7 +615,7 @@ function Helios2028() {
             src="assets/helios-exterior.jpg"
             alt="Helios flagship arena exterior render — Bridgetowne"
             label="helios flagship · exterior render · bridgetowne"
-            code="2028 / RENDER"
+            code="2027 / RENDER"
             dark
             h={560}
             clip="clip-tl"
