@@ -130,7 +130,7 @@ function Home({ go, density }) {
               code="01 / Pickleball"
               title="Helios"
               kicker="Joint Venture · Robinsons Land"
-              copy="Helios Beta — a 14-court professional-grade complex in Bridgetowne, opening soon — leads toward the 10-story, 20-court flagship arena in 2028."
+              copy="Helios Beta — a 14-court professional-grade complex in Bridgetowne, opening soon — leads toward the 10-story, 24-court flagship arena in 2028."
               imgLabel="helios flagship · concept render · bridgetowne"
               src="assets/helios-exterior-card.jpg"
               go={() => go("helios")}

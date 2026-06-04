@@ -3,7 +3,7 @@
 Kosmas + Robinsons Land Corporation joint venture. Two facilities, both at Bridgetowne (Pasig):
 
 - **Helios Beta** — interim 14-court professional-grade complex (dedicated centre court, café, pro shop, lounge, wellness/recovery). Opening soon — no public date (permit delays per [KAN-26](https://kosmaskavc.atlassian.net/browse/KAN-26) comments; PPA Asia Tour booked there Jan 2027 per KAN-5). Public naming on the website: "Helios Beta".
-- **Helios (flagship)** — 10-story flagship arena with 20 courts. Estimated opening 2028. The intended showcase deployment for everything Kosmas does — Pod Play tech, Ping Pod retail, pickleball programming.
+- **Helios (flagship)** — 10-story flagship arena with 24 courts. Estimated opening 2028. The intended showcase deployment for everything Kosmas does — Pod Play tech, Ping Pod retail, pickleball programming.
 
 > Website note (2026-06-03): the marketing site previously conflated the two (Beta copy with flagship renders, and a stale "6-story" flagship claim). Now split into distinct projects; flagship concept renders labeled as such; Beta photography pending from Carlos.
 
