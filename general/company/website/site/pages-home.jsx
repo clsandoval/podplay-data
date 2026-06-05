@@ -112,6 +112,65 @@ function HeroBanner({ go }) {
   );
 }
 
+/* "One ecosystem" portfolio band — six entities as photo + name + Discover more.
+   Layout per Eriell's peg; styling stays Kosmas. Minimal copy by design. */
+function EcoTile({ title, kicker, src, accent, onGo, flag }) {
+  return (
+    <Reveal>
+      <article onClick={onGo}
+        style={{ display: "flex", gap: 22, alignItems: "center", cursor: "pointer",
+          borderTop: "1px solid var(--line)", paddingTop: 24, minWidth: 0 }}>
+        <ImgPh src={src} alt={title} label={(flag ? "placeholder · " : "") + title.toLowerCase()}
+          h={118} clip="clip-tl" style={{ width: 168, flex: "0 0 168px" }} />
+        <div style={{ minWidth: 0 }}>
+          <div className="eyebrow on-light" style={{ color: accent, margin: 0 }}>{kicker}</div>
+          <h3 className="display display-s" style={{ margin: "8px 0 12px" }}>{title}</h3>
+          <span style={{ display: "inline-flex", alignItems: "center", gap: 8, color: accent,
+            fontFamily: "var(--font-mono)", fontSize: 12, letterSpacing: "0.12em", textTransform: "uppercase" }}>
+            Discover more <span className="arrow" />
+          </span>
+        </div>
+      </article>
+    </Reveal>
+  );
+}
+
+function PortfolioBand({ go }) {
+  const R = "var(--kosmas-red)", B = "var(--kosmas-blue)", G = "#9a7b3a"; // gold darkened for legibility on bone
+  const tiles = [
+    { title: "Helios",            kicker: "JV · Robinsons Land · Flagship 2028", src: "assets/helios-exterior-card.jpg", accent: R, go: () => go("helios") },
+    { title: "PodPlay",           kicker: "Exclusive SE Asia distribution",      src: "assets/podplay-venue-card.jpg",   accent: B, go: () => go("podplay") },
+    { title: "Helios Beta",       kicker: "14 courts · Bridgetowne · Opening soon", src: "assets/helios-centre-court.jpg", accent: R, go: () => go("helios") },
+    { title: "PingPod",           kicker: "Ping Pod retail · SE Asia",           src: "assets/helios-amenities-proshop.jpg", accent: G, go: () => go("podplay"), flag: true },
+    { title: "Atleta63",          kicker: "Only FIFA Quality Pro pitch in PH",   src: "assets/atleta63-pitch-card.jpg",  accent: G, go: () => go("atleta63") },
+    { title: "Kosmas Consultancy",kicker: "PH facility advisory",                src: "assets/consulting-developer-hero.jpg", accent: B, go: () => go("consulting") },
+  ];
+  return (
+    <section className="section bg-bone">
+      <div className="container">
+        <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-end", flexWrap: "wrap", gap: 24, marginBottom: 16 }}>
+          <Reveal>
+            <div className="eyebrow on-light"><span className="dot" />The portfolio</div>
+            <h2 className="display display-l" style={{ marginTop: 18, maxWidth: "16ch" }}>
+              One ecosystem. <span style={{ color: "var(--kosmas-red)", fontWeight: 600 }}>Endless experience.</span>
+            </h2>
+          </Reveal>
+          <Reveal delay={100}>
+            <a className="btn btn--red" onClick={() => go("consulting")}>
+              Partner with us <span className="arrow" />
+            </a>
+          </Reveal>
+        </div>
+        <div className="grid grid-2" style={{ gap: "8px 48px", marginTop: 40 }}>
+          {tiles.map(t => (
+            <EcoTile key={t.title} title={t.title} kicker={t.kicker} src={t.src} accent={t.accent} flag={t.flag} onGo={t.go} />
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
 /* Interactive construction / status timeline for the flagship facilities.
    Click a milestone to expand its detail. Facts sourced from
    ventures/helios-pickleball-center/README.md (KAN-26 / KAN-5). */
@@ -265,55 +324,8 @@ function Home({ go, density }) {
         </div>
       </section>
 
-      {/* PROJECTS SNAPSHOT */}
-      <section className="section bg-ink-deep">
-        <div className="container">
-          <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-end", flexWrap: "wrap", gap: 24, marginBottom: 56 }}>
-            <Reveal>
-              <div className="eyebrow" style={{ color: "var(--kosmas-gold)" }}><span className="dot" />Three flagships · One ecosystem</div>
-              <h2 className="display display-l" style={{ color: "var(--bone)", marginTop: 18 }}>The portfolio.</h2>
-            </Reveal>
-            <Reveal delay={100}>
-              <a href="#projects" className="btn btn--ghost-light" onClick={(e) => { e.preventDefault(); go("projects"); }}>
-                View all projects <span className="arrow" />
-              </a>
-            </Reveal>
-          </div>
-
-          <div className="grid grid-3" style={{ gap: 24 }}>
-            <ProjectCard
-              code="01 / Pickleball"
-              title="Helios"
-              kicker="Joint Venture · Robinsons Land"
-              copy="Helios Beta — a 14-court professional-grade complex in Bridgetowne, opening soon — leads toward the 10-story, 24-court flagship arena in 2028."
-              imgLabel="helios flagship · concept render · bridgetowne"
-              src="assets/helios-exterior-card.jpg"
-              go={() => go("helios")}
-              accent="var(--kosmas-red)"
-            />
-            <ProjectCard
-              code="02 / Football"
-              title="Atleta63"
-              kicker="Only FIFA Quality Pro pitch in the Philippines"
-              copy="The pinnacle of football infrastructure — an all-weather pitch with bar and recreation, built for elite performance."
-              imgLabel="pitch · bridgetowne"
-              src="assets/atleta63-pitch-card.jpg"
-              go={() => go("atleta63")}
-              accent="var(--kosmas-gold)"
-            />
-            <ProjectCard
-              code="03 / Technology"
-              title="PodPlay"
-              kicker="Exclusive Asian distribution rights"
-              copy="An integrated booking and instant-replay platform — the operating system for our venues, and our primary competitive moat."
-              imgLabel="control room · venue ops"
-              src="assets/podplay-venue-card.jpg"
-              go={() => go("podplay")}
-              accent="#ffffff"
-            />
-          </div>
-        </div>
-      </section>
+      {/* ONE ECOSYSTEM — 6-tile portfolio band (peg: Eriell) */}
+      <PortfolioBand go={go} />
 
       {/* CONSTRUCTION TIMELINE */}
       <BuildTimeline />
@@ -578,4 +590,4 @@ function CTAStrip({ go }) {
   );
 }
 
-Object.assign(window, { Home, About, CTAStrip, ProjectCard, PPABanner, BuildTimeline, HeroBanner });
+Object.assign(window, { Home, About, CTAStrip, ProjectCard, PPABanner, BuildTimeline, HeroBanner, PortfolioBand, EcoTile });
