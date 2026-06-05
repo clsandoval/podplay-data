@@ -37,6 +37,81 @@ function PPABanner({ go }) {
   );
 }
 
+/* Full-bleed hero banner — rotating facility photo with overlaid copy.
+   Layout follows Eriell's peg (photo-forward, text lower-left, carousel);
+   styling stays Kosmas (display type, navy/gold, angular buttons + dots). */
+function HeroBanner({ go }) {
+  const slides = [
+    { src: "assets/helios-centre-court.jpg", label: "Helios · centre court" },
+    { src: "assets/atleta63-pitch.jpg",       label: "Atleta63 · FIFA-quality pitch" },
+    { src: "assets/podplay-venue.jpg",         label: "PodPlay · venue technology" },
+  ];
+  const [i, setI] = useState(0);
+  useEffect(() => {
+    const t = setInterval(() => setI(p => (p + 1) % slides.length), 5500);
+    return () => clearInterval(t);
+  }, []);
+
+  return (
+    <section className="bg-ink" style={{ position: "relative", overflow: "hidden", minHeight: "clamp(520px, 82vh, 760px)", display: "flex", alignItems: "flex-end" }}>
+      {/* rotating photos */}
+      {slides.map((s, idx) => (
+        <div key={s.src} aria-hidden style={{
+          position: "absolute", inset: 0,
+          backgroundImage: `url("${s.src}")`, backgroundSize: "cover", backgroundPosition: "center",
+          opacity: idx === i ? 1 : 0, transition: "opacity 1.1s ease",
+        }} />
+      ))}
+      {/* legibility scrim: stronger at left + bottom */}
+      <div aria-hidden style={{ position: "absolute", inset: 0,
+        background: "linear-gradient(90deg, rgba(3,14,28,0.92) 0%, rgba(3,14,28,0.62) 42%, rgba(3,14,28,0.18) 100%)" }} />
+      <div aria-hidden style={{ position: "absolute", left: 0, right: 0, bottom: 0, height: "45%",
+        background: "linear-gradient(0deg, rgba(3,14,28,0.85), transparent)" }} />
+      {/* gold hairline */}
+      <div aria-hidden style={{ position: "absolute", bottom: -2, left: 0, width: "100%", height: "1px",
+        background: "linear-gradient(90deg, transparent, var(--kosmas-gold) 30%, var(--kosmas-gold) 70%, transparent)", opacity: 0.6 }} />
+
+      <div className="container" style={{ position: "relative", paddingTop: "clamp(96px, 13vw, 150px)", paddingBottom: "clamp(48px, 6vw, 84px)" }}>
+        <Reveal>
+          <div className="eyebrow" style={{ color: "var(--kosmas-gold)" }}>
+            <span className="dot" />Kosmas Athletic Ventures Co. · Manila
+          </div>
+        </Reveal>
+        <Reveal delay={120}>
+          <h1 className="display display-xl" style={{ color: "var(--bone)", marginTop: 22, marginBottom: 0, maxWidth: "15ch", textShadow: "0 2px 28px rgba(0,0,0,0.4)" }}>
+            Building the <span style={{ color: "var(--kosmas-red)" }}>Premier</span> Sports & Wellness Ecosystem <span style={{ color: "var(--kosmas-gold)", fontWeight: 600 }}>in the Philippines.</span>
+          </h1>
+        </Reveal>
+        <Reveal delay={260}>
+          <p className="lede" style={{ color: "rgba(255,255,255,0.85)", maxWidth: "44ch", marginTop: 26, marginBottom: 0 }}>
+            We design, activate, and operate the venues redefining how Filipinos live, train, and play.
+          </p>
+          <div className="hero-actions" style={{ display: "flex", gap: 12, marginTop: 32, flexWrap: "wrap" }}>
+            <a href="#projects" className="btn btn--red" onClick={(e) => { e.preventDefault(); go("projects"); }}>
+              See the projects <span className="arrow" />
+            </a>
+            <a href="#consulting" className="btn btn--ghost-light" onClick={(e) => { e.preventDefault(); go("consulting"); }}>
+              Work with us
+            </a>
+          </div>
+        </Reveal>
+        {/* carousel indicators */}
+        <div role="tablist" aria-label="Featured venues" style={{ display: "flex", gap: 10, marginTop: 44, alignItems: "center" }}>
+          {slides.map((s, idx) => (
+            <button key={s.src} type="button" role="tab" aria-selected={idx === i} aria-label={s.label}
+              onClick={() => setI(idx)}
+              style={{
+                width: idx === i ? 30 : 11, height: 6, padding: 0, border: "none", cursor: "pointer",
+                background: idx === i ? "var(--kosmas-gold)" : "rgba(255,255,255,0.4)",
+                transition: "width .3s ease, background .3s ease",
+              }} />
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
 /* Interactive construction / status timeline for the flagship facilities.
    Click a milestone to expand its detail. Facts sourced from
    ventures/helios-pickleball-center/README.md (KAN-26 / KAN-5). */
@@ -131,68 +206,8 @@ function Home({ go, density }) {
           Date is internal (KAN-5, status: Planning) and not yet on the official PPA calendar. */}
       {SHOW_PPA_BANNER && <PPABanner go={go} />}
 
-      {/* HERO — split: short copy + facility photo (balance text with imagery) */}
-      <section className="bg-ink" style={{ position: "relative", overflow: "hidden", paddingTop: "clamp(56px, 8vw, 120px)", paddingBottom: "clamp(56px, 8vw, 120px)" }}>
-        {/* angled red wedge accent */}
-        <div aria-hidden style={{
-          position: "absolute", top: 0, right: 0, width: "42%", height: "100%",
-          background: "linear-gradient(135deg, transparent 0%, transparent 35%, rgba(214,40,40,0.14) 35%, rgba(214,40,40,0.04) 60%, transparent 60%)",
-          pointerEvents: "none"
-        }} />
-        <div aria-hidden style={{
-          position: "absolute", bottom: -2, left: 0, width: "100%", height: "1px",
-          background: "linear-gradient(90deg, transparent, var(--kosmas-gold) 30%, var(--kosmas-gold) 70%, transparent)",
-          opacity: 0.6
-        }} />
-
-        <div className="container" style={{ position: "relative" }}>
-          <div className="grid grid-12" style={{ gap: 48, alignItems: "center" }}>
-            <div style={{ gridColumn: "span 7" }}>
-              <Reveal>
-                <div className="eyebrow" style={{ color: "var(--kosmas-gold)" }}>
-                  <span className="dot" />Kosmas Athletic Ventures Co. · Manila
-                </div>
-              </Reveal>
-
-              <Reveal delay={120}>
-                <h1 className="display display-xl" style={{ color: "var(--bone)", marginTop: 24, marginBottom: 0 }}>
-                  Building the<br/>
-                  <span style={{ color: "var(--kosmas-red)" }}>Premier</span> Sports &<br/>
-                  Wellness Ecosystem<br/>
-                  <span style={{ color: "var(--kosmas-gold)", fontWeight: 600 }}>in the Philippines.</span>
-                </h1>
-              </Reveal>
-
-              <Reveal delay={260}>
-                <p className="lede" style={{ color: "rgba(255,255,255,0.78)", maxWidth: "46ch", marginTop: 32, marginBottom: 0 }}>
-                  We design, activate, and operate the venues redefining how Filipinos
-                  live, train, and play.
-                </p>
-                <div className="hero-actions" style={{ display: "flex", gap: 12, marginTop: 36, flexWrap: "wrap" }}>
-                  <a href="#projects" className="btn btn--red" onClick={(e) => { e.preventDefault(); go("projects"); }}>
-                    See the projects <span className="arrow" />
-                  </a>
-                  <a href="#consulting" className="btn btn--ghost-light" onClick={(e) => { e.preventDefault(); go("consulting"); }}>
-                    Work with us
-                  </a>
-                </div>
-              </Reveal>
-            </div>
-
-            <Reveal delay={200} style={{ gridColumn: "span 5" }}>
-              <ImgPh
-                src="assets/helios-centre-court.jpg"
-                alt="Helios — centre court"
-                label="helios · centre court"
-                h="clamp(320px, 42vw, 560px)"
-                clip="clip-tl"
-                position="center"
-                style={{ width: "100%" }}
-              />
-            </Reveal>
-          </div>
-        </div>
-      </section>
+      {/* HERO — full-bleed facility photo with overlaid copy + carousel (peg: Eriell) */}
+      <HeroBanner go={go} />
 
       {/* MARQUEE */}
       <section className="bg-ink" style={{ color: "var(--kosmas-gold)", paddingTop: 0 }}>
@@ -563,4 +578,4 @@ function CTAStrip({ go }) {
   );
 }
 
-Object.assign(window, { Home, About, CTAStrip, ProjectCard, PPABanner, BuildTimeline });
+Object.assign(window, { Home, About, CTAStrip, ProjectCard, PPABanner, BuildTimeline, HeroBanner });
