@@ -2,15 +2,141 @@
    Homepage + About page
    ============================================================ */
 
+/* PPA Asia Tour announcement bar.
+   Flip to false to hide until the event is confirmed on the official PPA
+   tournament calendar. Source: KAN-5 (internal, status: Planning) — 2nd week
+   of January 2027 at Helios Beta. Team decision pending: publish now vs. wait. */
+const SHOW_PPA_BANNER = true;
+
+function PPABanner({ go }) {
+  return (
+    <div
+      role="region"
+      aria-label="PPA Asia Tour announcement"
+      style={{
+        background: "var(--kosmas-blue-ink)",
+        borderBottom: "1px solid rgba(210,171,103,0.35)",
+        color: "var(--bone)",
+      }}>
+      <div className="container ppa-bar" style={{
+        display: "flex", alignItems: "center", gap: 18, flexWrap: "wrap",
+        paddingTop: 12, paddingBottom: 12, justifyContent: "center",
+      }}>
+        <span className="eyebrow" style={{ color: "var(--kosmas-gold)", margin: 0 }}>
+          <span className="dot" />Upcoming
+        </span>
+        <span className="body-m" style={{ margin: 0, color: "rgba(255,255,255,0.92)" }}>
+          <strong style={{ fontWeight: 600 }}>PPA Asia Tour</strong> comes to Helios — January 2027
+        </span>
+        <a href="#helios" className="ppa-bar__link" onClick={(e) => { e.preventDefault(); go("helios"); }}
+           style={{ color: "var(--kosmas-gold-soft)", fontFamily: "var(--font-mono)", fontSize: 13, letterSpacing: "0.08em", textTransform: "uppercase", display: "inline-flex", alignItems: "center", gap: 8 }}>
+          Learn more <span className="arrow" />
+        </a>
+      </div>
+    </div>
+  );
+}
+
+/* Interactive construction / status timeline for the flagship facilities.
+   Click a milestone to expand its detail. Facts sourced from
+   ventures/helios-pickleball-center/README.md (KAN-26 / KAN-5). */
+function BuildTimeline() {
+  const milestones = [
+    {
+      tag: "In construction",
+      when: "2026",
+      title: "Helios Beta",
+      blurb: "A 14-court professional-grade complex in Bridgetowne — dedicated centre court, café, pro shop, and wellness/recovery lounge. Opening soon.",
+      img: "assets/helios-centre-court.jpg",
+      accent: "var(--kosmas-red)",
+    },
+    {
+      tag: "Scheduled",
+      when: "Jan 2027",
+      title: "PPA Asia Tour",
+      blurb: "The PPA Asia Tour is set to be hosted at Helios Beta — bringing professional pickleball to the Philippines.",
+      img: "assets/helios-centre-court.jpg",
+      accent: "var(--kosmas-gold)",
+    },
+    {
+      tag: "Concept · target 2028",
+      when: "2028",
+      title: "Helios Flagship",
+      blurb: "The 10-story, 24-court flagship arena — the showcase deployment for everything Kosmas does, from PodPlay technology to pro programming. Renders are concept.",
+      img: "assets/helios-exterior.jpg",
+      accent: "#ffffff",
+    },
+  ];
+  const [active, setActive] = useState(0);
+  const cur = milestones[active];
+
+  return (
+    <section className="section bg-ink-deep">
+      <div className="container">
+        <Reveal>
+          <div className="eyebrow" style={{ color: "var(--kosmas-gold)" }}><span className="dot" />Now rising</div>
+          <h2 className="display display-l" style={{ color: "var(--bone)", marginTop: 18, maxWidth: "18ch" }}>
+            The build, on a timeline.
+          </h2>
+        </Reveal>
+
+        {/* milestone rail */}
+        <Reveal delay={100}>
+          <div className="build-rail" style={{
+            display: "grid", gridTemplateColumns: `repeat(${milestones.length}, 1fr)`,
+            gap: 0, marginTop: 56, borderTop: "1px solid rgba(255,255,255,0.16)",
+          }}>
+            {milestones.map((m, i) => {
+              const on = i === active;
+              return (
+                <button key={m.title} type="button"
+                  onClick={() => setActive(i)}
+                  aria-pressed={on}
+                  className="build-node"
+                  style={{
+                    textAlign: "left", background: "transparent", border: "none", cursor: "pointer",
+                    padding: "24px 20px 24px 0", position: "relative", color: "inherit",
+                    borderTop: on ? `2px solid ${m.accent}` : "2px solid transparent", marginTop: -1,
+                    opacity: on ? 1 : 0.6, transition: "opacity .2s ease",
+                  }}>
+                  <div className="eyebrow" style={{ color: m.accent, margin: 0 }}>{m.when}</div>
+                  <div className="display display-s" style={{ color: "var(--bone)", marginTop: 10 }}>{m.title}</div>
+                  <div className="body-m" style={{ color: "rgba(255,255,255,0.6)", marginTop: 4 }}>{m.tag}</div>
+                </button>
+              );
+            })}
+          </div>
+        </Reveal>
+
+        {/* active detail */}
+        <div className="grid grid-12" style={{ gap: 48, alignItems: "center", marginTop: 48 }}>
+          <div style={{ gridColumn: "span 6" }}>
+            <div className="eyebrow" style={{ color: cur.accent }}><span className="dot" />{cur.tag}</div>
+            <h3 className="display display-m" style={{ color: "var(--bone)", marginTop: 14 }}>{cur.title}</h3>
+            <p className="lede" style={{ color: "rgba(255,255,255,0.78)", marginTop: 16 }}>{cur.blurb}</p>
+          </div>
+          <div style={{ gridColumn: "span 6" }}>
+            <ImgPh src={cur.img} alt={cur.title} label={cur.title.toLowerCase()} h={300} clip="clip-tl" style={{ width: "100%" }} />
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
 function Home({ go, density }) {
   return (
     <main data-screen-label="01 Home">
-      {/* HERO */}
-      <section className="bg-ink" style={{ position: "relative", overflow: "hidden", paddingTop: "clamp(72px, 10vw, 140px)", paddingBottom: "clamp(72px, 10vw, 140px)" }}>
+      {/* PPA TOUR ANNOUNCEMENT — toggle SHOW_PPA_BANNER (top of file) to publish/hide.
+          Date is internal (KAN-5, status: Planning) and not yet on the official PPA calendar. */}
+      {SHOW_PPA_BANNER && <PPABanner go={go} />}
+
+      {/* HERO — split: short copy + facility photo (balance text with imagery) */}
+      <section className="bg-ink" style={{ position: "relative", overflow: "hidden", paddingTop: "clamp(56px, 8vw, 120px)", paddingBottom: "clamp(56px, 8vw, 120px)" }}>
         {/* angled red wedge accent */}
         <div aria-hidden style={{
           position: "absolute", top: 0, right: 0, width: "42%", height: "100%",
-          background: "linear-gradient(135deg, transparent 0%, transparent 35%, rgba(214,40,40,0.18) 35%, rgba(214,40,40,0.06) 60%, transparent 60%)",
+          background: "linear-gradient(135deg, transparent 0%, transparent 35%, rgba(214,40,40,0.14) 35%, rgba(214,40,40,0.04) 60%, transparent 60%)",
           pointerEvents: "none"
         }} />
         <div aria-hidden style={{
@@ -20,37 +146,51 @@ function Home({ go, density }) {
         }} />
 
         <div className="container" style={{ position: "relative" }}>
-          <Reveal>
-            <div className="eyebrow" style={{ color: "var(--kosmas-gold)" }}>
-              <span className="dot" />Kosmas Athletic Ventures Co. · Manila
-            </div>
-          </Reveal>
+          <div className="grid grid-12" style={{ gap: 48, alignItems: "center" }}>
+            <div style={{ gridColumn: "span 7" }}>
+              <Reveal>
+                <div className="eyebrow" style={{ color: "var(--kosmas-gold)" }}>
+                  <span className="dot" />Kosmas Athletic Ventures Co. · Manila
+                </div>
+              </Reveal>
 
-          <Reveal delay={120}>
-            <h1 className="display display-xl" style={{ color: "var(--bone)", marginTop: 24, marginBottom: 0 }}>
-              Building the<br/>
-              <span style={{ color: "var(--kosmas-red)" }}>Premier</span> Sports &<br/>
-              Wellness Ecosystem<br/>
-              <span style={{ color: "var(--kosmas-gold)", fontWeight: 600 }}>in the Philippines.</span>
-            </h1>
-          </Reveal>
+              <Reveal delay={120}>
+                <h1 className="display display-xl" style={{ color: "var(--bone)", marginTop: 24, marginBottom: 0 }}>
+                  Building the<br/>
+                  <span style={{ color: "var(--kosmas-red)" }}>Premier</span> Sports &<br/>
+                  Wellness Ecosystem<br/>
+                  <span style={{ color: "var(--kosmas-gold)", fontWeight: 600 }}>in the Philippines.</span>
+                </h1>
+              </Reveal>
 
-          <Reveal delay={260}>
-            <div className="hero-actions" style={{ display: "flex", flexWrap: "wrap", gap: "32px 64px", marginTop: 56, alignItems: "flex-end", justifyContent: "space-between" }}>
-              <p className="lede" style={{ color: "rgba(255,255,255,0.78)", maxWidth: "52ch", margin: 0 }}>
-                A strategic sports infrastructure and management firm. We design, activate, and operate
-                the venues redefining how Filipinos live, train, and play.
-              </p>
-              <div className="hero-actions" style={{ display: "flex", gap: 12 }}>
-                <a href="#projects" className="btn btn--red" onClick={(e) => { e.preventDefault(); go("projects"); }}>
-                  See the projects <span className="arrow" />
-                </a>
-                <a href="#consulting" className="btn btn--ghost-light" onClick={(e) => { e.preventDefault(); go("consulting"); }}>
-                  Work with us
-                </a>
-              </div>
+              <Reveal delay={260}>
+                <p className="lede" style={{ color: "rgba(255,255,255,0.78)", maxWidth: "46ch", marginTop: 32, marginBottom: 0 }}>
+                  We design, activate, and operate the venues redefining how Filipinos
+                  live, train, and play.
+                </p>
+                <div className="hero-actions" style={{ display: "flex", gap: 12, marginTop: 36, flexWrap: "wrap" }}>
+                  <a href="#projects" className="btn btn--red" onClick={(e) => { e.preventDefault(); go("projects"); }}>
+                    See the projects <span className="arrow" />
+                  </a>
+                  <a href="#consulting" className="btn btn--ghost-light" onClick={(e) => { e.preventDefault(); go("consulting"); }}>
+                    Work with us
+                  </a>
+                </div>
+              </Reveal>
             </div>
-          </Reveal>
+
+            <Reveal delay={200} style={{ gridColumn: "span 5" }}>
+              <ImgPh
+                src="assets/helios-centre-court.jpg"
+                alt="Helios — centre court"
+                label="helios · centre court"
+                h="clamp(320px, 42vw, 560px)"
+                clip="clip-tl"
+                position="center"
+                style={{ width: "100%" }}
+              />
+            </Reveal>
+          </div>
         </div>
       </section>
 
@@ -159,6 +299,9 @@ function Home({ go, density }) {
           </div>
         </div>
       </section>
+
+      {/* CONSTRUCTION TIMELINE */}
+      <BuildTimeline />
 
       {/* PROOF / STATS */}
       <section className="section bg-bone">
@@ -420,4 +563,4 @@ function CTAStrip({ go }) {
   );
 }
 
-Object.assign(window, { Home, About, CTAStrip, ProjectCard });
+Object.assign(window, { Home, About, CTAStrip, ProjectCard, PPABanner, BuildTimeline });
