@@ -286,44 +286,6 @@ function Home({ go, density }) {
         </div>
       </section>
 
-      {/* INTRO + PILLARS */}
-      <section className="section bg-bone">
-        <div className="container">
-          <div className="grid grid-12" style={{ gap: 48, alignItems: "start" }}>
-            <Reveal style={{ gridColumn: "span 4" }}>
-              <div className="eyebrow on-light"><span className="dot" />The Demand Engine</div>
-              <h2 className="display display-m" style={{ marginTop: 18 }}>
-                Not a builder. An <span style={{ color: "var(--kosmas-red)", fontWeight: 600 }}>asset activator.</span>
-              </h2>
-            </Reveal>
-            <Reveal delay={100} style={{ gridColumn: "span 8" }}>
-              <p className="lede">
-                KAVC engineers ecosystems that generate consistent foot traffic, extend dwell time,
-                and elevate the value of the real estate around them. We deliver enduring sports
-                and wellness assets — not just facilities.
-              </p>
-              <div className="grid grid-3" style={{ marginTop: 64, gap: 0, borderTop: "1px solid var(--line)" }}>
-                {[
-                  { n: "01", t: "Design", d: "Sport-specific infrastructure engineered to international certification standards." },
-                  { n: "02", t: "Activate", d: "Proprietary programming, community leagues, and international tournaments drive utilization." },
-                  { n: "03", t: "Operate", d: "A tech-driven management stack optimizes operations and captures actionable usage data." },
-                ].map((p, i) => (
-                  <div key={p.n} className="pillar-cell" style={{
-                    padding: "28px 24px 28px 0",
-                    borderRight: i < 2 ? "1px solid var(--line)" : "none",
-                    paddingLeft: i > 0 ? 24 : 0,
-                  }}>
-                    <div className="eyebrow on-light" style={{ color: "var(--kosmas-gold)" }}>{p.n}</div>
-                    <h3 className="display display-s" style={{ marginTop: 12, marginBottom: 8 }}>{p.t}</h3>
-                    <p className="body-m" style={{ margin: 0, color: "var(--ink-2)" }}>{p.d}</p>
-                  </div>
-                ))}
-              </div>
-            </Reveal>
-          </div>
-        </div>
-      </section>
-
       {/* ONE ECOSYSTEM — 6-tile portfolio band (peg: Eriell) */}
       <PortfolioBand go={go} />
 
