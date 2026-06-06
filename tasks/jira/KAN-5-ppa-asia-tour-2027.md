@@ -4,14 +4,14 @@ jira_url: https://kosmaskavc.atlassian.net/browse/KAN-5
 project: KAN
 type: jira-issue
 issue_type: Task
-status: Planning
+status: Ready To Execute
 priority: High
 assignee: Richard Bachmann
 reporter: Richard Bachmann
 labels: []
 created: 2026-05-08T20:24:22.729+0800
-updated: 2026-05-21T14:49:02.214+0800
-synced_at: 2026-05-21
+updated: 2026-06-01T04:34:25.378+0800
+synced_at: 2026-06-06
 ---
 
 # KAN-5: PPA Asia Tour 2027
@@ -28,171 +28,127 @@ Met with Shery Cu regarding potential support for the PPA Asia Tour event, inclu
 
 ### Avvy Lapus — 2026-05-12
 
-I already emailed and sent our formal letter to Shery. She responded with “Received this and will give you feedback soonest”  
-
- Thanks!
+I already emailed and sent our formal letter to Shery. She responded with “Received this and will give you feedback soonest”   Thanks!
 
 ### Richard Bachmann — 2026-05-12
 
-We will proceed without waiting for their involvement and move forward under the assumption that we do not need them.Current priorities:- Pursue a meeting with Mr. Vargus (MVP) to discuss sponsorship and broadcast alignment.
+We will proceed without waiting for their involvement and move forward under the assumption that we do not need them.
 
+Current priorities:
 
+- Pursue a meeting with Mr. Vargus (MVP) to discuss sponsorship and broadcast alignment.
 - Coordinate with Clarence to confirm hotel accommodations and related logistics.
 
 ### Richard Bachmann — 2026-05-12
 
-Discuss sponsorship packages and sponsorship letters. Refer to the 2026 Event Manual for sponsorship tiers.SponsorshipDiscuss sponsorship packages and sponsorship letters. Refer to the 2026 Event Manual for sponsorship tiers.PPA Tour Asia event tiers:- 500 (Open)
-Target brands to contact:- Milo
+Discuss sponsorship packages and sponsorship letters. Refer to the 2026 Event Manual for sponsorship tiers.
 
+Sponsorship
 
+Discuss sponsorship packages and sponsorship letters. Refer to the 2026 Event Manual for sponsorship tiers.
+
+PPA Tour Asia event tiers:
+
+- 500 (Open)
+
+Target brands to contact:
+
+- Milo
 - Pocari
-
-
 - Summit
-Next steps:Extract/confirm sponsorship benefits per tier from the manual (Section 4.4 + hosting requirements).Draft sponsorship package one-pager per tier.Draft sponsorship letter template (customizable per brand).Send out to Milo / Pocari / Summit.Track outreach status + follow-ups.
+
+Next steps:
+
+Extract/confirm sponsorship benefits per tier from the manual (Section 4.4 + hosting requirements).
+Draft sponsorship package one-pager per tier.
+Draft sponsorship letter template (customizable per brand).
+Send out to Milo / Pocari / Summit.
+Track outreach status + follow-ups.
 
 ### Avvy Lapus — 2026-05-14
 
-Men’s Pro Pickleball Players- Ben Johns
+Men’s Pro Pickleball Players
 
+1. Ben Johns
+2. Federico Staksrud
+3. Tyson McGuffin
+4. Christian Alshon
+5. Gabriel Tardio
+6. Jack Sock
+7. JW Johnson
+8. Hayden Patriquin
+9. Zane Navratil
+10. Tam ma Shimabukuro
+11. Len Yang
+12. Chris Haworth
 
-- Federico Staksrud
+Women’s Pro Pickleball Players
 
-
-- Tyson McGuffin
-
-
-- Christian Alshon
-
-
-- Gabriel Tardio
-
-
-- Jack Sock
-
-
-- JW Johnson
-
-
-- Hayden Patriquin
-
-
-- Zane Navratil
-
-
-- Tam ma Shimabukuro
-
-
-- Len Yang
-
-
-- Chris Haworth
-Women’s Pro Pickleball Players- Anna Bright
-
-
-- Parris Todd
-
-
-- Alex Truong
-
-
-- Jorja Johnson
-
-
-- Tyra Black
-
-
-- Anna Leigh Waters
-
-
-- Catherine Parenteau
-
-
-- Jade Kawamoto
-
-
-- Jackie Kawamoto
-
-
-- Kate Fahey
-
-
-- Genie Bouchard
-
-
-- Chao Yi Wang
+1. Anna Bright
+2. Parris Todd
+3. Alex Truong
+4. Jorja Johnson
+5. Tyra Black
+6. Anna Leigh Waters
+7. Catherine Parenteau
+8. Jade Kawamoto
+9. Jackie Kawamoto
+10. Kate Fahey
+11. Genie Bouchard
+12. Chao Yi Wang
 
 ### JC Golez — 2026-05-21
 
-PPA 500 Sponsorship Meeting There are 7 categories:- Financial (excluding banking) like Insurance companies
+PPA 500 Sponsorship Meeting 
 
+There are 7 categories:
 
-- Airline and travel
+1. Financial (excluding banking) like Insurance companies
+2. Airline and travel
+3. E-Commerce
+4. Tech
+5. Beverages excluding water and isotonic drinks
+6. Consumer electronics
+7. Time (official timer partner)
 
+-There's an exception for Alcohol sponsors as long as the product is 0.0%
 
-- E-Commerce
+Restricted categories (will be the same for the 125 events):
 
+1. Betting
+2. Crypto - background check
 
-- Tech
+Tiers of Sponsorship Packages:
 
+1. Top = Event Presenting Sponsor - 1 slot
+2. Platinum = 2 slots
+3. Co-sponsors = 5 slots
+4. X deal can be done as long as it is not equipment because PPA have partners
+5. Food sponsors are ok
 
-- Beverages excluding water and isotonic drinks
+Hotel:
 
+1. Arranged by local partner
+2. Can be 2 hotels that are beside each other (Crowne & Holiday Inn)
+3. Rooms - X amount? - to follow but PPA staff are already about 10
+4. Airport transfers - not all but maybe just for specific players/guests
+5. Laundry included
+6. Breakfast included
+7. Meeting room/s
 
-- Consumer electronics
+Notes:
 
+1. Advance team arrives 3-5 days before the event
+2. Other staff arrives 1-2 days before the event
+3. Everyone normally leaves 1 day after  - let's ask for an option to entertain guests that wish to extend their stay
 
-- Time (official timer partner)
--There's an exception for Alcohol sponsors as long as the product is 0.0%Restricted categories (will be the same for the 125 events):- Betting
+To follow:
 
+1. Setup/picture of fan zone experience
+2. Branding
+3. Local pricing to align with PPA pricing from other events
+4. Room quantity requirements
 
-- Crypto - background check
-Tiers of Sponsorship Packages:- Top = Event Presenting Sponsor - 1 slot
+### Richard Bachmann — 2026-05-31
 
-
-- Platinum = 2 slots
-
-
-- Co-sponsors = 5 slots
-
-
-- X deal can be done as long as it is not equipment because PPA have partners
-
-
-- Food sponsors are ok
-Hotel:- Arranged by local partner
-
-
-- Can be 2 hotels that are beside each other (Crowne & Holiday Inn)
-
-
-- Rooms - X amount? - to follow but PPA staff are already about 10
-
-
-- Airport transfers - not all but maybe just for specific players/guests
-
-
-- Laundry included
-
-
-- Breakfast included
-
-
-- Meeting room/s
-Notes:- Advance team arrives 3-5 days before the event
-
-
-- Other staff arrives 1-2 days before the event
-
-
-- Everyone normally leaves 1 day after  - let's ask for an option to entertain guests that wish to extend their stay
-To follow:- Setup/picture of fan zone experience
-
-
-- Branding
-
-
-- Local pricing to align with PPA pricing from other events
-
-
-- Room quantity requirements
+Quick merch question for us.. do we have any guidance on how many tees to order for a PPA 500 vs a PPA 125? We also are trying to figure out a good size mix (S, M, L, XL, etc.) and which sizes usually sell fastest. Finally, are there any tee colors that have been consistent best-sellers at past events?

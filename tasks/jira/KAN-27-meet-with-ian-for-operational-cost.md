@@ -12,7 +12,7 @@ labels: []
 parent: KAN-16
 created: 2026-05-18T09:29:48.013+0800
 updated: 2026-05-18T09:30:03.934+0800
-synced_at: 2026-05-21
+synced_at: 2026-06-06
 ---
 
 # KAN-27: Meet with Ian for operational cost

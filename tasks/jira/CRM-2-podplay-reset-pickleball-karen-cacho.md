@@ -11,7 +11,7 @@ reporter: Avvy Lapus
 labels: []
 created: 2026-05-09T10:40:52.460+0800
 updated: 2026-05-11T09:35:49.914+0800
-synced_at: 2026-05-21
+synced_at: 2026-06-06
 ---
 
 # CRM-2: Podplay - Reset Pickleball (Karen Cacho)

@@ -11,8 +11,8 @@ reporter: Richard Bachmann
 labels: []
 due: 2026-05-13
 created: 2026-05-08T20:22:14.531+0800
-updated: 2026-05-17T18:39:20.786+0800
-synced_at: 2026-05-21
+updated: 2026-05-24T18:04:06.199+0800
+synced_at: 2026-06-06
 ---
 
 # KAN-4: PodPlay Hardware Requirements.
@@ -26,3 +26,29 @@ To forecast and consolidate incoming PodPlay hardware orders and deployment requ
 ### Richard Bachmann — 2026-05-12
 
 Meeting with Eric, Mario, and Marco tomorrow to align hardware order forecasting.
+
+### Richard Bachmann — 2026-05-24
+
+Podplay Investment ROI Spreadsheet
+
+Summary of attached spreadsheet sent by Mario:
+
+- Computes gross profit margin (GPM) and return on investment (ROI) for a facility investing in Podplay.
+- Calculates additional cost per hour per court, including both monthly venue costs and one-time costs.
+- Supports ROI analysis over different time horizons (for example, 1 year).
+
+What it shows
+
+- Projected GPM based on Podplay-related revenue and costs.
+- Incremental cost per hour per court, broken down into recurring monthly venue fees and one-time investment costs.
+- Estimated ROI for Podplay over selected analysis periods.
+
+How to use
+
+- Update the input fields for your facility’s court availability, pricing, and expected utilization.
+- Adjust monthly venue and one-time cost assumptions to match your local terms.
+- Review the calculated GPM and ROI outputs for the selected timeframe to assess the financial impact of adopting Podplay.
+
+### Richard Bachmann — 2026-05-24
+
+Avvy Lapus and JC Golez should review this as well. While PodPlay is expensive, presenting the cost on a per-court, per-hour basis and highlighting the benefits of the Pro+ tier makes it much easier to justify the value to a client.
