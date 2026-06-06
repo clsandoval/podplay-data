@@ -4,17 +4,17 @@ jira_url: https://kosmaskavc.atlassian.net/browse/KAN-20
 project: KAN
 type: jira-issue
 issue_type: Task
-status: On Hold
+status: Waiting / Blocked
 priority: Medium
 assignee: 
 reporter: Avvy Lapus
 labels: []
 created: 2026-05-12T15:42:49.024+0800
-updated: 2026-05-24T18:10:00.996+0800
-synced_at: 2026-05-28
+updated: 2026-06-01T08:26:58.548+0800
+synced_at: 2026-06-06
 ---
 
-# KAN-20: Pickle Crew PH
+# KAN-20: Pickle Crew PH 
 
 ## Description
 

@@ -11,8 +11,8 @@ reporter: Richard Bachmann
 labels: []
 due: 2026-05-20
 created: 2026-05-08T20:18:15.664+0800
-updated: 2026-05-17T18:39:33.898+0800
-synced_at: 2026-05-21
+updated: 2026-05-24T18:09:18.952+0800
+synced_at: 2026-06-06
 ---
 
 # KAN-3: To finalize the SkyRise Realty contract agreement.
@@ -25,10 +25,12 @@ Waiting for our lawyer to submit the updated draft of the contract. Once receive
 
 ### Richard Bachmann — 2026-05-16
 
-The updated KAVC/SkyRise contract is attached as of 
-
-. SkyRise will send a signed copy, and they have requested that we visit their office to execute the contract in person, along with a brief photo session.
+The updated KAVC/SkyRise contract is attached as of . SkyRise will send a signed copy, and they have requested that we visit their office to execute the contract in person, along with a brief photo session.
 
 ### Richard Bachmann — 2026-05-16
 
 SkyRise Realty Team has reviewed and is considering our recommendations for the mezzanine in their facility. The next step is to send them a list of our approved flooring suppliers for their consideration.
+
+### Richard Bachmann — 2026-05-24
+
+Awaiting their contract signature; they have requested an in-person meeting for the official signing. Next steps: get updates from Avvy tomorrow. We need to submit another set of suggestions on their plan—confirm with Aldo and Avvy.

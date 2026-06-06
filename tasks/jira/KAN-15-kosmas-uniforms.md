@@ -4,14 +4,14 @@ jira_url: https://kosmaskavc.atlassian.net/browse/KAN-15
 project: KAN
 type: jira-issue
 issue_type: Task
-status: Ready To Execute
+status: In Progress
 priority: Medium
 assignee: 
 reporter: Avvy Lapus
 labels: []
 created: 2026-05-11T07:08:19.158+0800
-updated: 2026-05-20T07:15:05.704+0800
-synced_at: 2026-05-21
+updated: 2026-06-01T04:34:32.918+0800
+synced_at: 2026-06-06
 ---
 
 # KAN-15: Kosmas Uniforms
@@ -49,3 +49,7 @@ Update: They have sizes. currently waiting for their quotation
 ### Avvy Lapus — 2026-05-20
 
 Currently checking another supplier for a lower cost.
+
+### Richard Bachmann — 2026-05-24
+
+Avvy visited an alternative supplier, where I tried on two shirts (one white and one black) in size 2XL; however, they were still too short and tight, so a 4XL size would be ideal.

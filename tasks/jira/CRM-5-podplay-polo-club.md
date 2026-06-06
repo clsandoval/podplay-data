@@ -11,7 +11,7 @@ reporter: Avvy Lapus
 labels: []
 created: 2026-05-20T14:36:21.825+0800
 updated: 2026-05-22T11:34:05.305+0800
-synced_at: 2026-05-28
+synced_at: 2026-06-06
 ---
 
 # CRM-5: Podplay - Polo CLub

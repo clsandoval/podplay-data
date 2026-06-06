@@ -11,7 +11,7 @@ reporter: Avvy Lapus
 labels: []
 created: 2026-05-09T10:36:16.177+0800
 updated: 2026-05-22T11:34:15.860+0800
-synced_at: 2026-05-28
+synced_at: 2026-06-06
 ---
 
 # CRM-1: KC - Skyrise Realty Cebu

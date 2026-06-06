@@ -4,22 +4,24 @@ jira_url: https://kosmaskavc.atlassian.net/browse/KAN-29
 project: KAN
 type: jira-issue
 issue_type: Task
-status: Backlog
+status: Waiting / Blocked
 priority: Medium
 assignee: 
 reporter: Avvy Lapus
 labels: []
 due: 2026-11-27
 created: 2026-05-20T07:17:00.868+0800
-updated: 2026-05-23T07:32:01.345+0800
-synced_at: 2026-05-28
+updated: 2026-06-01T04:33:55.424+0800
+synced_at: 2026-06-06
 ---
 
 # KAN-29: PCL - Paddle Battle Event
 
 ## Description
 
-PCL Paddle BattleA team-based pickleball tournament organized by featuring Pro and Open divisions, where sponsors field their own branded teams to compete. As a Gold Sponsor, would have the opportunity to showcase its brand through team participation, player engagement, and event visibility with the goal of encouraging more major brands to join the competition.
+PCL Paddle Battle
+
+A team-based pickleball tournament organized by featuring Pro and Open divisions, where sponsors field their own branded teams to compete. As a Gold Sponsor, would have the opportunity to showcase its brand through team participation, player engagement, and event visibility with the goal of encouraging more major brands to join the competition.
 
 ## Comments
 
@@ -35,16 +37,29 @@ Quick update on JOOLA / PCL discussions with Tom:
 
 ### Richard Bachmann — 2026-05-23
 
-Meeting update with SteveAttendeesKosmas side — Avvy, Kiko, JC, and myself
+Meeting update with Steve
+
+Attendees
+
+Kosmas side — Avvy, Kiko, JC, and myself
 
 PCL side — Steve, Mhica, and Rirhan Mae
 
-Key points- Steve strongly believes JOOLA should be part of the event and views them as the leading paddle/racket brand whose presence would add major credibility.
+Key points
+
+- Steve strongly believes JOOLA should be part of the event and views them as the leading paddle/racket brand whose presence would add major credibility.
 - JOOLA’s involvement is seen as a key driver for broader brand and community support.
 - Scheduling flexibility was discussed to accommodate JOOLA players and participation if required.
 - Overall tone was very positive, with clear intent from PCL to include JOOLA in the event regardless of the final sponsorship structure.
-Sponsorship proposal (JOOLA Gold Sponsor)Steve proposed a very flexible Gold Sponsor structure exclusively for JOOLA:
+
+Sponsorship proposal (JOOLA Gold Sponsor)
+
+Steve proposed a very flexible Gold Sponsor structure exclusively for JOOLA:
 
 - JOOLA determines the sponsorship value based on what the opportunity is worth to them.
 - The amount could be around 40k or potentially 0, depending on JOOLA’s assessment.
 - Steve’s primary priority is to have JOOLA involved in the event, even if the sponsorship fee is minimal or zero.
+
+### Richard Bachmann — 2026-05-31
+
+Kim already met with Tom from Joola and discussed the PCL “Battle Of The Brands” concept. They are still clarifying how it works. Joola likely cannot send their pros or signed endorsers; if they send employees, they want to know who will play for the other brands, and they are concerned about finishing last. Kim to follow up with them.

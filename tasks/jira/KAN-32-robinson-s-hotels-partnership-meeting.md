@@ -11,7 +11,7 @@ reporter: JC Golez
 labels: []
 created: 2026-05-21T08:45:13.316+0800
 updated: 2026-05-24T18:17:15.040+0800
-synced_at: 2026-05-28
+synced_at: 2026-06-06
 ---
 
 # KAN-32: Robinson's Hotels Partnership Meeting
@@ -26,30 +26,20 @@ Robinson’s Hotels and Resorts to be the “Official Home” of the PPA
 
 We get RHR to be the “Official Home of the PPA Asia Tour
 
-- We are looking at 30-40 rooms for the players, pros, VIP’s and Helios team
-- Being our partner, what we need to ask from them are:
-
-- Preferred commercial rates
-- Fixed/discounted rates for all events
-- Inclusions:
-
-- Breakfast
-- Early check-in
-- Late check-out
-- Can accommodate those who would want to extend their stay
-- Free laundry
-- Complimentary rooms. E.g. For every 5 or 10 rooms booked, we get a complimentary room.
-- Function rooms for meetings, player/staff briefing, prescon
-- Branding and marketing support
-
-- Lobby branding
-- Social media
-- Operational support
-
-- Transportation - airport transfers
-- Sponsorship support
-
-- How much will we ask them for sponsorship on top of everything we are asking them?
+1. We are looking at 30-40 rooms for the players, pros, VIP’s and Helios team
+2. Being our partner, what we need to ask from them are:1. Preferred commercial rates
+2. Fixed/discounted rates for all events
+3. Inclusions:1. Breakfast
+2. Early check-in
+3. Late check-out
+4. Can accommodate those who would want to extend their stay
+5. Free laundry
+6. Complimentary rooms. E.g. For every 5 or 10 rooms booked, we get a complimentary room.
+7. Function rooms for meetings, player/staff briefing, prescon
+8. Branding and marketing support1. Lobby branding
+2. Social media
+9. Operational support1. Transportation - airport transfers
+10. Sponsorship support1. How much will we ask them for sponsorship on top of everything we are asking them?
 
 ### JC Golez — 2026-05-21
 

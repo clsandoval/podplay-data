@@ -89,6 +89,7 @@ When a request matches one of these, read the skill file before acting.
 - **Drafting a SOW or proposal** → `skills/proposal-writing.md`
 - **First call / site visit prep or debrief** → `skills/discovery-call.md`
 - **Meeting / call notes → action items** → `skills/meeting-to-tickets.md`
+- **Re-sync the `tasks/jira/` mirror from Jira** → `skills/jira-sync.md`
 - **Proactive gap-watching during conversations** → `skills/ingestion.md`
 - **Reading files shared in Slack** → `skills/slack-file-reading.md`
 
