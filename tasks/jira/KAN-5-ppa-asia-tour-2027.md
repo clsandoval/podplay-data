@@ -10,8 +10,8 @@ assignee: Richard Bachmann
 reporter: Richard Bachmann
 labels: []
 created: 2026-05-08T20:24:22.729+0800
-updated: 2026-06-01T04:34:25.378+0800
-synced_at: 2026-06-06
+updated: 2026-06-21T16:05:20.056+0800
+synced_at: 2026-07-18
 ---
 
 # KAN-5: PPA Asia Tour 2027
@@ -152,3 +152,30 @@ To follow:
 ### Richard Bachmann — 2026-05-31
 
 Quick merch question for us.. do we have any guidance on how many tees to order for a PPA 500 vs a PPA 125? We also are trying to figure out a good size mix (S, M, L, XL, etc.) and which sizes usually sell fastest. Finally, are there any tee colors that have been consistent best-sellers at past events?
+
+### Richard Bachmann — 2026-06-07
+
+Dome Tent and Sound System Supplier: Jon — Contact Number: 0917 868 0847. Referred by Avvy.
+
+### Richard Bachmann — 2026-06-07
+
+We need to arrange a dedicated medical team with an ambulance on standby for all event days, including support from Avvy if available. Please coordinate with Red Cross for EMS coverage.
+
+Contact from Avvy: Ana Marie Jusay — 09178068518 / [prs.ems@redcross.org.ph](mailto:prs.ems@redcross.org.ph)
+
+### Richard Bachmann — 2026-06-21
+
+Meeting with PSC tomorrow at 10:00 AM with Avvy and Kiko. We hope they can assist us. To follow Mama Sita baskets (small) for them.
+
+### Richard Bachmann — 2026-06-21
+
+Update for everyone: I messaged Sienna from TV5/Cignal the other day. Here’s the message I sent:
+
+Hi Sienna,
+Just got back from Thailand and wanted to touch base.
+Thanks again for taking the time to review the PPA 500 materials. I know everyone has a lot on their plate, so no rush at all.
+I’ll be meeting with PSC on Monday to discuss the project and potential areas of collaboration. Thought I'd keep you updated as things move forward and as we continue exploring the broadcast and media opportunities around the event.
+Looking forward to hearing your thoughts when you get a chance.
+Thanks again, and have a great weekend!
+
+Please also send her a Mama Sita basket as a thank-you.

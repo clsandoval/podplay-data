@@ -11,7 +11,7 @@ reporter: Avvy Lapus
 labels: []
 created: 2026-05-12T15:42:49.024+0800
 updated: 2026-06-01T08:26:58.548+0800
-synced_at: 2026-06-06
+synced_at: 2026-07-18
 ---
 
 # KAN-20: Pickle Crew PH 

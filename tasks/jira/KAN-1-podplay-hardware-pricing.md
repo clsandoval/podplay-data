@@ -11,8 +11,8 @@ reporter: Richard Bachmann
 labels: []
 due: 2026-05-15
 created: 2026-05-08T20:08:58.496+0800
-updated: 2026-06-01T04:35:07.450+0800
-synced_at: 2026-06-06
+updated: 2026-06-21T16:15:10.283+0800
+synced_at: 2026-07-18
 ---
 
 # KAN-1: PodPlay Hardware Pricing
@@ -34,3 +34,7 @@ Marco needed to reduce the hardware cost per venue, which decreased from approxi
 ### Richard Bachmann — 2026-05-31
 
 Marco and I will update this, as the quotation for the cameras we’re ordering for Tela Park is now close to Php 30,000 per camera. We’ll revise the pricing accordingly and send the updated quotation to Mario for review and approval.
+
+### Richard Bachmann — 2026-06-21
+
+Get the final camera pricing from Marco, then work with Mario to define pricing for PodPlay/PingPod hardware for new clients.

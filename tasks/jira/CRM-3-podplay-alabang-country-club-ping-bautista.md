@@ -6,12 +6,12 @@ type: jira-issue
 issue_type: Customer
 status: NURTURE
 priority: Medium
-assignee: 
+assignee: JC Golez
 reporter: JC Golez
 labels: []
 created: 2026-05-11T09:36:18.706+0800
-updated: 2026-05-12T07:17:29.958+0800
-synced_at: 2026-06-06
+updated: 2026-06-17T16:17:54.523+0800
+synced_at: 2026-07-18
 ---
 
 # CRM-3: Podplay - Alabang Country Club (Ping Bautista)

@@ -11,7 +11,7 @@ reporter: Richard Bachmann
 labels: []
 created: 2026-05-17T18:44:02.133+0800
 updated: 2026-05-24T18:12:35.346+0800
-synced_at: 2026-06-06
+synced_at: 2026-07-18
 ---
 
 # KAN-24: Send Formal Notice to PPF

@@ -10,8 +10,8 @@ assignee: Richard Bachmann
 reporter: Richard Bachmann
 labels: []
 created: 2026-05-13T09:45:01.508+0800
-updated: 2026-05-31T06:57:36.932+0800
-synced_at: 2026-06-06
+updated: 2026-06-21T15:48:16.019+0800
+synced_at: 2026-07-18
 ---
 
 # KAN-21: MLP Philippines
@@ -42,3 +42,15 @@ MLP Philippines Planning Summary
 - Timing and conditions of the final contract signature with MLP for the Philippines.
 - Level of interest and engagement from Mr. Uytengsu regarding the proposed father-and-son team project.
 - Clarify MLP’s scope, resources, and launch timeline.
+
+### Richard Bachmann — 2026-06-21
+
+MLP Philippines — getting started
+Madeleine created the WhatsApp group MLP ASIA PHILIPPINES and shared MLP Asia Team notes — June 13, 2026. I need to review the notes and begin moving the work forward.
+Get access to the MLP ASIA PHILIPPINES WhatsApp group and confirm key participants.
+Review Madeleine’s MLP Asia Team notes from 
+
+.
+Extract decisions, open questions, owners, and next steps from the notes.
+Set up the initial action plan for launching MLP Philippines activities.
+Follow up with Madeleine and the Asia team on priorities, timeline, and required support.

@@ -11,8 +11,8 @@ reporter: Avvy Lapus
 labels: []
 due: 2026-11-27
 created: 2026-05-20T07:17:00.868+0800
-updated: 2026-06-01T04:33:55.424+0800
-synced_at: 2026-06-06
+updated: 2026-06-21T16:30:30.220+0800
+synced_at: 2026-07-18
 ---
 
 # KAN-29: PCL - Paddle Battle Event
@@ -63,3 +63,7 @@ Steve proposed a very flexible Gold Sponsor structure exclusively for JOOLA:
 ### Richard Bachmann — 2026-05-31
 
 Kim already met with Tom from Joola and discussed the PCL “Battle Of The Brands” concept. They are still clarifying how it works. Joola likely cannot send their pros or signed endorsers; if they send employees, they want to know who will play for the other brands, and they are concerned about finishing last. Kim to follow up with them.
+
+### Richard Bachmann — 2026-06-21
+
+Ongoing discussions with Steve, Kiko, Kim, JOOLA, and myself are still in progress. We have not yet reached an agreement on whether JOOLA will support the Paddle Battle event. PCL (Steve) continues to make a strong case and is making it difficult for JOOLA to say no.

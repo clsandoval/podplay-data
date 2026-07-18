@@ -11,7 +11,7 @@ reporter: Richard Bachmann
 labels: []
 created: 2026-05-19T05:49:59.853+0800
 updated: 2026-05-31T07:02:50.076+0800
-synced_at: 2026-06-06
+synced_at: 2026-07-18
 ---
 
 # KAN-28: CHK Facilities Collaboration – KAVC

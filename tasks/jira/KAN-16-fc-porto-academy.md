@@ -10,8 +10,8 @@ assignee: Richard Bachmann
 reporter: Richard Bachmann
 labels: []
 created: 2026-05-11T08:10:17.594+0800
-updated: 2026-06-01T04:33:39.939+0800
-synced_at: 2026-06-06
+updated: 2026-06-07T21:13:32.138+0800
+synced_at: 2026-07-18
 ---
 
 # KAN-16: FC Porto Academy
@@ -142,3 +142,9 @@ Full operational planning complete
 Camp delivery window
 - Run the Football World Camp during the targeted second week of the December school break.
 - Capture technical, operational, and commercial learnings to inform any long-term engagement.
+
+### Richard Bachmann — 2026-06-07
+
+The team has decided to start by piloting an FC Porto World Camp and then assess market interest before committing to a broader rollout.
+
+JC has completed the initial costings for the World Camp. The next step is to prepare sponsorship packages and begin securing sponsors for the event.

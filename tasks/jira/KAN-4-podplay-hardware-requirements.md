@@ -11,8 +11,8 @@ reporter: Richard Bachmann
 labels: []
 due: 2026-05-13
 created: 2026-05-08T20:22:14.531+0800
-updated: 2026-05-24T18:04:06.199+0800
-synced_at: 2026-06-06
+updated: 2026-06-07T17:53:29.907+0800
+synced_at: 2026-07-18
 ---
 
 # KAN-4: PodPlay Hardware Requirements.
@@ -52,3 +52,15 @@ How to use
 ### Richard Bachmann — 2026-05-24
 
 Avvy Lapus and JC Golez should review this as well. While PodPlay is expensive, presenting the cost on a per-court, per-hour basis and highlighting the benefits of the Pro+ tier makes it much easier to justify the value to a client.
+
+### Richard Bachmann — 2026-06-07
+
+Delivery and Inventory Check
+Please review the current delivery status for all PodPlay hardware requirements, including which items are already on hand and which items are still pending arrival.
+Confirm the list of items currently available on hand.
+Track all pending deliveries and expected arrival dates.
+Follow up with the supplier delivering the demo camera.
+Monitor Shopee orders and update the team once delivery dates are confirmed.
+Known pending items:
+- Demo camera from supplier
+- Items ordered from Shopee awaiting delivery

@@ -11,7 +11,7 @@ reporter: Avvy Lapus
 labels: []
 created: 2026-05-11T07:08:19.158+0800
 updated: 2026-06-01T04:34:32.918+0800
-synced_at: 2026-06-06
+synced_at: 2026-07-18
 ---
 
 # KAN-15: Kosmas Uniforms

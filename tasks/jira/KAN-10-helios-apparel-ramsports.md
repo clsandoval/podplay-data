@@ -12,7 +12,7 @@ labels: []
 due: 2026-05-13
 created: 2026-05-08T20:42:29.616+0800
 updated: 2026-06-01T08:26:54.239+0800
-synced_at: 2026-06-06
+synced_at: 2026-07-18
 ---
 
 # KAN-10: Helios Apparel - RamSports

@@ -11,7 +11,7 @@ reporter: Avvy Lapus
 labels: []
 created: 2026-05-11T07:08:06.742+0800
 updated: 2026-05-29T09:30:01.621+0800
-synced_at: 2026-06-06
+synced_at: 2026-07-18
 ---
 
 # KAN-14: Social Media Creation - Helios
