@@ -10,8 +10,8 @@ assignee: Richard Bachmann
 reporter: Richard Bachmann
 labels: []
 created: 2026-05-16T11:34:50.678+0800
-updated: 2026-05-31T07:21:32.730+0800
-synced_at: 2026-06-06
+updated: 2026-08-12T09:24:56.738+0800
+synced_at: 2026-08-26
 ---
 
 # KAN-23: PingPod Operations Training
@@ -91,3 +91,26 @@ Travel Preparation Note
 - Meeting with Varun / Central Group:- Purpose: Meeting with Varun and the Central Group company.
 - Context: Central Group in Thailand is similar in role and scale to SM in the Philippines.
 - Additional meeting:- Ernesto has arranged a meeting with the General Secretary of the Thailand Table Tennis Association.
+
+### Richard Bachmann — 2026-06-07
+
+Varun will be arriving on . Carlos and I will sit down with Ernesto to discuss the itinerary. All day on  will be PodPlay-related.
+
+### Richard Bachmann — 2026-06-21
+
+Sent the team the documents that needed to be reviewed. Next step: email Katie to schedule a meeting with the team.
+
+Email sent to Katie:
+
+Hi Katie,
+Great to meet you, and likewise, we’re very excited about the opportunity to work together and explore the expansion of the PingPod network in Asia.
+Appreciate you streamlining the communication as well.
+Our team is currently reviewing the documents that were shared internally so we can better align on the onboarding process, operational requirements, and overall rollout approach before moving into the next discussions.
+I’m based in the Philippines (GMT+8) and am generally available during Asia business hours, but I can also adjust depending on the schedule needed for coordination with your team.
+Looking forward to working closely with you and the team.
+Regards,
+REB
+
+### Richard Bachmann — 2026-08-12
+
+No update received from Katie. Next action is to follow up with Ernesto to check the status and facilitate progress.

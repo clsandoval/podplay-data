@@ -4,15 +4,15 @@ jira_url: https://kosmaskavc.atlassian.net/browse/KAN-2
 project: KAN
 type: jira-issue
 issue_type: Task
-status: Waiting / Blocked
+status: Review / QA
 priority: Medium
 assignee: 
 reporter: Richard Bachmann
 labels: []
 due: 2026-05-22
 created: 2026-05-08T20:13:12.993+0800
-updated: 2026-05-31T07:34:52.029+0800
-synced_at: 2026-06-06
+updated: 2026-08-14T09:00:46.851+0800
+synced_at: 2026-08-26
 ---
 
 # KAN-2: To finalize the contract agreement for Tela Park.
@@ -100,3 +100,15 @@ Next steps
 - Confirm the Ubiquiti router/firewall model meets network and port forwarding requirements.
 - Prepare network diagrams or infrastructure notes for planning.
 - Plan to configure and deliver all hardware and go live.
+
+### Richard Bachmann — 2026-06-07
+
+Sent the contract to JOF last Friday. I will ask him for feedback tomorrow. We will also know more about pricing and pod credits next week after their board meeting.
+
+### Richard Bachmann — 2026-06-07
+
+Can Marco start configuring the iPads, Apple TV, Mac Mini, and other items for Tela Park?
+
+### Richard Bachmann — 2026-06-24
+
+Received the latest Telapark contract and corresponding Scope of Work today. Currently under review and will be shared with Kim upon completion of the review.

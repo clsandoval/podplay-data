@@ -4,17 +4,17 @@ jira_url: https://kosmaskavc.atlassian.net/browse/KAN-22
 project: KAN
 type: jira-issue
 issue_type: Task
-status: Review / QA
+status: COMPLETED
 priority: Medium
 assignee: Carlos Sandoval
 reporter: Marco Van Basug
 labels: ["marketing", "website"]
 created: 2026-05-15T00:52:04.687+0800
-updated: 2026-06-04T07:29:59.697+0800
-synced_at: 2026-06-06
+updated: 2026-08-14T09:00:19.470+0800
+synced_at: 2026-08-26
 ---
 
-# KAN-22: Kosmas Website
+# KAN-22: KAVC Website
 
 ## Description
 
@@ -93,3 +93,29 @@ We already have [kosmas.com.ph](http://kosmas.com.ph) registered, so no need to 
 ### Carlos Sandoval — 2026-06-01
 
 sounds good ill message him on whatsapp
+
+### Richard Bachmann — 2026-06-07
+
+Hello team,
+
+Here’s a preview of the KAVC website with the latest feedback incorporated: 
+
+We’d appreciate any additional feedback from the team, especially on content clarity, overall user experience, visual polish, responsiveness, and anything that may need refinement before the next round of updates.
+
+Thank you!
+
+### Avvy Lapus — 2026-06-11
+
+is our website live already?
+
+### Marco Van Basug — 2026-06-11
+
+yes
+
+### Avvy Lapus — 2026-06-11
+
+whats the live url?
+
+### Marco Van Basug — 2026-06-11
+
+[kosmas.com.ph](http://kosmas.com.ph)

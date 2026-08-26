@@ -11,7 +11,7 @@ reporter: Avvy Lapus
 labels: []
 created: 2026-05-22T11:33:45.389+0800
 updated: 2026-05-22T11:33:58.139+0800
-synced_at: 2026-06-06
+synced_at: 2026-08-26
 ---
 
 # CRM-6: Courstide Pickleball PH

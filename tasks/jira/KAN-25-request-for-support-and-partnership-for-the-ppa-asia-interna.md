@@ -11,7 +11,7 @@ reporter: Richard Bachmann
 labels: []
 created: 2026-05-18T05:28:43.958+0800
 updated: 2026-05-31T17:33:46.488+0800
-synced_at: 2026-06-06
+synced_at: 2026-08-26
 ---
 
 # KAN-25: Request for Support and Partnership for the PPA Asia International Pickleball Event

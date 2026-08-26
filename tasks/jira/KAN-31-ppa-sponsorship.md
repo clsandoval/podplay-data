@@ -4,14 +4,14 @@ jira_url: https://kosmaskavc.atlassian.net/browse/KAN-31
 project: KAN
 type: jira-issue
 issue_type: Task
-status: Ready To Execute
+status: In Progress
 priority: Medium
 assignee: 
 reporter: Avvy Lapus
 labels: []
 created: 2026-05-20T07:24:57.467+0800
-updated: 2026-06-01T04:34:35.345+0800
-synced_at: 2026-06-06
+updated: 2026-06-22T07:45:12.987+0800
+synced_at: 2026-08-26
 ---
 
 # KAN-31: PPA Sponsorship
@@ -108,3 +108,17 @@ Begin preparation of media valuation and exposure metrics (international broadca
 Overall Status
 
 Positive initial alignment achieved. Stakeholders expressed interest in supporting a long-term partnership ecosystem spanning hotels, airline travel, tourism, and regional event expansion anchored on the PPA Asia platform.
+
+### Richard Bachmann — 2026-06-07
+
+Initial meeting with Ricky Vargus and Kim went well. Next step: meet with TV5/Cignal, represented by Sienna Olaso, on Tuesday at 10:00 AM to discuss broadcast opportunities for the PPA sponsorship.
+
+### Avvy Lapus — 2026-06-11
+
+Onboard:
+
+Immuni
+
+MsM Shop
+
+Iyasu

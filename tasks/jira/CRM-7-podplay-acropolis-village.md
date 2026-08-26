@@ -11,7 +11,7 @@ reporter: JC Golez
 labels: []
 created: 2026-06-03T07:06:12.341+0800
 updated: 2026-06-05T14:54:10.602+0800
-synced_at: 2026-06-06
+synced_at: 2026-08-26
 ---
 
 # CRM-7: PodPlay - Acropolis Village

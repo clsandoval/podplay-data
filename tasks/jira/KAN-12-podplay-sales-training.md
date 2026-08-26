@@ -12,7 +12,7 @@ labels: []
 due: 2026-05-13
 created: 2026-05-10T16:23:57.825+0800
 updated: 2026-05-20T12:19:24.665+0800
-synced_at: 2026-06-06
+synced_at: 2026-08-26
 ---
 
 # KAN-12: PodPlay Sales Training

@@ -4,15 +4,15 @@ jira_url: https://kosmaskavc.atlassian.net/browse/KAN-27
 project: KAN
 type: jira-issue
 issue_type: Subtask
-status: Planning
+status: COMPLETED
 priority: Medium
 assignee: 
 reporter: JC Golez
 labels: []
 parent: KAN-16
 created: 2026-05-18T09:29:48.013+0800
-updated: 2026-05-18T09:30:03.934+0800
-synced_at: 2026-06-06
+updated: 2026-06-10T06:59:45.802+0800
+synced_at: 2026-08-26
 ---
 
 # KAN-27: Meet with Ian for operational cost

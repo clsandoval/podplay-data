@@ -11,7 +11,7 @@ reporter: JC Golez
 labels: []
 created: 2026-05-21T08:45:13.316+0800
 updated: 2026-05-24T18:17:15.040+0800
-synced_at: 2026-06-06
+synced_at: 2026-08-26
 ---
 
 # KAN-32: Robinson's Hotels Partnership Meeting

@@ -12,7 +12,7 @@ labels: []
 parent: KAN-16
 created: 2026-05-12T07:08:04.871+0800
 updated: 2026-05-17T20:07:05.695+0800
-synced_at: 2026-06-06
+synced_at: 2026-08-26
 ---
 
 # KAN-19: Meet with Spanish TD
