@@ -11,7 +11,7 @@ reporter: Avvy Lapus
 labels: []
 created: 2026-05-11T07:07:56.972+0800
 updated: 2026-05-29T09:30:41.778+0800
-synced_at: 2026-07-18
+synced_at: 2026-08-26
 ---
 
 # KAN-13: Social Media Creation - Kosmas

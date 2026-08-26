@@ -12,7 +12,7 @@ labels: []
 parent: KAN-5
 created: 2026-05-08T20:37:35.214+0800
 updated: 2026-06-24T16:12:04.440+0800
-synced_at: 2026-07-18
+synced_at: 2026-08-26
 ---
 
 # KAN-7: To finalize and secure hotel partnerships, room allocations, and accommodation rates for the event and participating teams.

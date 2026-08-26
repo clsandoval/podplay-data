@@ -11,7 +11,7 @@ reporter: Richard Bachmann
 labels: []
 created: 2026-05-31T17:36:00.790+0800
 updated: 2026-06-19T21:27:26.181+0800
-synced_at: 2026-07-18
+synced_at: 2026-08-26
 ---
 
 # KAN-35: Discuss PPA Broadcasting Strategy with Ricky & Kim

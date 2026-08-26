@@ -11,7 +11,7 @@ reporter: JC Golez
 labels: []
 created: 2026-05-11T09:36:18.706+0800
 updated: 2026-06-17T16:17:54.523+0800
-synced_at: 2026-07-18
+synced_at: 2026-08-26
 ---
 
 # CRM-3: Podplay - Alabang Country Club (Ping Bautista)

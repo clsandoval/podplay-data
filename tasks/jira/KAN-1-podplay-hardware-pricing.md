@@ -12,7 +12,7 @@ labels: []
 due: 2026-05-15
 created: 2026-05-08T20:08:58.496+0800
 updated: 2026-06-21T16:15:10.283+0800
-synced_at: 2026-07-18
+synced_at: 2026-08-26
 ---
 
 # KAN-1: PodPlay Hardware Pricing

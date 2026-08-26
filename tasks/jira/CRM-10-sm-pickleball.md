@@ -11,7 +11,7 @@ reporter: JC Golez
 labels: []
 created: 2026-06-17T16:08:02.374+0800
 updated: 2026-06-17T16:15:17.453+0800
-synced_at: 2026-07-18
+synced_at: 2026-08-26
 ---
 
 # CRM-10: SM Pickleball

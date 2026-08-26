@@ -10,8 +10,8 @@ assignee: aflores
 reporter: Richard Bachmann
 labels: []
 created: 2026-06-24T09:31:49.511+0800
-updated: 2026-06-24T09:42:58.155+0800
-synced_at: 2026-07-18
+updated: 2026-07-19T14:55:16.587+0800
+synced_at: 2026-08-26
 ---
 
 # KAN-42: HubSpot & Slack For PodPlay
@@ -42,3 +42,16 @@ The GTM strategy is organized into four operational streams to ensure deals move
 2. Sales Enablement
 3. Contracting
 4. Post-Sales Support & Onboarding
+
+### Richard Bachmann — 2026-07-19
+
+PodPlay / HubSpot & Slack Update
+
+Quick update, team:
+
+- Marco has signed up for both KAVC HubSpot and KAVC Slack.
+- The PodPlay team has already been invited to both platforms.
+- I'm currently populating HubSpot with our leads, contacts, companies, and other relevant information to build out our CRM.
+- Before we move too far ahead, I'll ask the PodPlay team to review our setup to make sure we're organizing everything correctly and following best practices from the start.
+
+Will share another update once we've received their feedback and made any necessary adjustments.

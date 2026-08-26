@@ -11,7 +11,7 @@ reporter: Richard Bachmann
 labels: []
 created: 2026-05-31T17:34:57.343+0800
 updated: 2026-06-19T21:27:16.567+0800
-synced_at: 2026-07-18
+synced_at: 2026-08-26
 ---
 
 # KAN-34: Plan Bangkok Trip Logistics for PingPod & PodPlay

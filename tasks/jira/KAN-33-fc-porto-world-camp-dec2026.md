@@ -10,15 +10,15 @@ assignee: JC Golez
 reporter: JC Golez
 labels: []
 created: 2026-05-29T09:18:56.781+0800
-updated: 2026-07-01T21:57:12.305+0800
-synced_at: 2026-07-18
+updated: 2026-08-12T09:26:31.036+0800
+synced_at: 2026-08-26
 ---
 
 # KAN-33: FC Porto World Camp Dec2026
 
 ## Description
 
-FC Porto Dragon Force World Camp is an international football training camp program created by FC Porto through its Dragon Force youth development system. It brings FC Porto’s academy methodology to different countries, allowing young players — usually ages 6 to 17 — to train directly under certified FC Porto coaches.
+FC Porto Dragon Force World Camp is an international football training camp program created by FC Porto through its Dragon Force youth development system. It brings FC Porto’s academy methodology to different countries, allowing young players — usually ages 6 to 16 — to train directly under certified FC Porto coaches.
 
 ## Comments
 
@@ -169,3 +169,42 @@ We need to start thinking about:
 - June 2025 Barce charged P17,500 for a 4-day camp as well
 - The fee includes 1 set of jersey and shorts
 - In Iloilo JC started reaching out to Ian Araneta regarding the plans
+
+### Richard Bachmann — 2026-07-19
+
+Atleta 63 / Manila & Iloilo Update
+
+Quick updates for the team:
+
+- We need to set a date for the contract signing at Atleta 63.
+- We've started discussions with several potential sponsors. Initial conversations have been positive, but we now need to start locking in commitments.
+- The tarps at Atleta 63 are already up, but they need to be replaced. They're a bit too small, so we'll need larger ones for better visibility.
+
+Event Dates
+
+- Iloilo Leg: December 11–13
+- Manila Leg: December 18–22
+
+Next steps are to finalize the contract signing schedule, close sponsorships, and update the venue branding.
+
+### Eriell Estrada — 2026-07-20
+
+Thanks for the updates, Sir! Regarding the tarpaulin, Kuya  already communicated with Marigold’s procurement for production of tarps. To ensure effective promotional strategy, we’ve decided to resize it to 6ft (height) x 10ft (width), strategically placed facing the field and facing the road. All original and smaller tarps will be re-designated to the bleacher area. Attached are the details regarding this
+
+### JC Golez — 2026-08-02
+
+Update on things to do
+
+- Meet with Auntie Anne’s this week for sponsorship
+- Meet with Futbol Funatics and Aspire on how to run a football camp
+- Meet with Anton again. As discussed with him, he needs to get us a sit down already with his leads. Start with Coke and go from there
+- Follow up with Leo on the possible sponsorship from his brother Rene Garcia
+- Follow up on the tarps
+- Follow up with Porto meeting to finalize the camp schedule/flow for the 5 days in Manila and 3 in Iloilo and other questions of Kim in the contract so we can finalize it already and have contract going with Porto
+
+### Richard Bachmann — 2026-08-12
+
+- FC Porto World Camp / Academy – JIRA Activity Update- Coordinated with Outlast (Trisha) to support the marketing efforts for the FC Porto World Camp. Outlast will also assist with other key initiatives to help ensure the event's success, with a primary focus on sponsorship acquisition.
+- Conducted sponsorship outreach for the Gift of Football initiative, which aims to provide deserving children with the opportunity to attend the FC Porto World Camp through corporate sponsorships.
+- Received an initial commitment from MILO to support the Gift of Football program. Currently finalizing the sponsorship package before distributing it to prospective sponsors.
+- Scheduled an online coordination meeting with Jorge to discuss World Camp preparations, align on key deliverables, and review the overall event plan and next steps.

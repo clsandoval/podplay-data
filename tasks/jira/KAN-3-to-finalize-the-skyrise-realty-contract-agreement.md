@@ -4,15 +4,15 @@ jira_url: https://kosmaskavc.atlassian.net/browse/KAN-3
 project: KAN
 type: jira-issue
 issue_type: Task
-status: Waiting / Blocked
+status: Review / QA
 priority: Medium
 assignee: Richard Bachmann
 reporter: Richard Bachmann
 labels: []
 due: 2026-05-20
 created: 2026-05-08T20:18:15.664+0800
-updated: 2026-06-21T16:28:41.130+0800
-synced_at: 2026-07-18
+updated: 2026-08-14T09:00:48.293+0800
+synced_at: 2026-08-26
 ---
 
 # KAN-3: To finalize the SkyRise Realty contract agreement.

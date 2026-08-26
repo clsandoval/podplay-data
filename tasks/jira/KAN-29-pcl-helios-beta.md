@@ -4,15 +4,15 @@ jira_url: https://kosmaskavc.atlassian.net/browse/KAN-29
 project: KAN
 type: jira-issue
 issue_type: Task
-status: Waiting / Blocked
+status: On Hold
 priority: Medium
 assignee: 
 reporter: Avvy Lapus
 labels: []
 due: 2026-11-27
 created: 2026-05-20T07:17:00.868+0800
-updated: 2026-06-21T16:30:30.220+0800
-synced_at: 2026-07-18
+updated: 2026-08-14T09:00:54.134+0800
+synced_at: 2026-08-26
 ---
 
 # KAN-29: PCL - Paddle Battle Event

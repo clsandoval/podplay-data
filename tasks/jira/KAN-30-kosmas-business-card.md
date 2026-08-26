@@ -4,14 +4,14 @@ jira_url: https://kosmaskavc.atlassian.net/browse/KAN-30
 project: KAN
 type: jira-issue
 issue_type: Task
-status: In Progress
+status: COMPLETED
 priority: Medium
 assignee: 
 reporter: Avvy Lapus
 labels: []
 created: 2026-05-20T07:22:12.597+0800
-updated: 2026-07-09T14:07:17.940+0800
-synced_at: 2026-07-18
+updated: 2026-08-14T08:59:45.628+0800
+synced_at: 2026-08-26
 ---
 
 # KAN-30: Kosmas Business Card

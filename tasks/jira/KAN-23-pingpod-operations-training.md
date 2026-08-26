@@ -10,8 +10,8 @@ assignee: Richard Bachmann
 reporter: Richard Bachmann
 labels: []
 created: 2026-05-16T11:34:50.678+0800
-updated: 2026-06-21T15:54:25.901+0800
-synced_at: 2026-07-18
+updated: 2026-08-12T09:24:56.738+0800
+synced_at: 2026-08-26
 ---
 
 # KAN-23: PingPod Operations Training
@@ -110,3 +110,7 @@ I’m based in the Philippines (GMT+8) and am generally available during Asia bu
 Looking forward to working closely with you and the team.
 Regards,
 REB
+
+### Richard Bachmann — 2026-08-12
+
+No update received from Katie. Next action is to follow up with Ernesto to check the status and facilitate progress.

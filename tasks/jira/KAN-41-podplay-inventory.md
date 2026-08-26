@@ -11,7 +11,7 @@ reporter: Marco Van Basug
 labels: []
 created: 2026-06-15T22:26:36.263+0800
 updated: 2026-07-07T07:51:06.120+0800
-synced_at: 2026-07-18
+synced_at: 2026-08-26
 ---
 
 # KAN-41: Podplay Inventory

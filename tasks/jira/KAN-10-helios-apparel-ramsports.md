@@ -4,15 +4,15 @@ jira_url: https://kosmaskavc.atlassian.net/browse/KAN-10
 project: KAN
 type: jira-issue
 issue_type: Task
-status: Waiting / Blocked
+status: On Hold
 priority: Medium
 assignee: Avvy Lapus
 reporter: Richard Bachmann
 labels: []
 due: 2026-05-13
 created: 2026-05-08T20:42:29.616+0800
-updated: 2026-06-01T08:26:54.239+0800
-synced_at: 2026-07-18
+updated: 2026-08-14T09:00:34.329+0800
+synced_at: 2026-08-26
 ---
 
 # KAN-10: Helios Apparel - RamSports

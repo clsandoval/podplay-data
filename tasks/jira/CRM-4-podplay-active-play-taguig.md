@@ -11,7 +11,7 @@ reporter: JC Golez
 labels: []
 created: 2026-05-13T12:23:16.091+0800
 updated: 2026-06-17T16:18:00.137+0800
-synced_at: 2026-07-18
+synced_at: 2026-08-26
 ---
 
 # CRM-4: Podplay - Active Play Taguig

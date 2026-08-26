@@ -12,7 +12,7 @@ labels: []
 parent: KAN-39
 created: 2026-06-11T07:59:06.551+0800
 updated: 2026-06-11T08:00:11.646+0800
-synced_at: 2026-07-18
+synced_at: 2026-08-26
 ---
 
 # KAN-40: how to delete this? haha

@@ -11,7 +11,7 @@ reporter: Avvy Lapus
 labels: []
 created: 2026-05-20T07:24:57.467+0800
 updated: 2026-06-22T07:45:12.987+0800
-synced_at: 2026-07-18
+synced_at: 2026-08-26
 ---
 
 # KAN-31: PPA Sponsorship

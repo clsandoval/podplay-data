@@ -12,7 +12,7 @@ labels: []
 due: 2026-05-13
 created: 2026-05-08T20:22:14.531+0800
 updated: 2026-06-07T17:53:29.907+0800
-synced_at: 2026-07-18
+synced_at: 2026-08-26
 ---
 
 # KAN-4: PodPlay Hardware Requirements.

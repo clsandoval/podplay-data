@@ -10,8 +10,8 @@ assignee: Richard Bachmann
 reporter: Richard Bachmann
 labels: []
 created: 2026-05-11T08:10:17.594+0800
-updated: 2026-06-07T21:13:32.138+0800
-synced_at: 2026-07-18
+updated: 2026-08-12T09:22:53.104+0800
+synced_at: 2026-08-26
 ---
 
 # KAN-16: FC Porto Academy
@@ -148,3 +148,12 @@ Camp delivery window
 The team has decided to start by piloting an FC Porto World Camp and then assess market interest before committing to a broader rollout.
 
 JC has completed the initial costings for the World Camp. The next step is to prepare sponsorship packages and begin securing sponsors for the event.
+
+### Richard Bachmann — 2026-08-12
+
+FC Porto World Camp / Academy – JIRA Activity Update
+
+- Coordinated with Outlast (Trisha) to support the marketing efforts for the FC Porto World Camp. Outlast will also assist with other key initiatives to help ensure the event's success, with a primary focus on sponsorship acquisition.
+- Conducted sponsorship outreach for the Gift of Football initiative, which aims to provide deserving children with the opportunity to attend the FC Porto World Camp through corporate sponsorships.
+- Received an initial commitment from MILO to support the Gift of Football program. Currently finalizing the sponsorship package before distributing it to prospective sponsors.
+- Scheduled an online coordination meeting with Jorge to discuss World Camp preparations, align on key deliverables, and review the overall event plan and next steps.

@@ -4,15 +4,15 @@ jira_url: https://kosmaskavc.atlassian.net/browse/KAN-2
 project: KAN
 type: jira-issue
 issue_type: Task
-status: Waiting / Blocked
+status: Review / QA
 priority: Medium
 assignee: 
 reporter: Richard Bachmann
 labels: []
 due: 2026-05-22
 created: 2026-05-08T20:13:12.993+0800
-updated: 2026-06-24T14:59:59.998+0800
-synced_at: 2026-07-18
+updated: 2026-08-14T09:00:46.851+0800
+synced_at: 2026-08-26
 ---
 
 # KAN-2: To finalize the contract agreement for Tela Park.

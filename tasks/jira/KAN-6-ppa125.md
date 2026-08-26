@@ -11,7 +11,7 @@ reporter: Richard Bachmann
 labels: []
 created: 2026-05-08T20:25:29.214+0800
 updated: 2026-06-21T16:12:31.635+0800
-synced_at: 2026-07-18
+synced_at: 2026-08-26
 ---
 
 # KAN-6: PPA125

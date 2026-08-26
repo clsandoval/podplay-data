@@ -11,7 +11,7 @@ reporter: Richard Bachmann
 labels: []
 created: 2026-06-24T15:01:42.387+0800
 updated: 2026-06-24T15:01:42.811+0800
-synced_at: 2026-07-18
+synced_at: 2026-08-26
 ---
 
 # KAN-44: Draft and Send Response to Playkorte

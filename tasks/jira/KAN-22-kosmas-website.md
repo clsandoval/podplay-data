@@ -4,14 +4,14 @@ jira_url: https://kosmaskavc.atlassian.net/browse/KAN-22
 project: KAN
 type: jira-issue
 issue_type: Task
-status: Review / QA
+status: COMPLETED
 priority: Medium
 assignee: Carlos Sandoval
 reporter: Marco Van Basug
 labels: ["marketing", "website"]
 created: 2026-05-15T00:52:04.687+0800
-updated: 2026-06-11T07:27:05.367+0800
-synced_at: 2026-07-18
+updated: 2026-08-14T09:00:19.470+0800
+synced_at: 2026-08-26
 ---
 
 # KAN-22: KAVC Website

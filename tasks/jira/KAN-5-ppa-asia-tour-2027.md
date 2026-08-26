@@ -11,7 +11,7 @@ reporter: Richard Bachmann
 labels: []
 created: 2026-05-08T20:24:22.729+0800
 updated: 2026-06-21T16:05:20.056+0800
-synced_at: 2026-07-18
+synced_at: 2026-08-26
 ---
 
 # KAN-5: PPA Asia Tour 2027

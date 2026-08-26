@@ -11,7 +11,7 @@ reporter: Avvy Lapus
 labels: []
 created: 2026-06-11T06:53:53.399+0800
 updated: 2026-06-11T06:58:50.221+0800
-synced_at: 2026-07-18
+synced_at: 2026-08-26
 ---
 
 # CRM-9: Podplay - Skycourt Cebu (Skyrise)

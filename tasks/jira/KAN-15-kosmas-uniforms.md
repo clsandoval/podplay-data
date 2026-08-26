@@ -4,14 +4,14 @@ jira_url: https://kosmaskavc.atlassian.net/browse/KAN-15
 project: KAN
 type: jira-issue
 issue_type: Task
-status: In Progress
+status: COMPLETED
 priority: Medium
 assignee: 
 reporter: Avvy Lapus
 labels: []
 created: 2026-05-11T07:08:19.158+0800
-updated: 2026-06-01T04:34:32.918+0800
-synced_at: 2026-07-18
+updated: 2026-08-14T08:59:40.000+0800
+synced_at: 2026-08-26
 ---
 
 # KAN-15: Kosmas Uniforms

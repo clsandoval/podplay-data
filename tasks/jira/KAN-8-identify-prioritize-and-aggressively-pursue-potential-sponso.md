@@ -12,7 +12,7 @@ labels: []
 parent: KAN-5
 created: 2026-05-08T20:38:47.586+0800
 updated: 2026-05-08T20:38:47.700+0800
-synced_at: 2026-07-18
+synced_at: 2026-08-26
 ---
 
 # KAN-8: Identify, prioritize, and aggressively pursue potential sponsors and strategic brand partners for the event.

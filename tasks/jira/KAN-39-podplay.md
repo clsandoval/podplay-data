@@ -11,7 +11,7 @@ reporter: Avvy Lapus
 labels: []
 created: 2026-06-11T07:34:32.030+0800
 updated: 2026-06-21T16:23:25.235+0800
-synced_at: 2026-07-18
+synced_at: 2026-08-26
 ---
 
 # KAN-39: Podplay

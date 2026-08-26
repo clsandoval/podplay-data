@@ -10,8 +10,8 @@ assignee: Richard Bachmann
 reporter: Richard Bachmann
 labels: []
 created: 2026-05-19T05:49:59.853+0800
-updated: 2026-05-31T07:02:50.076+0800
-synced_at: 2026-07-18
+updated: 2026-08-12T09:17:32.512+0800
+synced_at: 2026-08-26
 ---
 
 # KAN-28: CHK Facilities Collaboration – KAVC
@@ -68,3 +68,12 @@ Education of parents regarding nutrition, health as part of the things we can of
 ### Richard Bachmann — 2026-05-31
 
 Please maintain regular communication with UP, as they are key partners for our facilities and upcoming events. Atleta 63 will open soon and the FC Porto World Camp is coming up; UP can support us with both.
+
+### Richard Bachmann — 2026-08-12
+
+JIRA Update – CHK Partnership Follow-up
+
+- JC sent a follow-up email to Dean Molly and Wisdom to reconnect after our previous meeting and reaffirm KAVC's interest in collaborating with CHK.
+- Expressed interest in upcoming Master's in Sports Science, Sports Management Certificate Programs, and other academic or collaborative initiatives.
+- Received a response from Dean Molly informing us that she had previously sent Kim a letter regarding CHK Week (Sept. 26 – Oct. 3), but has not yet received a response or further details. She asked if we could help follow up on the matter.
+- Next action: JC requested a copy of Dean Molly's letter regarding the CHK Week (Sept. 26 – Oct. 3) activities so he can assist in following up on the matter.

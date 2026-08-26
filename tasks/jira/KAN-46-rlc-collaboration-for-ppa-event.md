@@ -11,7 +11,7 @@ reporter: Richard Bachmann
 labels: []
 created: 2026-06-24T15:27:17.598+0800
 updated: 2026-06-24T15:30:52.476+0800
-synced_at: 2026-07-18
+synced_at: 2026-08-26
 ---
 
 # KAN-46: RLC Collaboration for PPA Event
