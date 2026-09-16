@@ -502,7 +502,7 @@ function HeliosVisit() {
               <InfoRow k="Location"       v="Bridgetowne · Pasig City, Metro Manila" />
               <InfoRow k="Hours"          v="Information to follow" mono />
               <InfoRow k="Parking"        v="Information to follow" mono />
-              <InfoRow k="Contact"        v="hello@helios.ph" />
+              <InfoRow k="Contact"        v="info@kosmas.com.ph" />
               <InfoRow k="Inquiries"      v="Corporate / private events" />
             </div>
             <a className="btn btn--blue" style={{ marginTop: 32 }}>
@@ -608,7 +608,7 @@ function Helios2028() {
                   <div className="eyebrow" style={{ color: "var(--kosmas-gold)" }}>✓ You're on the list</div>
                   <h3 className="display display-m" style={{ color: "var(--bone)", marginTop: 12 }}>See you in 2028.</h3>
                   <p className="body-m" style={{ color: "rgba(255,255,255,0.7)", marginTop: 16 }}>
-                    We'll be in touch from <span style={{ color: "var(--bone)", fontFamily: "var(--font-mono)" }}>founding@helios.ph</span>.
+                    We'll be in touch from <span style={{ color: "var(--bone)", fontFamily: "var(--font-mono)" }}>info@kosmas.com.ph</span>.
                   </p>
                 </div>
               )}
