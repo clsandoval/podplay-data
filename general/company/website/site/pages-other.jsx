@@ -368,7 +368,7 @@ function Consulting({ go, audience: initialAudience }) {
                 drop us a note. We respond within 2 business days.
               </p>
               <div style={{ marginTop: 32, display: "flex", flexDirection: "column", gap: 12, fontFamily: "var(--font-mono)", fontSize: 13, letterSpacing: "0.06em", textTransform: "uppercase", color: "var(--ink-2)" }}>
-                <div>▸ partners@kosmas.ph</div>
+                <div>▸ info@kosmas.com.ph</div>
               </div>
             </Reveal>
 
@@ -413,7 +413,7 @@ function Consulting({ go, audience: initialAudience }) {
                     <div className="eyebrow on-light" style={{ color: "var(--kosmas-red)" }}>✓ Inquiry received</div>
                     <h3 className="display display-l" style={{ margin: "16px 0 12px" }}>We'll be in touch.</h3>
                     <p className="body-l" style={{ color: "var(--ink-2)" }}>
-                      Expect a reply from <span style={{ fontFamily: "var(--font-mono)" }}>partners@kosmas.ph</span> within 2 business days.
+                      Expect a reply from <span style={{ fontFamily: "var(--font-mono)" }}>info@kosmas.com.ph</span> within 2 business days.
                     </p>
                   </div>
                 )}
@@ -461,10 +461,10 @@ function Contact({ go }) {
   const set = (k) => (e) => setForm({ ...form, [k]: e.target.value });
 
   const channels = [
-    { kicker: "Partnerships",     email: "partners@kosmas.ph", sub: "Mall operators, real estate, JV, corporate" },
-    { kicker: "Helios Pickleball", email: "hello@helios.ph",    sub: "Bookings, programming, events" },
-    { kicker: "Atleta63",          email: "info@atleta63.ph",   sub: "Pitch hire, leagues — direct to Tito Eric" },
-    { kicker: "PodPlay",           email: "podplay@kosmas.ph",  sub: "Distribution, venue technology" },
+    { kicker: "Partnerships",     email: "info@kosmas.com.ph", sub: "Mall operators, real estate, JV, corporate" },
+    { kicker: "Helios Pickleball", email: "info@kosmas.com.ph",    sub: "Bookings, programming, events" },
+    { kicker: "Atleta63",          email: "info@kosmas.com.ph",   sub: "Pitch hire, leagues — direct to Tito Eric" },
+    { kicker: "PodPlay",           email: "info@kosmas.com.ph",  sub: "Distribution, venue technology" },
   ];
 
   return (

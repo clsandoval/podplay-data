@@ -246,10 +246,10 @@ function Footer({ go }) {
           <div>
             <h4>Get in touch</h4>
             <ul>
-              <li><a href="mailto:partners@kosmas.ph">partners@kosmas.ph<br/><span style={{ color: "rgba(255,255,255,0.45)", fontSize: 12, letterSpacing: "0.08em", textTransform: "uppercase", fontFamily: "var(--font-mono)" }}>Partnerships</span></a></li>
-              <li><a href="mailto:hello@helios.ph">hello@helios.ph<br/><span style={{ color: "rgba(255,255,255,0.45)", fontSize: 12, letterSpacing: "0.08em", textTransform: "uppercase", fontFamily: "var(--font-mono)" }}>Helios bookings</span></a></li>
-              <li><a href="mailto:info@atleta63.ph">info@atleta63.ph<br/><span style={{ color: "rgba(255,255,255,0.45)", fontSize: 12, letterSpacing: "0.08em", textTransform: "uppercase", fontFamily: "var(--font-mono)" }}>Atleta63</span></a></li>
-              <li><a href="mailto:podplay@kosmas.ph">podplay@kosmas.ph<br/><span style={{ color: "rgba(255,255,255,0.45)", fontSize: 12, letterSpacing: "0.08em", textTransform: "uppercase", fontFamily: "var(--font-mono)" }}>PodPlay</span></a></li>
+              <li><a href="mailto:info@kosmas.com.ph">info@kosmas.com.ph<br/><span style={{ color: "rgba(255,255,255,0.45)", fontSize: 12, letterSpacing: "0.08em", textTransform: "uppercase", fontFamily: "var(--font-mono)" }}>Partnerships</span></a></li>
+              <li><a href="mailto:info@kosmas.com.ph">info@kosmas.com.ph<br/><span style={{ color: "rgba(255,255,255,0.45)", fontSize: 12, letterSpacing: "0.08em", textTransform: "uppercase", fontFamily: "var(--font-mono)" }}>Helios bookings</span></a></li>
+              <li><a href="mailto:info@kosmas.com.ph">info@kosmas.com.ph<br/><span style={{ color: "rgba(255,255,255,0.45)", fontSize: 12, letterSpacing: "0.08em", textTransform: "uppercase", fontFamily: "var(--font-mono)" }}>Atleta63</span></a></li>
+              <li><a href="mailto:info@kosmas.com.ph">info@kosmas.com.ph<br/><span style={{ color: "rgba(255,255,255,0.45)", fontSize: 12, letterSpacing: "0.08em", textTransform: "uppercase", fontFamily: "var(--font-mono)" }}>PodPlay</span></a></li>
             </ul>
           </div>
         </div>
