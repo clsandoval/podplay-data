@@ -4,7 +4,9 @@
   publish = "general/company/website/site"
   command = ""
   # Only redeploy when the site itself changes, not on every data/task sync commit.
-  ignore = "git diff --quiet $CACHED_COMMIT_REF $COMMIT_REF -- general/company/website/site netlify.toml"
+  # Exit 0 = skip build, anything else = build. If the diff itself cannot be
+  # evaluated (e.g. cached commit missing from the clone), fall through to a build.
+  ignore = "git diff --quiet $CACHED_COMMIT_REF $COMMIT_REF -- general/company/website/site netlify.toml; test $? -eq 0"
 
 # Images change rarely; cache for a week, serve stale while revalidating.
 [[headers]]
