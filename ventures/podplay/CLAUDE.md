@@ -67,7 +67,7 @@ When the user describes a change, **make it**. Don't open an issue asking them t
 type: project
 name: Tela Park
 status: intake | procurement | deployment | financial_close | completed | cancelled
-tier: pro | autonomous | autonomous_plus | pbk
+tier: basic | basic_plus | pro | autonomous | autonomous_plus
 client: "[[tela-park-client]]"
 venue: "[[tela-park-venue]]"
 deployment_date: 2026-04-28
@@ -353,7 +353,9 @@ When you create a new file in `data/*/`, update any directory-level index or das
 
 ## Pricing
 
-`pricing/rate-card.md` is the single source of truth for Pod Play tier pricing (Pro / Autonomous / Autonomous+ / PBK). Proposals, invoices, and contracts must align with it. When it changes, cascade updates to active drafts in the same PR.
+`pricing/rate-card.md` is the single source of truth for Pod Play tier pricing (Basic / Basic+ / Pro / Autonomous / Autonomous+). Proposals, invoices, and contracts must align with it. When it changes, cascade updates to active drafts in the same PR.
+
+Tier definitions live in `data/notes/service-tiers.md`. There is no Pro+ and no PBK tier. **Basic+2** is a billing plan (Basic+ and Pro combined on one account), not a feature tier — record it in the project body and contract, not in the `tier:` enum; the equipped courts follow the Pro build.
 
 ## Skills (this venture)
 
