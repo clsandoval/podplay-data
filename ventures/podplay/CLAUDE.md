@@ -82,7 +82,7 @@ Notes and context about the project.
 
 ### Inventory Item
 
-`data/inventory/` is a **SKU catalog** — what we deploy, from whom, at what last-known price. It does not track stock. On-hand counts live in Kosmas Setup (`~/Desktop/Kosmas Setup/docs/kosmas-inventory.md`); don't duplicate them here.
+`data/inventory/` is a **SKU catalog** — what we deploy, from whom, at what last-known price. It does not track stock. On-hand counts live in the **Kosmas Setup** repo (`docs/kosmas-inventory.md`); don't duplicate them here.
 
 ```yaml
 ---
@@ -100,7 +100,7 @@ Sizing rule, config notes, why this SKU, alternative SKUs. Retired items say wha
 ```
 
 - `unit_cost` is the last known price in `currency` — cite the source and date in the body (e.g. "per Tela Park Pricing (2026-07-20)"). `0.00` means unknown.
-- The catalog mirrors the venue calculator's item list (`~/Desktop/projects/podplay-venue-calculator`) plus the by-hand lines the sizing doc requires. US-channel SKUs we don't buy are deleted, not kept. `status: retired` is for a SKU the calculator still carries as inactive (e.g. the KSTAR 3K) — never put one on a new BOM.
+- The catalog mirrors the **podplay-venue-calculator** repo's item catalog plus the by-hand lines the sizing doc requires. US-channel SKUs we don't buy are deleted, not kept. `status: retired` is for a SKU the calculator still carries as inactive (e.g. the KSTAR 3K) — never put one on a new BOM.
 - Venue-specific hardware that isn't in the PodPlay BOM (e.g. Tela Park's client-designed pole switches) is recorded on the project/venue, not here.
 
 ### Vendor
