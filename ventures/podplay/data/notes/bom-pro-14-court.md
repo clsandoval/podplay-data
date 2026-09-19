@@ -48,7 +48,7 @@ Prices are last-known PH prices from `data/inventory/` (USD where that's all we 
 
 | Item | Qty | Why |
 |---|---|---|
-| PP-WIFI-AP-U7LR — UniFi U7-LR | TBD | coverage survey, never a formula |
+| PP-WIFI-AP-U7LR — UniFi U7-LR | 0 or per survey | optional — only if the client wants facility Wi-Fi or a survey recommends it |
 | TV tilt mount (VESA 400×300) | 14 | by hand, 1 per TV, no catalog SKU |
 
 ## Not in the BOM

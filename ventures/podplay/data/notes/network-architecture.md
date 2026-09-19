@@ -188,7 +188,7 @@ Kingston XS1000 / XS2000; Samsung T7 is an acceptable alternate. USB-C, erased A
 | Flic buttons | `(courts × 2) + 2` |
 | Aluminum signs | `courts × 2` |
 | Mac mini + shelf | 1 per venue |
-| Access points | **TBD — coverage survey, never a formula** |
+| Access points | **optional** — only if the client wants facility Wi-Fi or a survey recommends it; qty from the coverage plan |
 | Junction boxes | none — ship with the camera |
 | HDMI cables | none — ship with the TV |
 | Security cameras | `security_cameras` as specified (Autonomous+) |

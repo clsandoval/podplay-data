@@ -10,7 +10,8 @@
 #   - Junction boxes — ship with the replay camera.
 #   - HDMI cables — ship with the TV order. Put the line back if the TV supplier changes.
 #   - Rack PDU — the UPS socket plate distributes power; see INFRA-C14-ADAPTER.
-#   - Access points — a coverage decision from the site survey, never a formula. Always TBD.
+#   - Access points — OPTIONAL. Nothing court-side needs Wi-Fi. Add only if the client wants
+#     facility Wi-Fi or a site survey leads us to recommend it; qty from the coverage plan.
 #
 # Accessory lines — each goes with a parent item and scales with it:
 #   Apple TV mount 1 per Apple TV · TV tilt mount 1 per TV (no catalog SKU, by hand) ·
@@ -194,4 +195,4 @@ tbd_items:
     name: UniFi U7-LR Access Point
     category: networking
     qty: TBD
-    notes: "Facility Wi-Fi. Coverage decision from the site survey — never derived from court count. Sits on the default LAN, firewalled off REPLAY."
+    notes: "Optional facility Wi-Fi — only if the client wants it or a site survey recommends it. Qty from the coverage plan, never from court count. Sits on the default LAN, firewalled off REPLAY."
