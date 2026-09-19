@@ -1,66 +1,72 @@
+---
+type: note
+title: BOM — Pro Tier, 14 Courts (worked example)
+tags: [bom, pro, sizing, example]
+---
+
 # Bill of Materials — Pro Tier, 14 Courts
 
-Generated from `templates/bom-pro.yaml`. Two BOM-level upgrades applied for 14 courts:
-- **Gateway**: UDM-SE → UDM-Pro-Max (12+ court threshold)
-- **Replay SSD**: 1TB → 4TB (9+ court threshold)
+Generated from `templates/bom-pro.yaml` with `courts = 14`. Rules in `network-architecture.md`.
 
----
+**Derived:** `total_ports = 14 × 3 = 42` → 1× 48-port switch (25–48 band), 1× 48-port patch panel, 12U rack (8U of gear). Replay camera assumed **Uniview** (default); the Dahua alternative is shown where it changes a line.
 
-## Venue-Level Items (Fixed)
+Prices are last-known PH prices from `data/inventory/` (USD where that's all we have). Blank = unknown. **Do not sum the column** — currencies are mixed and several lines are TBD.
 
-| SKU | Item | Qty | Unit Cost | Line Total |
-|-----|------|----:|----------:|-----------:|
-| NET-UDM-PRO-MAX | UniFi UDM-Pro-Max Gateway ⚠️ *upgraded* | 1 | 599.00 | 599.00 |
-| NET-USW-PRO-48-POE | UniFi USW-Pro-48-POE Switch | 1 | 75,500.00 | 75,500.00 |
-| NET-SFP-DAC | UniFi SFP+ DAC Cable 0.5m | 1 | 1,750.00 | 1,750.00 |
-| NET-PDU | TrippLite 12-Outlet Rack PDU | 1 | 952.00 | 952.00 |
-| NET-PATCH-PANEL-24 | iwillink 24-Port Patch Panel | 2 | 2,240.00 | 4,480.00 |
-| INFRA-UPS | APC 1500VA Rack-Mount UPS | 1 | 105,840.00 | 105,840.00 |
-| INFRA-RACK | 12U Network Rack Enclosure | 1 | 8,400.00 | 8,400.00 |
-| INFRA-RACK-SHELF | Pyle 19-Inch 1U Vented Rack Shelf | 1 | 2,000.00 | 2,000.00 |
-| REPLAY-MACMINI | Mac Mini 16GB 256GB | 1 | 700.00 | 700.00 |
-| REPLAY-SSD-4TB | Samsung T7 4TB External SSD ⚠️ *upgraded* | 1 | 310.00 | 310.00 |
+## Venue-level items
 
-## Per-Court Items (× 14 Courts)
+| SKU | Item | Qty | Rule | Unit price |
+|---|---|---:|---|---:|
+| NET-UDM-PRO | UniFi UDM-Pro Gateway | 1 | multi-court Pro, no doors → UDM-Pro | $379 |
+| NET-USW-PRO-48-POE | UniFi USW-Pro-48-POE Switch | 1 | 42 ports → 48-port | ₱75,500 |
+| NET-SFP-DAC | UniFi SFP+ DAC Cable 0.5m | 1 | UDM ↔ switch | ₱1,750 |
+| NET-PATCH-PANEL-48-COUPLER | Cat6 48-Port Patch Panel | 1 | 1 per 48-port switch | — |
+| NET-PATCH-0-5M | Vention Cat6 UTP 0.5M | 44 | 42 + 2 | ₱50 |
+| NET-PATCH-1M | Vention Cat6 UTP 1M | 2 | fixed | ₱80 |
+| NET-PATCH-3M | Vention Cat6 UTP 3M | 2 | 2 + 0 doors | ₱150 |
+| INFRA-UPS-1000VA | UPS — 1000 VA / 600 W min | 1 | 406 W ÷ 0.7 ÷ 0.6 = 967 VA → 1000 VA | — |
+| INFRA-C14-ADAPTER | C14-to-Universal Adapter Plug | 2 | fixed | ₱69 |
+| INFRA-RACK | 12U Network Rack Enclosure | 1 | 8U of gear → 12U | ₱8,400 |
+| INFRA-RACK-SHELF | Pyle 1U Vented Rack Shelf | 1 | 1 per venue | ₱2,000 |
+| REPLAY-MACMINI | Mac mini (M4) 16GB 256GB | 1 | 1 per venue | ₱36,490 |
+| REPLAY-SSD-2TB-KINGSTON | Kingston XS1000 2TB | 1 | 5+ courts → 2TB | ₱19,900 |
 
-### Replay
+## Per-court items (× 14)
 
-| SKU | Item | Qty/Court | Total Qty | Unit Cost | Line Total |
-|-----|------|----------:|----------:|----------:|-----------:|
-| REPLAY-CAMERA-WHITE | EmpireTech Replay Camera | 1 | 14 | 120.00 | 1,680.00 |
-| REPLAY-CAMERA-JB-WHITE | EmpireTech Junction Box | 1 | 14 | 15.00 | 210.00 |
+| SKU | Item | Per court | Total | Unit price |
+|---|---|---:|---:|---:|
+| REPLAY-CAMERA-UNIVIEW | Uniview IPC3624LE-ADF28K-WP (Owlview) | 1 | 14 | ₱5,390 |
+| DISPLAY-IPAD | iPad (A16) 128GB | 1 | 14 | ₱24,990 |
+| DISPLAY-IPAD-POE-GENERIC | PoE to USB-C Adapter, generic | 1 | 14 | ₱236 |
+| DISPLAY-IPAD-MOUNT | iPad Locking Wall Mount | 1 | 14 | $81.92 |
+| DISPLAY-TV-65 | Samsung 65" TV (U8000F) | 1 | 14 | ₱36,399 |
+| DISPLAY-APPLETV | Apple TV 4K (Wi-Fi + Ethernet) 128GB | 1 | 14 | ₱11,600 |
+| DISPLAY-ATV-MOUNT | HIDEit ATV4K 3G Apple TV Wall Mount | 1 | 14 | $25 |
+| REPLAY-FLIC | Flic Button (Gen 2) | 2 (+2 venue spares) | 30 | $35 |
+| REPLAY-SIGN | Aluminum Printed Sign 6x8 | 2 | 28 | $25 |
 
-### Scoreboard
+## Not sized — decide per venue
 
-| SKU | Item | Qty/Court | Total Qty | Unit Cost | Line Total |
-|-----|------|----------:|----------:|----------:|-----------:|
-| REPLAY-FLIC | Flic Button | 2 | 28 | 35.00 | 980.00 |
-| REPLAY-SIGN | Aluminum Printed Sign 6x8 | 1 | 14 | 25.00 | 350.00 |
+| Item | Qty | Why |
+|---|---|---|
+| PP-WIFI-AP-U7LR — UniFi U7-LR | TBD | coverage survey, never a formula |
+| TV tilt mount (VESA 400×300) | 14 | by hand, 1 per TV, no catalog SKU |
 
-### Display
+## Not in the BOM
 
-| SKU | Item | Qty/Court | Total Qty | Unit Cost | Line Total |
-|-----|------|----------:|----------:|----------:|-----------:|
-| DISPLAY-TV-65 | 65 inch TV Display | 1 | 14 | 36,399.00 | 509,586.00 |
-| DISPLAY-TV-MOUNT | VESA 400x300 TV Tilt Wall Mount | 1 | 14 | 30.00 | 420.00 |
-| DISPLAY-APPLETV | Apple TV 4K with Ethernet | 1 | 14 | 8,990.00 | 125,860.00 |
-| DISPLAY-HDMI-3FT | Amazon Basics 3ft HDMI Cable | 1 | 14 | 7.00 | 98.00 |
-| DISPLAY-ATV-MOUNT | HIDEit Apple TV Wall Mount | 1 | 14 | 25.00 | 350.00 |
+Junction boxes (ship with the camera) · HDMI cables (ship with the TV) · PDU (UPS socket plate) · rack-side Kisi / NVR (Autonomous tiers only).
 
-### Kiosk
+## Power and PoE
 
-| SKU | Item | Qty/Court | Total Qty | Unit Cost | Line Total |
-|-----|------|----------:|----------:|----------:|-----------:|
-| DISPLAY-IPAD | iPad 128GB WiFi+Cellular | 1 | 14 | 24,990.00 | 349,860.00 |
-| DISPLAY-IPAD-POE | iPad PoE Adapter | 1 | 14 | 40.00 | 560.00 |
-| DISPLAY-IPAD-CASE | iPad Kiosk Case with Lock | 1 | 14 | 80.00 | 1,120.00 |
+| | Uniview (default) | Dahua alternative |
+|---|---|---|
+| Per-court draw | 2.8 + 13 = 15.8 W | 17.5 + 13 = 30.5 W |
+| Total load (14 courts + UDM 50 + switch 60 + Mac mini 65 + modem 10) | **406 W** | **612 W** |
+| UPS rung | **1000 VA** | **1500 VA** |
+| Purchase | KSTAR RT-III 1K (900 W, 45%) | KSTAR RT-III 1K (900 W, 68% — 2 points under the 70% cap) or 2K |
+| Switch PoE load | 221 W of 600 W (37%) | 427 W of 600 W (71%) |
 
----
+Switching camera SKU after the rack is bought is a UPS-rung change, not just a line swap. If a Dahua venue ever ships with the white illuminator on (24 W), the load is 703 W → 2000 VA.
 
-## Notes
+## IP plan
 
-- Camera and junction box colors (WHITE/BLACK) should be confirmed against ceiling finish before ordering.
-- Patch panel covers: 2× 24-port panels cover all 48 switch ports. Optional to swap for a single 48-port panel if sourced.
-- UDM-Pro-Max replaces UDM-SE per template note: *"Swap for NET-UDM-PRO-MAX for 12+ courts."*
-- 4TB SSD replaces 1TB per template note: *"9+ courts → REPLAY-SSD-4TB."*
-- Flic buttons can also be sourced as 6-packs (SKU: REPLAY-FLIC-6PK @ 159.00 each) — 28 units = 5 packs with 2 spare buttons.
+14 courts is a **9+ court venue** — use the wide REPLAY blocks: iPads `.21–.34`, replay cameras `.121–.134`, Apple TVs `.161–.174`, Mac mini `.100`. The ≤8-court blocks (`.31–.38` / `.41–.48`) collide at 11 courts.

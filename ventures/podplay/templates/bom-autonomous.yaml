@@ -1,0 +1,58 @@
+# Bill of Materials — Autonomous Tier
+# Autonomous = the Pro BOM (bom-pro.yaml) PLUS remote door access via Kisi.
+# No NVR, no security cameras — those are Autonomous+ only.
+# Do not duplicate Pro items — apply both BOMs together for a full equipment list.
+#
+# Sizing inputs: `courts` (as Pro) + `doors` = number of access-controlled doors
+#                + `backup_internet` (yes/no — a second WAN uplink on the UDM).
+#
+# Changes to the Pro BOM on this tier:
+#   - Gateway is ALWAYS NET-UDM-SE (doors > 0). Kisi controllers land on its RJ45 ports;
+#     readers take its PoE ports first.
+#   - Switch is always the Pro variant (doors > 0 → wantPro), sized on
+#     total_ports = courts × 3 + readers that overflowed off the UDM-SE.
+#   - 3M Cat6 qty becomes 2 + doors (one home-run per reader).
+#   - UPS load adds 20W per controller + 7W per reader.
+#   - Rack adds nothing (the controller records no U figure — verify its bracket).
+#
+# Door-side items the GC/electrician supplies, NOT in this BOM:
+#   per door: 1× Cat6 (reader), 1× 18/2 (strike or mag lock), 1× 22/4 (push-to-exit,
+#   mag-lock doors only), optional 1× 22/4 (door sensor); the lock itself.
+
+tier: autonomous
+extends: bom-pro.yaml
+
+venue_items:
+
+  - sku: NET-UDM-SE
+    name: UniFi UDM-SE Gateway
+    category: networking
+    qty: 1
+    notes: "Replaces NET-UDM-PRO from the Pro BOM. 8 RJ45 (PoE) ports: 1 Mac mini + controllers + readers + backup WAN."
+
+  # Controllers — 1 per 4 doors (ceil). Non-PoE; 1 UDM RJ45 port each.
+  - sku: AC-KISI-CONTROLLER
+    name: Kisi Controller Pro 2
+    category: access_control
+    qty: "ceil(doors ÷ 4)"
+    notes: "Rack-mounted; on the UDM, never the switch. ~20W mains. Ships from US/HK."
+
+  # Readers — 1 per door, 7W 802.3af.
+  # Port placement: free UDM-SE ports = 8 − 1 (Mac mini) − controllers − (1 if backup_internet).
+  # Readers fill those first; the overflow goes on the switch and counts toward total_ports.
+  # At 8 courts the 24-port switch is exactly full, so any reader that overflows forces
+  # the 48-port — which is why readers go on the gateway. Record the placement per venue.
+  - sku: AC-KISI-READER-2-1
+    name: Kisi Reader Pro 2.1
+    category: access_control
+    qty: "doors"
+    notes: "1 per door. Tag each UDM port carrying a reader onto ACCESS CONTROL VLAN 33. Ships from US/HK."
+
+  # Push-to-exit — mag-lock (glass) doors only; panic-bar doors with electric strikes need none.
+  # No catalog SKU: any REX device (touchless wave or mechanical plate) wires to the controller
+  # the same way. PH source + price TBD.
+  - sku: TBD
+    name: Push-to-exit / wave-to-exit button
+    category: access_control
+    qty: "1 per mag-lock door"
+    notes: "Not a catalog item. Kisi's own reader also supports touchless egress (MotionSense) if a separate device isn't wanted."

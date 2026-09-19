@@ -369,8 +369,11 @@ Other relevant skills (proposal-writing, discovery-call, meeting-to-tickets, ing
 
 ## Templates (this venture)
 
-- `templates/bom-pro.yaml` — Pod Play Pro tier bill of materials
-- `templates/bom-autonomous-plus.yaml` — Autonomous+ tier BOM
+- `templates/bom-pro.yaml` — Pro tier bill of materials (base for every hardware tier)
+- `templates/bom-autonomous.yaml` — Autonomous additions (Kisi access control); extends Pro
+- `templates/bom-autonomous-plus.yaml` — Autonomous+ additions (NVR + security cameras); extends Autonomous
+
+Sizing rules (gateway, switch bands, UPS rung, rack, SSD, cable counts, IP plan) live in `data/notes/network-architecture.md`. Basic and Basic+ have no BOM.
 - `templates/checklist-deployment.yaml` — Deployment phase checklist
 
 ## Dashboards (this venture)

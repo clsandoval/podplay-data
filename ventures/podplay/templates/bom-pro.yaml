@@ -1,141 +1,193 @@
 # Bill of Materials — Pro Tier
-# Standard BOM for a Pro tier venue deployment.
-# venue_items are fixed per venue; per_court_items multiply by court count.
+# Standard BOM for a Pro tier venue. Every SKU resolves to data/inventory/<file>.md.
+#
+# Sizing input: `courts` = number of Pro (replay-equipped) courts. Nothing else
+# drives a Pro BOM. Formulas are written against it; numeric qty is fixed per venue.
+#
+# Derived: total_ports = courts × 3 (replay camera + iPad + Apple TV per court).
+#
+# Not in this BOM, on purpose:
+#   - Junction boxes — ship with the replay camera.
+#   - HDMI cables — ship with the TV order. Put the line back if the TV supplier changes.
+#   - Rack PDU — the UPS socket plate distributes power; see INFRA-C14-ADAPTER.
+#   - Access points — a coverage decision from the site survey, never a formula. Always TBD.
+#   - TV tilt mount — still bought, 1 per TV, no catalog SKU; add by hand.
 
 tier: pro
 
 venue_items:
 
-  # Network Rack
-  - sku: NET-UDM-SE
-    name: UniFi UDM-SE Gateway
+  # Gateway — rule: UDM-Pro for any multi-court Pro venue (nothing PoE hangs off the
+  # gateway in a switched venue, so the SE's PoE ports buy nothing). UDM-SE only when
+  # courts == 1 (no switch; the gateway's 8 PoE ports power the court gear directly)
+  # or on Kisi tiers.
+  - sku: NET-UDM-PRO
+    name: UniFi UDM-Pro Gateway
     category: networking
     qty: 1
-    notes: "Default gateway. Swap for NET-UDM-PRO-MAX for 12+ courts."
+    notes: "Swap for NET-UDM-SE when courts == 1. ~50W mains, 1U."
 
-  - sku: NET-USW-PRO-48-POE
-    name: UniFi USW-Pro-48-POE Switch
+  # Switch — rule by total_ports = courts × 3:
+  #   courts == 1        → no switch (court gear on the gateway)
+  #   courts 2–3         → 1× NET-USW-24-POE (non-Pro, 95W PoE budget — runs ~96% at 3 courts)
+  #   courts 4–8         → 1× NET-USW-PRO-24-POE (24 ports; 8 courts fills it exactly)
+  #   courts 9–16        → 1× NET-USW-PRO-48-POE (600W PoE budget)
+  #   courts 17–24       → 1× 24 + 1× 48
+  - sku: NET-USW-PRO-24-POE
+    name: UniFi USW-Pro-24-POE Switch
     category: networking
     qty: 1
-    notes: "Default for 8+ courts or 10+ APs. USW-Pro-24-POE only for small venues with <8 courts and <10 APs. Do a port count before ordering."
+    notes: "4–8 courts. 9+ courts → NET-USW-PRO-48-POE. 2–3 courts → NET-USW-24-POE. 1 court → none."
 
   - sku: NET-SFP-DAC
     name: UniFi SFP+ DAC Cable 0.5m
     category: networking
     qty: 1
-    notes: "UDM to switch uplink."
+    notes: "UDM ↔ switch uplink. Consumes no RJ45 port on either end. Omit when courts == 1."
 
-  - sku: NET-PDU
-    name: TrippLite 12-Outlet Rack PDU
-    category: power
-    qty: 1
-
-  - sku: NET-PATCH-PANEL-24
-    name: iwillink 24-Port Patch Panel
+  # Patch panel — 1 per switch, sized to the switch. 48-port coupler panel for the 48-port
+  # switch (2× 24-port is the fallback if no 48-port coupler panel is sourceable, at +1U).
+  - sku: NET-PATCH-PANEL-24-COUPLER
+    name: Cat6 24-Port Patch Panel (pass-through couplers)
     category: networking
-    qty: 2
-    notes: "2x 24-port panels to cover the full 48-port switch. Optional: swap both for a single 48-port patch panel if sourced."
+    qty: 1
+    notes: "1 per 24-port switch. With a 48-port switch use NET-PATCH-PANEL-48-COUPLER instead. Coupler keystones required — punch-down is not a substitute."
 
-  # Infrastructure
-  - sku: INFRA-UPS
-    name: APC 1500VA Rack-Mount UPS
+  # Cat6 patch cables (Vention, metric)
+  - sku: NET-PATCH-0-5M
+    name: Vention Cat6 UTP 0.5M
+    category: cable
+    qty: "(courts × 3) + 2"
+    notes: "Panel front → switch, one per port plus 2 spare."
+
+  - sku: NET-PATCH-1M
+    name: Vention Cat6 UTP 1M
+    category: cable
+    qty: 2
+    notes: "UDM ↔ Mac mini, plus 1 spare."
+
+  - sku: NET-PATCH-3M
+    name: Vention Cat6 UTP 3M
+    category: cable
+    qty: 2
+    notes: "Config laptop / spare."
+
+  # UPS — a RATING, not a model. Load = Σ(max-draw watts of every item on the venue)
+  # + 10W ISP modem. Required watts = load ÷ 0.70 (headroom). Required VA = watts ÷ 0.6
+  # (pessimistic line-interactive PF). Pick the first rung ≥ required VA from
+  # 750 / 1000 / 1500 / 2000 / 3000 VA. Per-court draw: replay camera max + 13W iPad
+  # adapter (Apple TV and TV are mains, not counted against PoE but the UPS doesn't feed them).
+  # Fixed: UDM 50W + switch 50–60W + Mac mini 65W + modem 10W.
+  #   14 courts on the Uniview (2.8W) → ~406W → 1000 VA
+  #   14 courts on the Dahua (17.5W)  → ~612W → 1500 VA
+  # Purchase: KSTAR MemoPower RT-III 1K (900W) or 2K (1800W), whichever covers the watts.
+  - sku: INFRA-UPS-1000VA
+    name: UPS — 1000 VA (1 kVA) / 600 W minimum, 2U rack-mount
     category: power
     qty: 1
-    notes: "2U, mounted at bottom of rack."
+    notes: "Rung for 9–14 courts on the Uniview, or ≤8 courts on the Dahua. Small Uniview venues (≤8 courts) land on INFRA-UPS-750VA. Recompute per venue."
 
+  - sku: INFRA-C14-ADAPTER
+    name: C14-to-Universal Adapter Plug (10A 250V)
+    category: power
+    qty: 2
+    notes: "Mac mini + ISP modem into the UPS's C13 socket plate. UDM and switch use native C13 cords. Confirm the plate has ≥4 C13 sockets."
+
+  # Rack — sum rack-U of the gear + 1U ISP modem allowance, then the next bracket up:
+  #   ≤10U → 12U · 11–14U → 16U · 15–19U → 21U · 20–25U → 27U
+  # Pro: Mac mini+shelf 2U + UDM 1U + switch 1U + panel 1U + UPS 2U + modem 1U = 8U → 12U.
   - sku: INFRA-RACK
     name: 12U Network Rack Enclosure
     category: networking
     qty: 1
+    notes: "Internal depth ≥610mm / 24\" — confirm against the UPS chassis depth."
 
   - sku: INFRA-RACK-SHELF
     name: Pyle 19-Inch 1U Vented Rack Shelf
     category: networking
     qty: 1
-    notes: "For Mac Mini."
+    notes: "For the Mac mini. 2U combined for rack sizing."
 
-  # Replay System — venue-level
+  # Replay server — 1 per venue regardless of court count
   - sku: REPLAY-MACMINI
-    name: Mac Mini 16GB 256GB
+    name: Mac mini (M4) 16GB 256GB
     category: compute
     qty: 1
-    notes: "Fixed IP 192.168.32.100 on REPLAY VLAN 32."
+    notes: "Fixed IP 192.168.32.100 on REPLAY VLAN 32, port 4000."
 
-  - sku: REPLAY-SSD-1TB
-    name: Samsung T7 1TB External SSD
-    category: compute
+  # Replay clip store — by court count:
+  #   1–4 courts → 1TB · 5+ courts → 2TB · 20+ courts or extended retention → 4TB
+  - sku: REPLAY-SSD-2TB-KINGSTON
+    name: Kingston XS1000 2TB
+    category: storage
     qty: 1
-    notes: "For 1–4 courts. Swap for REPLAY-SSD-2TB (5–8 courts) or REPLAY-SSD-4TB (9+ courts)."
+    notes: "5+ courts. 1–4 courts → REPLAY-SSD-1TB-KINGSTON. 20+ or extended retention → REPLAY-SSD-4TB-KINGSTON. Samsung T7 is an acceptable alternate at each size."
 
 per_court_items:
 
-  # Replay System — per court
-  - sku: REPLAY-CAMERA-WHITE
-    name: EmpireTech Replay Camera
-    category: compute
+  # Replay camera — 1 per court. Two accepted SKUs; pick ONE per venue and size the UPS
+  # and PoE budget on it. Junction box ships with the camera.
+  - sku: REPLAY-CAMERA-UNIVIEW
+    name: Uniview IPC3624LE-ADF28K-WP (Owlview)
+    category: camera
     qty: 1
-    notes: "White (REPLAY-CAMERA-WHITE) or black (REPLAY-CAMERA-BLACK) to match ceiling. 1 per court."
+    notes: "Default. 2.8W max, 802.3af, fixed 2.8mm. Or REPLAY-CAMERA-DAHUA (17.5W max, 802.3at, motorized varifocal) — ~6× the PoE draw; at 14 courts that is one UPS rung and 245W of the 48-port switch's 600W."
 
-  - sku: REPLAY-CAMERA-JB-WHITE
-    name: EmpireTech Junction Box
-    category: compute
+  # Kiosk
+  - sku: DISPLAY-IPAD
+    name: iPad (A16) 128GB
+    category: display
     qty: 1
-    notes: "Match housing color to camera (WHITE or BLACK)."
+    notes: "Mosyle enrolled, Single App Mode. PoE-powered via the adapter."
 
+  - sku: DISPLAY-IPAD-POE-GENERIC
+    name: PoE to USB-C Adapter, generic (802.3af, 5V/12W)
+    category: display
+    qty: 1
+    notes: "Budget 13W per port. Must do power AND data over USB-C. DISPLAY-IPAD-POE (UACC) is the higher-spec alternate. Never the 25W UACC-PoE+-USBC on dense venues."
+
+  - sku: DISPLAY-IPAD-MOUNT
+    name: iPad Locking Wall Mount
+    category: display
+    qty: 1
+    notes: "Kit includes fence/pole hardware — no separate bracket line."
+
+  # Display
+  - sku: DISPLAY-TV-65
+    name: Samsung 65" TV (U8000F)
+    category: display
+    qty: 1
+    notes: "Commercial-grade required. VESA 400×300, 8 ft 9 in AFF. Tilt mount 1 per TV by hand (no catalog SKU). HDMI cable ships with the TV."
+
+  - sku: DISPLAY-APPLETV
+    name: Apple TV 4K (Wi-Fi + Ethernet) 128GB
+    category: display
+    qty: 1
+    notes: "Ethernet model required. Mains-powered — no PoE. Mosyle enrolled."
+
+  - sku: DISPLAY-ATV-MOUNT
+    name: HIDEit ATV4K 3G Apple TV Wall Mount
+    category: display
+    qty: 1
+    notes: "Behind the TV. 3G SKU for the 3rd-gen Apple TV."
+
+  # Scoreboard
   - sku: REPLAY-FLIC
-    name: Flic Button
-    category: compute
-    qty: 2
-    notes: "2 per court for scoreboard."
+    name: Flic Button (Gen 2)
+    category: accessory
+    qty: "2 per court, + 2 venue spares"
+    notes: "Total = (courts × 2) + 2. Mounted on the signs."
 
   - sku: REPLAY-SIGN
     name: Aluminum Printed Sign 6x8
     category: signage
-    qty: 1
-    notes: "Flic button mounting surface. 1 per court."
+    qty: 2
+    notes: "2 per court. PH supplier not yet sourced."
 
-  # Displays — per court
-  - sku: DISPLAY-TV-65
-    name: 65 inch TV Display
-    category: display
-    qty: 1
-    notes: "VESA 400x300. Mounted at 8 ft 9 in AFF."
+tbd_items:
 
-  - sku: DISPLAY-TV-MOUNT
-    name: VESA 400x300 TV Tilt Wall Mount
-    category: display
-    qty: 1
-
-  - sku: DISPLAY-APPLETV
-    name: Apple TV 4K with Ethernet
-    category: display
-    qty: 1
-    notes: "Mosyle MDM enrolled."
-
-  - sku: DISPLAY-HDMI-3FT
-    name: Amazon Basics 3ft HDMI Cable
-    category: display
-    qty: 1
-
-  - sku: DISPLAY-ATV-MOUNT
-    name: HIDEit Apple TV Wall Mount
-    category: display
-    qty: 1
-
-  - sku: DISPLAY-IPAD
-    name: iPad 128GB WiFi+Cellular
-    category: display
-    qty: 1
-    notes: "Mosyle enrolled. PoE-powered."
-
-  - sku: DISPLAY-IPAD-POE
-    name: iPad PoE Adapter
-    category: display
-    qty: 1
-    notes: "PoE-to-USB-C."
-
-  - sku: DISPLAY-IPAD-CASE
-    name: iPad Kiosk Case with Lock
-    category: display
-    qty: 1
-    notes: "Mounted at 4 ft 8 in AFF."
+  - sku: PP-WIFI-AP-U7LR
+    name: UniFi U7-LR Access Point
+    category: networking
+    qty: TBD
+    notes: "Facility Wi-Fi. Coverage decision from the site survey — never derived from court count. Sits on the default LAN, firewalled off REPLAY."

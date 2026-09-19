@@ -1,57 +1,54 @@
 # Bill of Materials — Autonomous Plus Tier
-# Autonomous Plus includes everything in the Pro tier BOM (bom-pro.yaml)
-# PLUS the additional items listed here.
-# Do not duplicate Pro items — apply both BOMs together for a full equipment list.
+# Autonomous+ = the Autonomous BOM (bom-autonomous.yaml, which itself extends bom-pro.yaml)
+# PLUS 24/7 surveillance: PoE security cameras recording to a UniFi NVR.
+# Do not duplicate items — apply all three BOMs together for a full equipment list.
+#
+# Sizing input: `security_cameras` = a MANUAL count from the site plan. It is NOT derived
+# from courts. Replay cameras don't count — they record to the Mac mini, not the NVR.
+#
+# Changes to the Autonomous BOM on this tier:
+#   - total_ports = courts × 3 + security_cameras + reader overflow. Switch re-bands on it
+#     (e.g. 7 courts + 7 cameras = 28 ports → 48-port).
+#   - UPS load adds the security cameras (7W each, placeholder) + the NVR:
+#       ≤20 cams 100W · ≤35 160W · ≤40 200W · ≤60 320W.
+#   - Rack adds the NVR: UNVR 1U, UNVR-Pro 2U.
+#   - Security cameras get their own SURVEILLANCE VLAN 31; the NVR sits at .31.100.
 
 tier: autonomous_plus
-extends: bom-pro.yaml
+extends: bom-autonomous.yaml
 
 venue_items:
 
-  # Access Control — per venue
-  - sku: AC-KISI-CONTROLLER
-    name: Kisi Controller Pro 2
-    category: access_control
-    qty: 1
-    notes: "1 per venue. Connected via 10ft Cat6 patch cable (NET-PATCH-10FT) from switch."
-
-  - sku: AC-KISI-READER
-    name: Kisi Reader Pro 2
-    category: access_control
-    qty: 1
-    notes: "1 per access-controlled door. Adjust qty to match door count."
-
-  # Surveillance NVR — per venue
+  # NVR — by security camera count (NOT court count):
+  #    1–10 → 1× UNVR, 2 HDD   · 11–15 → 1× UNVR, 3 HDD   · 16–20 → 1× UNVR, 4 HDD
+  #   21–26 → 1× UNVR-Pro, 5   · 27–30 → 1× UNVR-Pro, 6   · 31–35 → 1× UNVR-Pro, 7
+  #   36–40 → 2× UNVR, 8       · 41–51 → 2× UNVR-Pro, 10  · 52–60 → 2× UNVR-Pro, 12
+  #   > 60 → size by hand.
   - sku: SURV-UNVR
     name: UniFi UNVR 4-Bay NVR
-    category: compute
+    category: camera
     qty: 1
-    notes: "For up to 4 security cameras. Swap for SURV-UNVR-PRO (7-bay) for 5+ cameras."
+    notes: "1–20 security cameras. 21+ → SURV-UNVR-PRO (7-bay). 1U. Ships from US/HK."
 
   - sku: SURV-HDD
     name: Ubiquiti Enterprise 8TB HDD
-    category: compute
-    qty: 4
-    notes: "4x for UNVR (4-bay). Use 7x for SURV-UNVR-PRO (7-bay)."
+    category: storage
+    qty: "per NVR table (2 at ≤10 cameras)"
+    notes: "WD Purple 8TB (SURV-HDD-WD) is an acceptable alternate."
 
-  # Uplink — NVR to switch
   - sku: NET-SFP-DAC
     name: UniFi SFP+ DAC Cable 0.5m
     category: networking
     qty: 1
-    notes: "Additional DAC for switch-to-NVR uplink (Pro BOM covers UDM-to-switch)."
+    notes: "Additional DAC for switch ↔ NVR (the Pro BOM's covers UDM ↔ switch)."
 
-per_court_items:
+per_camera_items:
 
-  # Surveillance — per court
-  - sku: SURV-CAMERA-WHITE
-    name: UniFi G5 Turret Ultra Camera
-    category: compute
+  # Security camera — no PH SKU chosen yet. Budget the placeholder (7W 802.3af); if PH picks a
+  # PoE+ part the draw roughly doubles and every Autonomous+ UPS rung must be recomputed.
+  # Do NOT fill this role with a replay camera. Junction box ships with the camera.
+  - sku: SURV-CAMERA-TBD
+    name: Security Camera — SKU not yet selected
+    category: camera
     qty: 1
-    notes: "White (SURV-CAMERA-WHITE) or black (SURV-CAMERA-BLACK) to match ceiling. 1 per court."
-
-  - sku: SURV-CAMERA-JB-WHITE
-    name: UniFi Camera Junction Box
-    category: compute
-    qty: 1
-    notes: "Match housing color to camera (WHITE or BLACK)."
+    notes: "1 per security_cameras. Candidate class: UniFi G5 Turret Ultra (Protect-native). Ships from US/HK."
