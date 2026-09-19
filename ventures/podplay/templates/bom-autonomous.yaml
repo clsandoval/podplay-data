@@ -3,8 +3,10 @@
 # No NVR, no security cameras — those are Autonomous+ only.
 # Do not duplicate Pro items — apply both BOMs together for a full equipment list.
 #
-# Sizing inputs: `courts` (as Pro) + `doors` = number of access-controlled doors
-#                + `backup_internet` (yes/no — a second WAN uplink on the UDM).
+# Sizing inputs: `courts` (as Pro) + `doors` = number of access-controlled doors (≥ 1 —
+#                the tier IS door access; ask before sizing) + `backup_internet` (yes/no —
+#                a second WAN uplink on the UDM, which costs one reader slot).
+# `security_cameras` is invalid here — that is Autonomous+.
 #
 # Changes to the Pro BOM on this tier:
 #   - Gateway is ALWAYS NET-UDM-SE (doors > 0). Kisi controllers land on its RJ45 ports;

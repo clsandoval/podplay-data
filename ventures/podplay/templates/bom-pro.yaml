@@ -1,8 +1,10 @@
 # Bill of Materials — Pro Tier
 # Standard BOM for a Pro tier venue. Every SKU resolves to data/inventory/<file>.md.
 #
-# Sizing input: `courts` = number of Pro (replay-equipped) courts. Nothing else
+# Sizing input: `courts` = number of Pro (replay-equipped) courts (≥ 1). Nothing else
 # drives a Pro BOM. Formulas are written against it; numeric qty is fixed per venue.
+# `extended_retention` (yes/no) only moves the SSD to 4TB. `doors` and `security_cameras`
+# are invalid on Pro — a venue with either is an Autonomous tier.
 #
 # Derived: total_ports = courts × 3 (replay camera + iPad + Apple TV per court).
 #

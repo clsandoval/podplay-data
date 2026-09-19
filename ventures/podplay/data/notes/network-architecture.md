@@ -11,9 +11,18 @@ The sizing rules behind `templates/bom-*.yaml`. Every formula takes the same inp
 | `courts` | Pro (replay-equipped) courts | all hardware tiers |
 | `doors` | Kisi access-controlled doors | Autonomous, Autonomous+ |
 | `security_cameras` | surveillance cameras — a **manual count** from the site plan, never derived from courts; replay cameras don't count | Autonomous+ |
-| `backup_internet` | second WAN uplink on the UDM | Autonomous, Autonomous+ |
+| `backup_internet` | second WAN uplink on the UDM — only affects reader placement, so it's inert on Pro | Autonomous, Autonomous+ |
+| `extended_retention` | keep replay clips longer than the default — forces the 4TB SSD | any hardware tier |
 
 Basic and Basic+ have no hardware — nothing below applies to them.
+
+**Input validity — a BOM is not produced if any of these fail:**
+- `courts` ≥ 1; every count a whole number ≥ 0.
+- **Autonomous / Autonomous+ need `doors` ≥ 1.** The tier *is* door access; zero doors would pick the wrong gateway. Ask for the door count before sizing.
+- `doors > 0` on Pro is invalid — there is no partial door-access tier; a venue that wants any door on Kisi is Autonomous.
+- `security_cameras > 0` on anything but Autonomous+ is invalid — it would silently upgrade the switch.
+
+**Ceilings — past these the venue needs a design decision, not a formula:** `total_ports` > 264 · UPS requirement > 3000 VA (larger unit or second UPS) · rack gear > 25U · `security_cameras` > 60 (NVR by hand, and the UPS load then understates the NVR).
 
 **Derived:** `total_ports = courts × 3` (replay camera + iPad + Apple TV per court) `+ security_cameras + readers that overflowed off the gateway`.
 
@@ -25,6 +34,7 @@ VLAN ID = third octet. Everything PodPlay-side is isolated from the venue's faci
 
 | Network | Subnet | Tier |
 |---|---|---|
+| management | `192.168.30.0/24` | carries nothing sized here |
 | SURVEILLANCE | `192.168.31.0/24` | Autonomous+ only |
 | **REPLAY** | **`192.168.32.0/24`** | every hardware tier |
 | ACCESS CONTROL | `192.168.33.0/24` | Autonomous, Autonomous+ |
@@ -77,6 +87,8 @@ Every fixed IP is a MAC-bound DHCP reservation. For an iPad the wired identity i
 
 The UDM ↔ switch uplink is an SFP DAC and consumes no RJ45 port.
 
+SE vs Pro: the SE has 8 built-in PoE ports (180 W) and 2.5G WAN; the Pro has 8 data-only ports and 1G WAN; otherwise the same box, SE ~$120 more. The SE's PoE is only ever used on a 1-court venue (court gear) or a Kisi venue (readers).
+
 ---
 
 ## Switch
@@ -96,7 +108,7 @@ The UDM ↔ switch uplink is an SFP DAC and consumes no RJ45 port.
 
 **8 courts fills a 24-port switch exactly** (24 = 8 × 3). That is the breaking point for Autonomous: any reader that overflows onto the switch forces the 48-port — which is why readers go on the gateway (below).
 
-**PoE budget check:** Σ(PoE watts × qty) of everything on the switch against 400W / 600W / 95W (or 180W on the gateway for a 1-court venue). Warn at 80%, critical at 90%. Readers on the UDM-SE draw from its own 180W and are excluded. Worst standard case: 14 courts on the Dahua camera = 14 × 17.5 + 14 × 13 = **427W of 600W (71%)** — fine, but never use the 25W UACC-PoE+-USBC iPad adapter there.
+**PoE budget check:** Σ(PoE watts × qty) of everything on the switch — replay cameras, iPad adapters, security cameras, readers on the switch, and APs if any are specified — against 400W / 600W / 95W (or 180W on the gateway for a 1-court venue). Warn at 80%, critical at 90%. Readers on the UDM-SE draw from its own 180W and are excluded. Worst standard case: 14 courts on the Dahua camera = 14 × 17.5 + 14 × 13 = **427W of 600W (71%)** — fine, but never use the 25W UACC-PoE+-USBC iPad adapter there.
 
 ---
 
@@ -144,7 +156,31 @@ Max draw, not typical: replay camera **17.5W** (Dahua) or **2.8W** (Uniview), iP
 | 14-court Pro, Dahua | 612W | 1500 VA |
 | 14-court Pro, Dahua with white illuminator left on (24W) | 703W | 2000 VA |
 
-The camera choice moves the rung — and the "set illumination to IR" config step is load-bearing for the number, not a picture preference. Watts bind, not VA: an on-line unit at PF 0.9 meets the same watts a rung lower. Line-interactive with AVR minimum. 230V, 2U rack-mount, chassis depth against the rack. **No PDU** — the UPS's C13 socket plate distributes power: UDM and switch on native C13 cords, Mac mini and ISP modem via **2× C14-to-universal adapters** per venue. Autonomous+ adds the NVR as a 5th outlet — size the plate at 5.
+The camera choice moves the rung — and the "set illumination to IR" config step is load-bearing for the number, not a picture preference. Watts bind, not VA: an on-line unit at PF 0.9 meets the same watts a rung lower.
+
+**What any UPS must satisfy:** watt rating ≥ load ÷ 0.70 · on-line double-conversion preferred, line-interactive with AVR is the floor, never standby/offline (PH mains need buck/boost) · USB graceful-shutdown signalling to the Mac mini, verified to enumerate · user-replaceable battery · 230V, 2U rack-mount, chassis depth against the rack · C13 output plate with ≥4 sockets (5 on Autonomous+) · installed at the **bottom of the rack** on a **dedicated 20A circuit** · runtime ≥5 min at the venue's computed load (capacity is not runtime — check the vendor curve).
+
+**Confirm before unboxing:** installed socket plate matches the count above · USB interface fitted (not RS-232-only) · input cord is local plug → C20 · chassis depth vs the rack · watt rating in writing (vendor quotes often list VA only). **No PDU** — the UPS's C13 socket plate distributes power: UDM and switch on native C13 cords, Mac mini and ISP modem via **2× C14-to-universal adapters** per venue. Autonomous+ adds the NVR as a 5th outlet — size the plate at 5.
+
+---
+
+## NVR (Autonomous+ only)
+
+Sized on `security_cameras`, never courts — replay cameras record to the Mac mini and don't count.
+
+| Security cameras | NVR | 8TB HDDs |
+|---:|---|---:|
+| 1–10 | 1× UNVR | 2 |
+| 11–15 | 1× UNVR | 3 |
+| 16–20 | 1× UNVR | 4 |
+| 21–26 | 1× UNVR-Pro | 5 |
+| 27–30 | 1× UNVR-Pro | 6 |
+| 31–35 | 1× UNVR-Pro | 7 |
+| 36–40 | 2× UNVR | 8 |
+| 41–51 | 2× UNVR-Pro | 10 |
+| 52–60 | 2× UNVR-Pro | 12 |
+
+Above 60: size by hand. Each NVR takes an SFP DAC to the switch, a 5th UPS outlet, and 1U (UNVR) / 2U (UNVR-Pro) added to the rack sum by hand. NVR at `192.168.31.100`.
 
 ---
 
@@ -180,6 +216,7 @@ Kingston XS1000 / XS2000; Samsung T7 is an acceptable alternate. USB-C, erased A
 | Item | Qty |
 |---|---|
 | Replay camera, iPad, iPad PoE adapter, iPad wall mount, Apple TV, TV | 1 per court |
+| — replay camera mount | 16–20 ft behind the baseline, 11 ft AFF, ~30° down (up to 26 ft only where 16–20 isn't possible). A fixed ~2.8 mm lens frames the court at that distance; varifocal is a convenience, not a requirement |
 | Apple TV mount | 1 per Apple TV |
 | TV tilt mount | 1 per TV (no catalog SKU) |
 | C14-to-universal adapters | 2 per venue (Mac mini + modem) |

@@ -3,8 +3,9 @@
 # PLUS 24/7 surveillance: PoE security cameras recording to a UniFi NVR.
 # Do not duplicate items — apply all three BOMs together for a full equipment list.
 #
-# Sizing input: `security_cameras` = a MANUAL count from the site plan. It is NOT derived
-# from courts. Replay cameras don't count — they record to the Mac mini, not the NVR.
+# Sizing input: `security_cameras` = a MANUAL count from the site plan (≥ 1). It is NOT
+# derived from courts. Replay cameras don't count — they record to the Mac mini, not the NVR.
+# Above 60 cameras the NVR table has no row — size by hand, and the UPS load understates it.
 #
 # Changes to the Autonomous BOM on this tier:
 #   - total_ports = courts × 3 + security_cameras + reader overflow. Switch re-bands on it
