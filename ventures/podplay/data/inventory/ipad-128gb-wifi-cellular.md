@@ -1,14 +1,16 @@
 ---
 type: inventory
-name: iPad 128GB WiFi+Cellular
+name: iPad (A16) 128GB
 sku: DISPLAY-IPAD
 vendor: "[[apple]]"
 category: display
 unit_cost: 24990.00
-on_hand: 0
-allocated: 0
-on_order: 0
-reorder_point: 1
+currency: PHP
+status: current
 ---
 
-Mosyle enrolled. PoE-powered via iPad PoE adapter. Mounted in kiosk case at 4 ft 8 in AFF for court booking and check-in.
+Court kiosk — booking + check-in. Base iPad with A16 chip, 128GB. One per court. Enrolled in Mosyle MDM via Apple Configurator; runs in Single App Mode (see `notes/mosyle-kiosk-ipad-profiles.md`).
+
+Powered + networked over PoE through the [[ipad-poe-adapter]]; the adapter's MAC is the iPad's wired identity for DHCP reservations. Mounted in the [[ipad-locking-wall-mount]].
+
+PH price as of 2026-07-20 (Tela Park quote).

@@ -3,12 +3,10 @@ type: inventory
 name: UniFi UNVR 4-Bay NVR
 sku: SURV-UNVR
 vendor: "[[ubiquiti]]"
-category: compute
+category: camera
 unit_cost: 25000.00
-on_hand: 0
-allocated: 0
-on_order: 0
-reorder_point: 1
+currency: PHP
+status: current
 ---
 
-4-bay network video recorder for Autonomous+ tier. Supports up to 4x Ubiquiti Enterprise 8TB HDDs.
+Autonomous+ only. 4-bay NVR for **1–20 security cameras** (UniFi Protect). Replay cameras don't count — they record to the Mac mini, so a Pro venue never needs one. 1U. Ships from US/HK.

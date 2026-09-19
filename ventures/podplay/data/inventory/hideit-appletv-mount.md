@@ -1,14 +1,14 @@
 ---
 type: inventory
-name: HIDEit Apple TV Wall Mount
+name: HIDEit ATV4K 3G Apple TV Wall Mount
 sku: DISPLAY-ATV-MOUNT
 vendor: "[[hideit]]"
 category: display
 unit_cost: 25.00
-on_hand: 0
-allocated: 0
-on_order: 0
-reorder_point: 2
+currency: USD
+status: current
 ---
 
-Wall mount bracket for Apple TV 4K. Mounts behind the TV for a clean install.
+Wall mount bracket for the 3rd-gen Apple TV 4K. Mounts behind the TV for a clean install. Use the **ATV4K 3G** SKU — the older `ATV4K` only fits 1st/2nd gen.
+
+Not a sized line — add 1 per court by hand.

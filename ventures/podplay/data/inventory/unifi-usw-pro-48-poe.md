@@ -2,13 +2,11 @@
 type: inventory
 name: UniFi USW-Pro-48-POE Switch
 sku: NET-USW-PRO-48-POE
-vendor: "[[ubiquiti]]"
+vendor: "[[drextech]]"
 category: networking
 unit_cost: 75500.00
-on_hand: 0
-allocated: 0
-on_order: 0
-reorder_point: 1
+currency: PHP
+status: current
 ---
 
-High-density PoE switch for venues with 9+ courts. 48-port managed switch with PoE+.
+Switch for **9+ court** venues (`courts × 3 > 24`). Single switch is enough until 17+ courts. **600W PoE budget** — a 14-court venue on the Dahua camera runs ~427W (~71%), the tightest standard PH config. ~60W mains, 1U. Pairs with the [[cat6-48-port-patch-panel]].

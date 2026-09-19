@@ -82,22 +82,26 @@ Notes and context about the project.
 
 ### Inventory Item
 
+`data/inventory/` is a **SKU catalog** — what we deploy, from whom, at what last-known price. It does not track stock — no on-hand or allocated counts here.
+
 ```yaml
 ---
 type: inventory
-name: Ubiquiti U6-Pro
-sku: U6-PRO
-vendor: "[[ubiquiti]]"
-category: networking | display | compute | power | access_control | signage
-unit_cost: 149.00
-on_hand: 18
-allocated: 24
-on_order: 6
-reorder_point: 5
+name: UniFi U7-LR Access Point
+sku: PP-WIFI-AP-U7LR
+vendor: "[[drextech]]"
+category: networking | display | compute | camera | storage | cable | power | access_control | signage | accessory
+unit_cost: 13500.00
+currency: PHP | USD
+status: current | alternate | retired
 ---
 
-Stock notes, vendor lead times, alternative SKUs.
+Sizing rule, config notes, why this SKU, alternative SKUs. Retired items say what replaced them.
 ```
+
+- `unit_cost` is the last known price in `currency` — cite the source and date in the body (e.g. "PH price as of 2026-07-20"). `0.00` means unknown.
+- The catalog is the PH BOM: what a venue build actually calls for, plus the by-hand lines (mounts, adapters, UPS model). US-channel SKUs we don't buy are deleted, not kept. `status: retired` is for a SKU we've stocked but no longer spec (e.g. the KSTAR 3K) — never put one on a new BOM.
+- Venue-specific hardware that isn't in the PodPlay BOM (e.g. Tela Park's client-designed pole switches) is recorded on the project/venue, not here.
 
 ### Vendor
 

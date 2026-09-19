@@ -1,14 +1,16 @@
 ---
 type: inventory
-name: Apple TV 4K with Ethernet
+name: Apple TV 4K (Wi-Fi + Ethernet) 128GB
 sku: DISPLAY-APPLETV
 vendor: "[[apple]]"
 category: display
-unit_cost: 8990.00
-on_hand: 0
-allocated: 0
-on_order: 0
-reorder_point: 2
+unit_cost: 11600.00
+currency: PHP
+status: current
 ---
 
-Enrolled in Mosyle MDM. One per TV display. Mounted behind the TV using the HIDEit wall mount bracket.
+3rd generation, 128GB, A15 Bionic, Gigabit Ethernet. **The Ethernet model is required** — Wi-Fi-only 64GB units cannot sit on the wired REPLAY VLAN and are not usable for a court (29 were returned 2026-07-24 for exactly this reason).
+
+Enrolled in Mosyle MDM via Mac Configurator 2. One per TV display, mounted behind the TV on the HIDEit ATV4K 3G bracket. Mains-powered — draws no PoE.
+
+PH price as of 2026-07-20 (Tela Park quote).

@@ -2,13 +2,13 @@
 type: inventory
 name: UniFi UDM-Pro Gateway
 sku: NET-UDM-PRO
-vendor: "[[ubiquiti]]"
+vendor: "[[drextech]]"
 category: networking
 unit_cost: 379.00
-on_hand: 0
-allocated: 0
-on_order: 0
-reorder_point: 1
+currency: USD
+status: current
 ---
 
-Alternative to UDM-SE. No PoE on gateway ports. Use when PoE on gateway is not required.
+Gateway for **multi-court Pro venues without door access** — the default PH case. In a switched venue nothing PoE hangs off the gateway (only the Mac mini, data-only), so the SE's PoE ports and 2.5G WAN buy nothing and the Pro is ~$120 cheaper. ~50W mains, 1U.
+
+PH pricing TBD — the ₱ figure on the SE is the reference.
