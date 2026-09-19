@@ -62,7 +62,6 @@ Junction boxes (ship with the camera) · HDMI cables (ship with the TV) · PDU (
 | Per-court draw | 2.8 + 13 = 15.8 W | 17.5 + 13 = 30.5 W |
 | Total load (14 courts + UDM 50 + switch 60 + Mac mini 65 + modem 10) | **406 W** | **612 W** |
 | UPS rung | **1000 VA** | **1500 VA** |
-| Purchase | KSTAR RT-III 1K (900 W, 45%) | KSTAR RT-III 1K (900 W, 68% — 2 points under the 70% cap) or 2K |
 | Switch PoE load | 221 W of 600 W (37%) | 427 W of 600 W (71%) |
 
 Switching camera SKU after the rack is bought is a UPS-rung change, not just a line swap. If a Dahua venue ever ships with the white illuminator on (24 W), the load is 703 W → 2000 VA.

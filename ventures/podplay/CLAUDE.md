@@ -100,7 +100,7 @@ Sizing rule, config notes, why this SKU, alternative SKUs. Retired items say wha
 ```
 
 - `unit_cost` is the last known price in `currency` — cite the source and date in the body (e.g. "PH price as of 2026-07-20"). `0.00` means unknown.
-- The catalog is the PH BOM: what a venue build actually calls for, plus the by-hand lines (mounts, adapters, UPS model). US-channel SKUs we don't buy are deleted, not kept. `status: retired` is for a SKU we've stocked but no longer spec (e.g. the KSTAR 3K) — never put one on a new BOM.
+- The catalog is the PH BOM: what a venue build actually calls for, plus the by-hand lines (mounts, adapters, UPS model). US-channel SKUs we don't buy are deleted, not kept. `status: retired` is for a SKU we've stocked but no longer spec — never put one on a new BOM.
 - Venue-specific hardware that isn't in the PodPlay BOM (e.g. Tela Park's client-designed pole switches) is recorded on the project/venue, not here.
 
 ### Vendor

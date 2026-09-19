@@ -114,6 +114,7 @@ Take the 48-port at 8 courts anyway if `doors > 4`, the venue wants spare switch
 
 ## Patch panels and cables
 
+- **SFP DAC:** `1 per switch + 1 per NVR` — UDM ↔ each switch, switch ↔ NVR. Consumes no RJ45.
 - **Patch panel:** 1 per switch, matching size — 24-port coupler panel per 24-port switch, **1× 48-port coupler panel** per 48-port switch (2× 24-port is the fallback if no 48-port coupler panel is sourceable, at +1U). Cat6, pass-through couplers, front → switch, back → court runs. Punch-down is not a substitute.
 - **Cat6 0.5M:** `total_ports + 2` (panel front → switch, one per port + 2 spare)
 - **Cat6 1M:** 2 (UDM ↔ Mac mini + spare)
@@ -143,7 +144,7 @@ Max draw, not typical: replay camera **17.5W** (Dahua) or **2.8W** (Uniview), iP
 | 14-court Pro, Dahua | 612W | 1500 VA |
 | 14-court Pro, Dahua with white illuminator left on (24W) | 703W | 2000 VA |
 
-The camera choice moves the rung — and the "set illumination to IR" config step is load-bearing for the number, not a picture preference. Watts bind, not VA: an on-line unit at PF 0.9 meets the same watts a rung lower. Line-interactive with AVR minimum. 230V. Purchase is the KSTAR MemoPower RT-III 1K (900W) or 2K (1800W). No PDU — the UPS socket plate distributes power; 2× C14-to-universal adapters per venue for the Mac mini and modem.
+The camera choice moves the rung — and the "set illumination to IR" config step is load-bearing for the number, not a picture preference. Watts bind, not VA: an on-line unit at PF 0.9 meets the same watts a rung lower. Line-interactive with AVR minimum. 230V, 2U rack-mount, chassis depth against the rack. **No PDU** — the UPS's C13 socket plate distributes power: UDM and switch on native C13 cords, Mac mini and ISP modem via **2× C14-to-universal adapters** per venue. Autonomous+ adds the NVR as a 5th outlet — size the plate at 5.
 
 ---
 
@@ -178,7 +179,12 @@ Kingston XS1000 / XS2000; Samsung T7 is an acceptable alternate. USB-C, erased A
 
 | Item | Qty |
 |---|---|
-| Replay camera, iPad, iPad PoE adapter, iPad wall mount, Apple TV, TV, HIDEit mount, TV tilt mount | 1 per court |
+| Replay camera, iPad, iPad PoE adapter, iPad wall mount, Apple TV, TV | 1 per court |
+| Apple TV mount | 1 per Apple TV |
+| TV tilt mount | 1 per TV (no catalog SKU) |
+| C14-to-universal adapters | 2 per venue (Mac mini + modem) |
+| SFP DAC | 1 per switch + 1 per NVR |
+| Push-to-exit | 1 per mag-lock door (Autonomous tiers) |
 | Flic buttons | `(courts × 2) + 2` |
 | Aluminum signs | `courts × 2` |
 | Mac mini + shelf | 1 per venue |

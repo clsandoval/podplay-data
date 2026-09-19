@@ -11,7 +11,8 @@
 #     (e.g. 7 courts + 7 cameras = 28 ports → 48-port).
 #   - UPS load adds the security cameras (7W each, placeholder) + the NVR:
 #       ≤20 cams 100W · ≤35 160W · ≤40 200W · ≤60 320W.
-#   - Rack adds the NVR: UNVR 1U, UNVR-Pro 2U.
+#   - Rack: add the NVR's U by hand (UNVR 1U, UNVR-Pro 2U) — it isn't a sized line, so
+#     the rack bracket won't include it automatically. Pro 8U + UNVR-Pro 2U = 10U → still 12U.
 #   - Security cameras get their own SURVEILLANCE VLAN 31; the NVR sits at .31.100.
 
 tier: autonomous_plus
@@ -39,8 +40,8 @@ venue_items:
   - sku: NET-SFP-DAC
     name: UniFi SFP+ DAC Cable 0.5m
     category: networking
-    qty: 1
-    notes: "Additional DAC for switch ↔ NVR (the Pro BOM's covers UDM ↔ switch)."
+    qty: "1 per NVR"
+    notes: "Goes with the NVR: switch ↔ NVR uplink, one per NVR unit (the Pro BOM's DACs cover UDM ↔ switch)."
 
 per_camera_items:
 

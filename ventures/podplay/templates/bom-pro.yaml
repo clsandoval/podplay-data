@@ -11,7 +11,10 @@
 #   - HDMI cables — ship with the TV order. Put the line back if the TV supplier changes.
 #   - Rack PDU — the UPS socket plate distributes power; see INFRA-C14-ADAPTER.
 #   - Access points — a coverage decision from the site survey, never a formula. Always TBD.
-#   - TV tilt mount — still bought, 1 per TV, no catalog SKU; add by hand.
+#
+# Accessory lines — each goes with a parent item and scales with it:
+#   Apple TV mount 1 per Apple TV · TV tilt mount 1 per TV (no catalog SKU, by hand) ·
+#   C14 adapters 2 per venue (Mac mini + modem, on the UPS) · SFP DAC 1 per switch.
 
 tier: pro
 
@@ -42,8 +45,8 @@ venue_items:
   - sku: NET-SFP-DAC
     name: UniFi SFP+ DAC Cable 0.5m
     category: networking
-    qty: 1
-    notes: "UDM ↔ switch uplink. Consumes no RJ45 port on either end. Omit when courts == 1."
+    qty: "1 per switch"
+    notes: "UDM ↔ switch uplink, one per switch (2 at 17+ courts). Consumes no RJ45 port on either end. None when courts == 1."
 
   # Patch panel — 1 per switch, sized to the switch. 48-port coupler panel for the 48-port
   # switch (2× 24-port is the fallback if no 48-port coupler panel is sourceable, at +1U).
@@ -80,7 +83,8 @@ venue_items:
   # Fixed: UDM 50W + switch 50–60W + Mac mini 65W + modem 10W.
   #   14 courts on the Uniview (2.8W) → ~406W → 1000 VA
   #   14 courts on the Dahua (17.5W)  → ~612W → 1500 VA
-  # Purchase: KSTAR MemoPower RT-III 1K (900W) or 2K (1800W), whichever covers the watts.
+  # Line-interactive with AVR minimum, 230V, 2U. Watts bind — an on-line unit at PF 0.9 meets
+  # the same watts a rung lower.
   - sku: INFRA-UPS-1000VA
     name: UPS — 1000 VA (1 kVA) / 600 W minimum, 2U rack-mount
     category: power
@@ -91,7 +95,7 @@ venue_items:
     name: C14-to-Universal Adapter Plug (10A 250V)
     category: power
     qty: 2
-    notes: "Mac mini + ISP modem into the UPS's C13 socket plate. UDM and switch use native C13 cords. Confirm the plate has ≥4 C13 sockets."
+    notes: "Goes with the UPS: Mac mini + ISP modem into its C13 socket plate. UDM and switch use native C13 cords. Confirm the plate has ≥4 C13 sockets (5 on Autonomous+ for the NVR)."
 
   # Rack — sum rack-U of the gear + 1U ISP modem allowance, then the next bracket up:
   #   ≤10U → 12U · 11–14U → 16U · 15–19U → 21U · 20–25U → 27U
@@ -157,7 +161,7 @@ per_court_items:
     name: Samsung 65" TV (U8000F)
     category: display
     qty: 1
-    notes: "Commercial-grade required. VESA 400×300, 8 ft 9 in AFF. Tilt mount 1 per TV by hand (no catalog SKU). HDMI cable ships with the TV."
+    notes: "Commercial-grade required. VESA 400×300, 8 ft 9 in AFF. Goes with: 1 tilt mount per TV (no catalog SKU, by hand); HDMI cable ships with the TV."
 
   - sku: DISPLAY-APPLETV
     name: Apple TV 4K (Wi-Fi + Ethernet) 128GB
@@ -169,7 +173,7 @@ per_court_items:
     name: HIDEit ATV4K 3G Apple TV Wall Mount
     category: display
     qty: 1
-    notes: "Behind the TV. 3G SKU for the 3rd-gen Apple TV."
+    notes: "Goes with the Apple TV, 1 each. Behind the TV. 3G SKU for the 3rd-gen Apple TV."
 
   # Scoreboard
   - sku: REPLAY-FLIC
