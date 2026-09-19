@@ -3,12 +3,10 @@ type: inventory
 name: Ubiquiti Enterprise 8TB HDD
 sku: SURV-HDD
 vendor: "[[ubiquiti]]"
-category: compute
+category: storage
 unit_cost: 20000.00
-on_hand: 0
-allocated: 0
-on_order: 0
-reorder_point: 4
+currency: PHP
+status: current
 ---
 
-Enterprise-grade 3.5" surveillance HDD for UniFi NVRs. 4 drives for UNVR (4-bay), 7 drives for UNVR-Pro (7-bay).
+Autonomous+ only. 8TB HDDs for the UNVR / UNVR-Pro; quantity scales with security-camera count (2 at 1–10 cameras up to 7 at 31–35 in a UNVR-Pro). Ships from US/HK.

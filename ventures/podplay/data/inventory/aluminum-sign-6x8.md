@@ -5,10 +5,10 @@ sku: REPLAY-SIGN
 vendor: ""
 category: signage
 unit_cost: 25.00
-on_hand: 0
-allocated: 0
-on_order: 0
-reorder_point: 4
+currency: USD
+status: current
 ---
 
-6x8 inch printed aluminum sign used to mount Flic buttons. One per court.
+Printed aluminum sign, 6×8 in, one per court. Mounts the 2 Flic buttons for the scoreboard. PodPlay-branded artwork with Flic mounting holes.
+
+PH supplier not yet sourced — Tela Park's 16 signs are priced TBD.

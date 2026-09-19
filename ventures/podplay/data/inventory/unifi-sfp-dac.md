@@ -5,10 +5,8 @@ sku: NET-SFP-DAC
 vendor: "[[ubiquiti]]"
 category: networking
 unit_cost: 1750.00
-on_hand: 0
-allocated: 0
-on_order: 0
-reorder_point: 5
+currency: PHP
+status: current
 ---
 
-Direct-attach copper SFP+ cable, 0.5m. Used for UDM-to-switch and switch-to-NVR high-speed connections.
+10G SFP+ DAC (UACC-DAC-SFP10-0.5M) for the UDM ↔ switch uplink. Consumes no RJ45 port on either end.

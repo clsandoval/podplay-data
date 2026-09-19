@@ -3,12 +3,10 @@ type: inventory
 name: UniFi UNVR-Pro 7-Bay NVR
 sku: SURV-UNVR-PRO
 vendor: "[[ubiquiti]]"
-category: compute
+category: camera
 unit_cost: 499.00
-on_hand: 0
-allocated: 0
-on_order: 0
-reorder_point: 1
+currency: USD
+status: current
 ---
 
-7-bay NVR for venues with 5+ security cameras. Supports up to 7x Ubiquiti Enterprise 8TB HDDs for extended retention.
+Autonomous+ only. 7-bay NVR for **21+ security cameras** (UniFi Protect). Replay cameras don't count — they record to the Mac mini. 2U. Ships from US/HK.

@@ -2,13 +2,11 @@
 type: inventory
 name: Pyle 19-Inch 1U Vented Rack Shelf
 sku: INFRA-RACK-SHELF
-vendor: "[[pyle]]"
+vendor: "[[amazon]]"
 category: networking
 unit_cost: 2000.00
-on_hand: 0
-allocated: 0
-on_order: 0
-reorder_point: 2
+currency: PHP
+status: current
 ---
 
-1U vented rack shelf for mounting the Mac Mini inside the network enclosure.
+1U vented rack shelf for the Mac mini. Counts as 2U combined with the Mini for rack sizing.
