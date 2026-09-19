@@ -13,4 +13,4 @@ Replay clip store for **5+ court** venues — the standard PH pick. USB-C extern
 
 Plug directly into a Mini USB-C port, not through a hub. Throughput is a non-issue (8 courts ≈ 8 MB/s aggregate). The XS1000 family stops at 2TB — see [[kingston-xs2000-4tb]] for larger.
 
-Price per Tela Park Pricing (2026-07-20).
+PH price as of 2026-07-20 (Tela Park quote).

@@ -13,4 +13,4 @@ Gateway + DHCP + firewall + UniFi controller, 8-port PoE built in. Selected when
 
 Kisi controllers land on its RJ45 ports; Kisi readers take its PoE ports first (6 free normally), overflowing to the switch. Built-in Teleport VPN is the Kosmas off-site admin path. ~50W mains, 1U.
 
-Price per Tela Park Pricing (2026-07-20) — Tela Park uses an SE despite being Pro because the client designed the network around it.
+PH price as of 2026-07-20 (Tela Park quote) — Tela Park uses an SE despite being Pro because the client designed the network around it.

@@ -11,4 +11,4 @@ status: current
 
 Lets the Mac mini and ISP modem plug into the KSTAR UPS's C13 socket plate (the UDM and switch use native C13 cords). **2 per venue.** Rigid plug-adapter form is what the PH market stocks; the flexible cable form also works.
 
-**Not a calculator line — add by hand** (removed from the calculator 2026-08-11, still required on every rack per 2026-09-16 decision). Confirmed source: Lazada listing i519716622, ships from Metro Manila.
+**Not a sized line — add by hand** (still required on every rack, confirmed 2026-09-16). Confirmed source: Lazada listing i519716622, ships from Metro Manila.

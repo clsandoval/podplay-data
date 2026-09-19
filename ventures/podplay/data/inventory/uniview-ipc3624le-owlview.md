@@ -17,6 +17,6 @@ Config notes: no fixed factory IP (DHCP on the default VLAN); web UI is **HTTPS*
 
 The lighter PoE draw vs the [[dahua-ipc-hdw5459t-ze-il]] is a full UPS rung at 14 courts (1000 VA vs 1500 VA) — the camera choice is per venue.
 
-Price per Tela Park Pricing (2026-07-20).
+PH price as of 2026-07-20 (Tela Park quote).
 
 Junction box is included with the camera — no separate line.

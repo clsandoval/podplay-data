@@ -13,4 +13,4 @@ Court kiosk — booking + check-in. Base iPad with A16 chip, 128GB. One per cour
 
 Powered + networked over PoE through the [[ipad-poe-adapter]]; the adapter's MAC is the iPad's wired identity for DHCP reservations. Mounted in the [[ipad-locking-wall-mount]].
 
-Price per Tela Park Pricing (2026-07-20).
+PH price as of 2026-07-20 (Tela Park quote).

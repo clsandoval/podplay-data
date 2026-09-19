@@ -8,8 +8,6 @@ tags: [tiers, pricing, product]
 
 Pricing below is what the **venue pays PodPlay** (PH & SEA client pricing, effective August 2026). It is not hardware cost. Amounts are USD.
 
-Source of truth for tier definitions and pricing: the **Kosmas Setup** repo — `docs/podplay-tiers-reference.md` and `reference/PodPlay Pricing August 2026.pdf`. If this note and that doc disagree, the tiers reference wins.
-
 > **There is no Pro+ and no PBK tier.** Pro+ was removed 2026-08-11 — door access is all-or-nothing, so any venue wanting a Kisi door is Autonomous. An old "Pro+" quote is a Pro deal if it had no doors, an Autonomous one if it did — decide per deal. PBK (Pickleball Kingdom) is a venue operator brand, not a tier.
 
 ---

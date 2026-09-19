@@ -13,4 +13,4 @@ Court display, one per court. Samsung U8000F (model per label). VESA 400×300 co
 
 **Commercial-grade required** — residential TVs burn out under commercial operating hours.
 
-Price per Tela Park Pricing (2026-07-20).
+PH price as of 2026-07-20 (Tela Park quote).

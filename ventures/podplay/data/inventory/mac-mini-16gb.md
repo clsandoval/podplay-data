@@ -13,4 +13,4 @@ Replay system compute unit — captures the cameras' RTSP streams and stores cli
 
 Base 16GB / 256GB matches the BOM. **Minimum spec is M2**, but PH has no refurb channel so M4/M5 new from Power Mac Center is the only realistic buy. ~65W mains.
 
-Price per Tela Park Pricing (2026-07-20).
+PH price as of 2026-07-20 (Tela Park quote).

@@ -13,4 +13,4 @@ status: current
 
 Enrolled in Mosyle MDM via Mac Configurator 2. One per TV display, mounted behind the TV on the HIDEit ATV4K 3G bracket. Mains-powered — draws no PoE.
 
-Price per Tela Park Pricing (2026-07-20).
+PH price as of 2026-07-20 (Tela Park quote).
