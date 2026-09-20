@@ -1,8 +1,16 @@
-# Tela Park: Apple Device Payment Status
+---
+type: ticket
+title: Tela Park — Apple device payment status
+project: "[[tela-park]]"
+severity: medium
+status: open
+assigned_to: ""
+created_date: 2026-05-05
+resolved_date: null
+tags: [finance, procurement]
+---
 
-**Status:** OPEN  
-**Created:** 2025-05-05  
-**Category:** Finance / Procurement
+# Tela Park: Apple Device Payment Status
 
 ## Issue
 Equipment brought back from PodPlay to Tela Park project:

@@ -1,17 +1,17 @@
 ---
 type: recurring_fee
 project: "[[tela-park]]"
-description: Basic Plus booking system — 6 courts
-amount: 259.00
+description: Basic+2 venue fee — Basic+ layer, venue-wide
+amount: 150.00
 frequency: monthly
 start_date: null
 end_date: null
 status: paused
-tags: [basic-plus, software-only]
+tags: [basic-plus-2, venue-fee, software-only]
 ---
 
-Discounted rate negotiated by Kosmas. Originally $460/month ($100 venue fee + $60 × 6 courts). Reduced to $259/month all-in for 6 Basic Plus courts.
+The venue-wide half of the Basic+2 plan: booking, the venue's own player app, push notifications, social chat across all 14 courts. $150/month — the Basic+ venue rate, not Pro's $300.
 
-Status set to paused pending contract signature and environment activation. Will activate once booking system goes live.
+Supersedes the April 2026 verbal figure of $259/month all-in for 6 Basic Plus courts.
 
-Denominated in USD. Billed via Magpie (~5% transaction fee passed to client).
+Paused pending contract signature and environment activation. USD. Billed via Magpie.
