@@ -10,4 +10,4 @@ tags: [external, client-contact, tela-park, manila]
 
 **Role / context:** Tela Park — client IT
 
-Designed Tela Park's distributed network (UDM-SE head end, fiber switch, 5 pole switches, 3 APs) and owns the PLDT edge configuration. Kosmas's counterpart for the on-site network work — pole ↔ court mapping, LAN subnet check, CGNAT verification, the port-4000 path. See [[tela-park]] and [[tela-park-venue]].
+Designed Tela Park's distributed network (UDM-SE head end, client fiber LAN, PoE pole switches). Tela Park bought the switches (2026-10-19) and maintains the network since 2026-10-28; Kosmas keeps UI.com ownership of the UDM-SE. Kosmas's counterpart for network changes on the REPLAY VLAN (e.g. keeping outbound 7844 open for the Cloudflare Tunnel). See [[tela-park]] and [[tela-park-venue]].

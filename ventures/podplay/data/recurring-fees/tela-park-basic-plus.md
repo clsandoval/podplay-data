@@ -14,4 +14,4 @@ The venue-wide half of the Basic+2 plan: booking, the venue's own player app, pu
 
 Supersedes the April 2026 verbal figure of $259/month all-in for 6 Basic Plus courts.
 
-Paused pending contract signature and environment activation. USD. Billed via Magpie.
+The venue is live (2026-11-11), but billing start isn't recorded and the contract isn't signed, so this stays paused. USD. Billed via Magpie.
