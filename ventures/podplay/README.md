@@ -6,7 +6,7 @@ This is the venture with the most existing content because the original `podplay
 
 ## Quick orientation
 
-- **Active projects** are in `data/projects/` (Atleta-63 demo, Tela Park, Helios, temporary-facility)
+- **Active projects** are in `data/projects/` (Atleta-63 demo, Tela Park, Helios SPARC, Helios, temporary-facility)
 - **Hardware catalog** is in `data/inventory/` (~50 items)
 - **Vendors** in `data/vendors/` are pod-play-specific. Cross-venture vendors (e.g., Stripe if multiple ventures adopt it) get promoted to root `general/vendors/`
 - **Tier pricing** lives at `pricing/rate-card.md` — SOT for proposals, invoices, contracts
