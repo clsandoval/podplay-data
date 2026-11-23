@@ -91,8 +91,6 @@ podplay/
     ├── vendors/              # 11 vendors documented
     │   ├── amazon.md
     │   ├── apple.md
-    │   ├── better-stack.md
-    │   ├── cloudflare.md
     │   ├── cta-digital.md
     │   ├── empiretch.md
     │   ├── fast-signs.md
