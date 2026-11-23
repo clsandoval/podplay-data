@@ -31,3 +31,4 @@ The replay system runs on its own once the installation team sets it up. Players
 ## Related
 - `data/notes/network-architecture.md`
 - `data/inventory/kingston-xs1000-2tb.md`, `data/inventory/kingston-xs2000-4tb.md`
+- `data/inventory/mac-mini-16gb.md`
