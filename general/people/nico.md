@@ -10,7 +10,7 @@ department: operations
 tags: [hq, hardware, replay, training]
 ---
 
-**Niko Kantarellis** (earlier notes spell it "Nico"), IT Operations Manager at Pod Play HQ, per their email signature (2026-11-09); earlier notes had the title as Hardware & Replay Service Lead. Manages approximately 70 live PodPlay locations. Kosmas's technical contact for venue deployments: replay service, Mac mini, Cloudflare Tunnel. **Not** for hardware sizing like the UPS or rack.
+**Niko Kantarellis**, IT Operations Manager at Pod Play HQ, per their email signature (2026-11-09); earlier notes had the title as Hardware & Replay Service Lead. Manages approximately 70 live PodPlay locations. Kosmas's technical contact for venue deployments: replay service, Mac mini, Cloudflare Tunnel. **Not** for hardware sizing like the UPS or rack.
 
 **Time zone:** Newark, US Eastern — 13 h behind Manila in US standard time, 12 h during US daylight time. Their workday (~9–5 ET) is about 10 PM–6 AM Manila in winter, so convert before calling a promise overdue.
 
