@@ -37,10 +37,10 @@ PLDT modem (Huawei HG8145X6, LAN 192.168.1.x)
             └── per Pro court: camera (PoE) · iPad adapter (PoE) · Apple TV (mains)
 ```
 - Default `192.168.30.0/24` (UniFi management); REPLAY `192.168.32.0/24`, VLAN 32, the only PodPlay network
-- Tela Park maintains the network since 2026-10-28; Marco stays UI.com owner, so Kosmas keeps admin + Teleport
+- Tela Park maintains the network; Marco stays UI.com owner, so Kosmas keeps admin + Teleport
 - **WAN:** PLDT Home Fiber (residential), public dynamic IP, not CGNAT by traceroute. Modem admin only on `https://192.168.1.1`
-- **No inbound ports.** Replays reach the Mac mini via Cloudflare Tunnel `telapark` (`https://replay-telapark.fnasasin.com`); the old 4000 forward + DDNS were removed 2026-11-16
-- Remote admin via UniFi Teleport only (Tailscale removed 2026-11-09)
+- **No inbound ports.** Replays reach the Mac mini via Cloudflare Tunnel `telapark` (`https://replay-telapark.fnasasin.com`); no port forwards, no DDNS
+- Remote admin via UniFi Teleport only
 
 ## Site survey notes
 - Power: 3-phase, 200A main panel. Adequate.
