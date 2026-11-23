@@ -49,11 +49,12 @@ phases:
       - Configure recording schedules
       - Verify coverage zones
   - id: 7
-    name: DDNS Setup (FreeDNS)
+    name: Cloudflare Tunnel (no port forward, no DDNS)
     tasks:
-      - Register DDNS hostname
-      - Configure on UDM/UDR
-      - Verify remote access
+      - Confirm outbound TCP/UDP 7844 is open from REPLAY
+      - Run setup_venue_tunnel.py (tunnel, replay-CUSTOMERNAME hostname, cloudflared on the Mac mini)
+      - Set the dashboard Server URL to https://replay-CUSTOMERNAME.<venue domain>
+      - Verify /health loads from a phone on cellular
   - id: 8
     name: Mac Mini Setup
     tasks:
@@ -62,12 +63,12 @@ phases:
       - Configure auto-login
       - Test replay capture
   - id: 9
-    name: Replay Service Deployment (V1)
+    name: Replay Service Deployment (V2)
     tasks:
-      - Deploy replay app
-      - Configure camera feeds
-      - Test instant replay workflow
-      - Performance tuning
+      - Install the replay service and pair the Mac mini in the dashboard
+      - Set Local IP 192.168.32.100 and turn Auto-cleanup (3 days) on
+      - Configure camera feeds (H.264, G.711 µ-law)
+      - Test saved and instant replays during a real reservation
   - id: 10
     name: iPad Setup
     tasks:
@@ -101,7 +102,7 @@ phases:
     name: Health Monitoring Setup
     tasks:
       - Configure alerts in UniFi
-      - Set up uptime monitoring
+      - Set up the Better Stack uptime monitor on the tunnel's /health
       - Document baseline metrics
       - Train client on dashboard
   - id: 15
