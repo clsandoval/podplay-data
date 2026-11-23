@@ -12,13 +12,13 @@ revenue_stage: ""
 tags: [manila, bridgetowne, indoor, pickleball, ppa, helios]
 ---
 
-The second PH PodPlay venue: **Helios SPARC**, the interim 14-court facility at Bridgetowne (formerly "Helios Beta"; named Helios SPARC as of 2026-11-09). **Not** the 2028 flagship, which is [[helios]]. The venture side lives at `ventures/helios-pickleball-center/`.
+The second PH PodPlay venue: **Helios SPARC**, the interim 14-court facility at Bridgetowne (formerly "Helios Beta"). **Not** the 2028 flagship, which is [[helios]]. The venture side lives at `ventures/helios-pickleball-center/`.
 
 A mixed-tier venue: **14 pickleball courts on Pro**, plus a **ping pong area on Autonomous** (Kisi door access) after the opening. `tier: pro` covers the courts; the ping pong area is recorded here, not in the enum.
 
 ## Status
 
-**Procurement.** Hardware is "already ordered" per PodPlay's 2026-11-04 meeting notes (which items isn't recorded), but **no switches yet**: they wait on the first site visit and run measurements. Site not surveyed as of 2026-11-16. Switch layout is a draft (2026-11-18).
+**Procurement.** Some hardware is "already ordered" (which items isn't recorded), but **no switches yet**: they wait on the first site visit and run measurements. Site not surveyed yet. Switch layout is a draft.
 
 | Milestone | Date |
 |---|---|
@@ -34,7 +34,7 @@ A mixed-tier venue: **14 pickleball courts on Pro**, plus a **ping pong area on 
 - **Cloudflare Tunnel from day one**, no port forward or DDNS. First real run of the `venue-tunnel` setup script (Tela Park was built by hand).
 - **UniFi:** Kosmas owns the console; invite `unifi@podplay.app`.
 
-### Switch layout (draft 2026-11-18, pending the site survey)
+### Switch layout (draft, pending the site survey)
 
 | | MDF (server room on A-2.0) | West IDF (storage room by the west stair, door GD20) |
 |---|---|---|
@@ -48,7 +48,6 @@ A mixed-tier venue: **14 pickleball courts on Pro**, plus a **ping pong area on 
 - **Why an IDF:** from the server room, west courts 10–13 run ~96–118 m along the walls, past Cat6's limit. From the IDF spot the longest run is ~72 m.
 - **Why fiber:** the MDF ↔ IDF route is at or past 90 m once it climbs and drops. Match the SFP+ modules to the fiber the contractor pulls (single-mode vs multimode), and buy them after. Pre-terminated LC-LC, next standard length up from the measured route.
 - **Second wiring option:** both switches straight into the UDM (IDF fiber on the UDM-SE's SFP+ LAN port, the 48 on a short Cat6, Mac mini on the UDM), so a 48 outage only drops courts 1–8. Same parts cost.
-- PodPlay had suggested 2× USW-Pro-24-POE in one rack (2026-11-04); the draft keeps their second switch as the IDF.
 
 ### IP plan
 
@@ -78,15 +77,15 @@ Starts from the 14-court Pro worked example, with the switch layout above, Kisi 
 | [[ipad-128gb-wifi-cellular]] (iPad A16) | 14 | On hand |
 | iPad PoE → USB-C adapter, low-power 802.3af | 14 | 8 on hand, buy 6. **Not** the 25 W `UACC-PoE+-USBC` |
 | [[ipad-locking-wall-mount]] | 14 | Fence hardware comes in the kit |
-| [[apple-tv-4k-ethernet]] | 14 | On hand (pre-enrolled batch, Ethernet model confirmed 2026-11-16) |
+| [[apple-tv-4k-ethernet]] | 14 | On hand (pre-enrolled batch, Ethernet model) |
 | [[hideit-appletv-mount]] | 14 | |
 | [[tv-65in]] + tilt mount | 14 + 14 | HDMI comes with the TVs |
-| [[flic-button]] | 30 | `(14 × 2) + 2`, covered by the 120 that arrived 2026-11-19 (held by Tito Kim). **May not be needed**, see below |
+| [[flic-button]] | 30 | `(14 × 2) + 2`, covered by the 120 on hand (held by Tito Kim). **May not be needed**, see below |
 | [[aluminum-sign-6x8]] | 28 | Supplier TBD |
 
 **Ping pong area (Autonomous, after the opening):** court kit per table ×5 (assumed; 5 drawn on A-2.0, count unconfirmed) · [[kisi-reader-pro-2-1]] 1 per door (on the UDM-SE) · push-to-exit button per mag-lock door. Doors not decided.
 
-**Door access option 2: UniFi Access** (suggested by [[ernesto-ebuen]], 2026-11-18): no monthly licence. Per door a UA-Hub-Door (one PoE++ port, up to 50 W, on the 48's PoE++ ports) + a reader (e.g. UA-G3-Pro) + the lock. Not yet known whether PodPlay's Autonomous booking can unlock UniFi Access doors; its door integration is Kisi. Either way, keep 2–3 of the 48's PoE++ ports free for door hardware.
+**Door access option 2: UniFi Access**: no monthly licence. Per door a UA-Hub-Door (one PoE++ port, up to 50 W, on the 48's PoE++ ports) + a reader (e.g. UA-G3-Pro) + the lock. Not yet known whether PodPlay's Autonomous booking can unlock UniFi Access doors; its door integration is Kisi. Either way, keep 2–3 of the 48's PoE++ ports free for door hardware.
 
 **Not in this list:** cable runs and the MDF ↔ IDF fiber (contractor), Wi-Fi APs (a coverage decision; the sizing gives 0), junction boxes.
 
@@ -97,18 +96,15 @@ Starts from the 14-court Pro worked example, with the switch layout above, Kisi 
 
 ## Support
 
-PodPlay recommended two Slack channels for Kosmas's team: one with the replay devs, one with the iOS devs. Not set up yet.
+Two Slack channels with PodPlay for Kosmas's team: one with the replay devs, one with the iOS devs. Not set up yet.
 
 ## Key decisions
-- **MDF + west IDF with home runs**, not small court switches (draft 2026-11-18): run lengths force a second switch; home runs keep gear and UPS in two places, not one per pole.
+- **MDF + west IDF with home runs**, not small court switches: run lengths force a second switch; home runs keep gear and UPS in two places, not one per pole.
 - **USW-Pro-48-POE at the MDF** (39 ports past a 24); **USW-Pro-24-POE at the IDF** (on hand, room to spare; a 16 fits only courts 9–13 at 85% of its PoE).
-- **UDM-SE, not UDM-Pro** (2026-11-18): Kisi readers go on the SE's PoE. If [[nico]] confirms Autonomous can unlock UniFi Access doors and the doors go Access, buy the **UDM-Pro** instead (~$120 less); if the gateway must be ordered before that answer, buy the SE.
-- **Kingston XS2000 4TB, not 2TB** (2026-11-09): recordings follow reservations and are kept 3 days; at the Dahua 8 Mbps cap, 2TB holds ~10 booked hours per court per day before the 80% alert, the 4TB ~21.
+- **UDM-SE, not UDM-Pro**: Kisi readers go on the SE's PoE. If [[nico]] confirms Autonomous can unlock UniFi Access doors and the doors go Access, buy the **UDM-Pro** instead (~$120 less); if the gateway must be ordered before that answer, buy the SE.
+- **Kingston XS2000 4TB, not 2TB**: recordings follow reservations and are kept 3 days; at the Dahua 8 Mbps cap, 2TB holds ~10 booked hours per court per day before the 80% alert, the 4TB ~21.
 - **Fiber uplink to the IDF**, not Cat6 (distance, not bandwidth).
 - **KSTAR 2K UPS at the MDF**: ~610 W is 68–69% of a 1K, no headroom.
 - **Low-power 802.3af iPad adapters**: keeps the PoE budget comfortable at 14 courts.
 - **Cloudflare Tunnel from day one**: Tela Park's replays failed for weeks on a missing ISP forward.
-- **Flics vs gesture scoring** (2026-11-19): Ethan and [[ernesto-ebuen]] said PodPlay is moving scoring, replay and undo to arm gestures at the camera. Not confirmed whether it's live by 2027-01-14 or which cameras it needs, so bring the 30 Flics as the fallback.
-
-## Sources
-PodPlay meeting 2026-11-04 (Nico; Richard on the venue side), the architect's plan set (A-2.0 ground level, issued 2026-11-11), PodPlay Operations' hardware floor plan draft (2026-11-04), and Kosmas decisions since.
+- **Flics vs gesture scoring**: PodPlay plans to move scoring, replay and undo to arm gestures at the camera. Not confirmed whether it's live by 2027-01-14 or which cameras it needs, so bring the 30 Flics as the fallback.

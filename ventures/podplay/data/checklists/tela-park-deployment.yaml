@@ -3,9 +3,9 @@ type: checklist
 phase: deployment
 status: in_progress
 
-# Tela Park deployment — Basic+2 plan, Pro build on 8 of 14 courts. Live since 2026-11-11.
+# Tela Park deployment — Basic+2 plan, Pro build on 8 of 14 courts. Live.
 # No rack, no Kisi, no NVR. Network is the client's distributed design (UDM-SE + client fiber LAN
-# + client-bought PoE pole switches), maintained by Tela Park since 2026-10-28. Replays reach the
+# + client-bought PoE pole switches), maintained by Tela Park. Replays reach the
 # Mac mini through a Cloudflare Tunnel; no inbound ports.
 
 categories:
@@ -20,7 +20,7 @@ categories:
         notes: "Court number = name number; Mosyle names AppleTV CH1 / iPad P3 etc.; camera IDs on the Mini stay championship-court-1..2, premium-court-1..6"
       - label: Pole ↔ court mapping confirmed with client
         done: true
-        notes: "Client's build; the pole mapping itself isn't recorded by Kosmas. Camera .3N = court N confirmed from each frame 2026-11-16"
+        notes: "Client's build; the pole mapping itself isn't recorded by Kosmas. Camera .3N = court N, confirmed from each frame"
       - label: Layout diagram with cable run distances
         done: false
 
@@ -28,13 +28,12 @@ categories:
     items:
       - label: Court kit quoted (8 courts)
         done: true
-        notes: "Quote of 2026-07-20"
       - label: Court kit delivered to the venue
         done: true
-        notes: "Cameras + TVs 2026-10-14; iPads, adapters, mounts, Apple TVs, 18 Flics, Mac mini, SSD, UDM-SE, 4× U7-LR 2026-10-16"
+        notes: "Cameras, TVs, iPads, adapters, mounts, Apple TVs, 18 Flics, Mac mini, SSD, UDM-SE, 4× U7-LR"
       - label: Switches sourced
         done: true
-        notes: "Client bought their own (2026-10-19); the Kosmas USW-Flex + 5× USW-Lite-8-PoE are unused stock"
+        notes: "Client bought their own; the Kosmas USW-Flex + 5× USW-Lite-8-PoE are unused stock"
       - label: Replay SSD in hand
         done: true
         notes: "Kingston XS1000 2TB"
@@ -66,7 +65,6 @@ categories:
         notes: "Mounted by Tela Park to PodPlay's specs"
       - label: Replay shows on each court's TV
         done: true
-        notes: "Verified 2026-11-16"
 
   - name: Network & Internet
     items:
@@ -90,21 +88,21 @@ categories:
         notes: "Not recorded as a separate check"
       - label: Network handed to Tela Park, UI.com ownership kept by Kosmas
         done: true
-        notes: "2026-10-28; unifi@podplay.app invited 2026-11-06"
+        notes: "unifi@podplay.app invited"
 
   - name: Replay Path & Monitoring
     items:
       - label: Cloudflare Tunnel live (https://replay-telapark.fnasasin.com)
         done: true
-        notes: "Live 2026-11-05; outbound TCP/UDP 7844 must stay open on REPLAY"
+        notes: "Outbound TCP/UDP 7844 must stay open on REPLAY"
       - label: Old port-4000 forward + DDNS removed
         done: true
-        notes: "UDM-SE forward, DDNS cron, telapark.fnasasin.com record and its token removed 2026-11-16"
+        notes: "UDM-SE forward, DDNS cron, DNS record and its token"
       - label: External health check from cellular
         done: true
       - label: Uptime monitoring + alerts
         done: true
-        notes: "Better Stack on /health every 3 min, email (replaced GCP)"
+        notes: "Better Stack on /health every 3 min, email"
 
   - name: Mac mini & Replay Service
     items:
@@ -112,7 +110,6 @@ categories:
         done: true
       - label: Auto-login ON, screen lock OFF, Full Disk Access on the replay service
         done: true
-        notes: "Per Nico, 2026-11-06"
       - label: Replay SSD erased as Replays (APFS, GUID) and headless automount daemon installed
         done: true
         notes: "Plug the SSD in before powering the Mini"
@@ -123,13 +120,12 @@ categories:
         done: true
       - label: Replay service deployed and running
         done: true
-        notes: "Paired 2026-10-27; now 2.1.2; upload key installed 2026-11-11 — recheck after every self-update"
+        notes: "On 2.1.2; recheck the upload key after every self-update"
       - label: Saved replays working end to end
         done: true
-        notes: "2026-11-11"
       - label: Remote admin — Teleport verified into the REPLAY VLAN
         done: true
-        notes: "Teleport only; Tailscale removed 2026-11-09"
+        notes: "Teleport only"
 
   - name: Cameras (Uniview Owlview)
     items:
@@ -148,13 +144,11 @@ categories:
         done: true
       - label: Apple TVs enrolled in Mosyle
         done: true
-        notes: "All 8; Courts 1–2 swapped for pre-enrolled units; handed over 2026-10-16"
+        notes: "All 8, handed over"
       - label: Mosyle names and court numbers set on all 16 devices
         done: true
-        notes: "2026-11-08"
       - label: Flic buttons paired, 2 per court
         done: true
-        notes: "2026-11-09"
       - label: Flic buttons mounted
         done: false
         notes: "Waiting on the aluminium signs"

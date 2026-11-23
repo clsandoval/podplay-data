@@ -13,8 +13,8 @@ tags: [manila, bridgetowne, indoor, pickleball, helios]
 
 Interim 14-court pickleball facility at Bridgetowne (formerly "Helios Beta"), with a dedicated center court and a ping pong area. Distinct from the 2028 flagship ([[helios-venue]]). Project: [[helios-sparc]].
 
-## Layout (architect's plan A-2.0, ground level, issued 2026-11-11)
-- **MDF:** the SERVER ROOM (bottom right of A-2.0, between the admin office and the manager's office). PodPlay's hardware plan (base dated 2026-08-04) shows a TELCO/CAB and an ELECTRICAL room at the top of the building that are storage on the 2026-11-11 A-2.0, so confirm on the site visit.
+## Layout (architect's plan A-2.0, ground level)
+- **MDF:** the SERVER ROOM (bottom right of A-2.0, between the admin office and the manager's office). PodPlay's hardware plan shows a TELCO/CAB and an ELECTRICAL room at the top of the building that are storage on A-2.0, so confirm on the site visit.
 - **West IDF:** the STORAGE room by the west stair (door GD20, above the west Food & Drink). Needs power, a lockable wall cabinet (≥6U) and the fiber run from the MDF.
 - **Ping pong area:** 5 tables drawn; doors GD01 (outside), GD08 (court hall) and GD14 (pro shop) touch it; its west side is open to the café seating.
 - **Center court:** LED screens at both baselines, which affects the camera position.
@@ -32,7 +32,7 @@ Interim 14-court pickleball facility at Bridgetowne (formerly "Helios Beta"), wi
 - Design Center draws straight lines, so it understates long runs; draw the real tray path once surveyed.
 
 ## Site survey
-Not surveyed yet (as of 2026-11-16).
+Not surveyed yet.
 
 ## Contacts
 - Venue side: [[richard-bachmann]]
