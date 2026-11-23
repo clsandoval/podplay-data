@@ -68,11 +68,13 @@ podplay/
     │   └── tela-park-client.md
     ├── venues/               # 4 venues documented
     │   ├── atleta-63-venue.md
+    │   ├── helios-sparc-venue.md
     │   ├── helios-venue.md
     │   ├── tela-park-venue.md
     │   └── temporary-facility-venue.md
     ├── projects/             # Active projects
     │   ├── atleta-63-demo.md
+    │   ├── helios-sparc.md
     │   ├── helios.md
     │   ├── tela-park.md
     │   └── temporary-facility.md

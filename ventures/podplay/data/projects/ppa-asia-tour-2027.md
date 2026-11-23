@@ -4,7 +4,7 @@ name: PPA Asia Tour 2027
 status: intake
 tier: ""
 client: ""
-venue: "[[helios-venue]]"
+venue: "[[helios-sparc-venue]]"
 deployment_date: 2027-01-11
 installer: ""
 isp_type: ""
@@ -13,7 +13,7 @@ jira: KAN-5
 tags: [event, ppa, helios, manila, 2027]
 ---
 
-PPA Asia Tour 2027 — pickleball tour event hosted at Helios Beta during the 2nd week of January 2027. Tracked in [KAN-5](https://kosmaskavc.atlassian.net/browse/KAN-5) (parent) with subtasks for LOC, sponsorship, and hotel partnerships ([KAN-7](https://kosmaskavc.atlassian.net/browse/KAN-7), [KAN-8](https://kosmaskavc.atlassian.net/browse/KAN-8), [KAN-9](https://kosmaskavc.atlassian.net/browse/KAN-9)). Related: [[ppa125]] ([KAN-6](https://kosmaskavc.atlassian.net/browse/KAN-6)).
+PPA Asia Tour 2027 — pickleball tour event hosted at Helios SPARC (formerly Helios Beta) during the 2nd week of January 2027; the venue's target opening is 2027-01-14, the PPA event. Tracked in [KAN-5](https://kosmaskavc.atlassian.net/browse/KAN-5) (parent) with subtasks for LOC, sponsorship, and hotel partnerships ([KAN-7](https://kosmaskavc.atlassian.net/browse/KAN-7), [KAN-8](https://kosmaskavc.atlassian.net/browse/KAN-8), [KAN-9](https://kosmaskavc.atlassian.net/browse/KAN-9)). Related: [[ppa125]] ([KAN-6](https://kosmaskavc.atlassian.net/browse/KAN-6)).
 
 ## Status (2026-05-12)
 - Owner: [[richard-bachmann]]
@@ -27,4 +27,4 @@ PPA Asia Tour 2027 — pickleball tour event hosted at Helios Beta during the 2n
 - [KAN-9](https://kosmaskavc.atlassian.net/browse/KAN-9) — Establish Local Organizing Committee (LOC)
 
 ## Cross-references
-- Venue: [[helios]] (Helios Beta — interim facility, not the 2028 flagship)
+- Venue: [[helios-sparc]] (Helios SPARC, formerly Helios Beta — interim facility, not the 2028 flagship [[helios]])

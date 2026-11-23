@@ -2,7 +2,7 @@
 
 Kosmas + Robinsons Land Corporation joint venture. Two facilities, both at Bridgetowne (Pasig):
 
-- **Helios Beta** — interim 14-court professional-grade complex (dedicated centre court, café, pro shop, lounge, wellness/recovery). Opening soon — no public date (permit delays per [KAN-26](https://kosmaskavc.atlassian.net/browse/KAN-26) comments; PPA Asia Tour booked there Jan 2027 per KAN-5). Public naming on the website: "Helios Beta".
+- **Helios SPARC** (formerly "Helios Beta"; renamed 2026-11-09) — interim 14-court professional-grade complex (dedicated centre court, café, pro shop, lounge, wellness/recovery, ping pong area). Construction complete end of December 2026; **target opening 2027-01-14, the PPA event** (KAN-5). Public naming on the website is still "Helios Beta".
 - **Helios (flagship)** — 10-story flagship arena with 24 courts. Estimated opening 2028. The intended showcase deployment for everything Kosmas does — Pod Play tech, Ping Pod retail, pickleball programming.
 
 > Website note (2026-06-03): the marketing site previously conflated the two (Beta copy with flagship renders, and a stale "6-story" flagship claim). Now split into distinct projects; flagship concept renders labeled as such; Beta photography pending from Carlos.
@@ -17,7 +17,7 @@ Kosmas + Robinsons Land Corporation joint venture. Two facilities, both at Bridg
 
 ## What lives elsewhere
 
-- The **Pod Play installation** at this venue (cabling, AP placement, kiosks, replay) lives at `ventures/podplay/data/projects/helios.md` and `ventures/podplay/data/venues/helios-venue.md`. Helios-the-venture cross-references that engagement; podplay's project file cross-references back here.
+- The **Pod Play installation** at Helios SPARC lives at `ventures/podplay/data/projects/helios-sparc.md` and `ventures/podplay/data/venues/helios-sparc-venue.md`; the flagship's at `ventures/podplay/data/projects/helios.md` and `ventures/podplay/data/venues/helios-venue.md`. Helios-the-venture cross-references that engagement; podplay's project file cross-references back here.
 - **Pickleball facility consulting** patterns that informed Helios's design live at `ventures/pickleball-consulting/`.
 
 ## Likely structure (when content lands)
@@ -30,6 +30,7 @@ Kosmas + Robinsons Land Corporation joint venture. Two facilities, both at Bridg
 
 ## Cross-references
 
+- `[[helios-sparc]]` / `[[helios-sparc-venue]]` (podplay's Helios SPARC files)
 - `[[helios]]` (podplay's project file)
 - `[[helios-venue]]` (podplay's venue file)
 - See `cs/monorepo/entities/projects/pod-play-sea.md` for Kosmas team context
