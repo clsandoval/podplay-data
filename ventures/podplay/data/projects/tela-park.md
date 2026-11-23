@@ -18,7 +18,7 @@ First PodPlay deployment in Metro Manila and the PH demo site. Padel facility in
 
 ## Status
 
-**Live since 2026-11-11** (saved replays work end to end). Network, cameras, Mac mini, iPads, Apple TVs and the Cloudflare Tunnel are done; the old port-forward + DDNS path was removed 2026-11-16. `status` stays `deployment` until the open items below close.
+**Live since 2026-11-11** (saved replays work end to end). Network, cameras, Mac mini, iPads, Apple TVs and the Cloudflare Tunnel are done; the old port-forward + DDNS path was removed 2026-11-16.
 
 ## Courts
 
@@ -131,15 +131,6 @@ The USW-Flex-2.5G-8-SFP + 5× USW-Lite-8-PoE that Kosmas bought for the poles (d
 - **Mosyle names `AppleTV CH1` / `iPad P3`**, matching the court names, instead of the standard `{Device} telapark Court #` (2026-11-08).
 - **Recording follows reservations** (replay service 2.1.0+; deliberate per [[nico]], 2026-11-06, because 24/7 wore out SSDs). Recording starts ~30 min before a reservation.
 - Uniview Owlview replay camera (fixed 2.8 mm, 802.3af); Mac mini M4 as the replay server, separate from PodPlay's infrastructure (hard client requirement).
-
-## Open items
-- [ ] Re-aim and calibrate seven cameras (Championship 1 done)
-- [ ] Mount the Flics, waiting on the custom aluminium printed signs
-- [ ] Turn on App Lock on the iPads once the Flics are mounted
-- [ ] Billing basis: court fee on 8 or 14 courts (PodPlay)
-- [ ] Ask [[nico]] which reservation types start recording
-- [ ] Contract counterpart signed (see [[tela-park-sow]])
-- [ ] Apple devices from PodPlay paid / billed (see `tickets/tela-park-apple-device-payment.md`)
 
 ## Status updates
 - **2026-04-15:** Negotiation meeting at the venue. Pricing and scope agreed verbally (6 Basic Plus + 8 Pro). See `meetings/2026-04-15-tela-park-negotiation.md`.
