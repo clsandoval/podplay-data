@@ -110,18 +110,5 @@ PodPlay recommended two Slack channels for Kosmas's team: one with the replay de
 - **Cloudflare Tunnel from day one**: Tela Park's replays failed for weeks on a missing ISP forward.
 - **Flics vs gesture scoring** (2026-11-19): Ethan and [[ernesto-ebuen]] said PodPlay is moving scoring, replay and undo to arm gestures at the camera. Not confirmed whether it's live by 2027-01-14 or which cameras it needs, so bring the 30 Flics as the fallback.
 
-## Open items
-- [ ] [[richard-bachmann]]: send center court LED screen specs + photos to PodPlay
-- [ ] **First site visit**: confirm the server room as MDF (ISP entry, power, ventilation), tray height and route, the court 1–2 runs (~76–82 m, longest from the MDF; a USW-Flex relay if one passes 90 m), and the GD20 storage room as IDF (power, cabinet space, measure the fiber route)
-- [ ] After the visit: draw the real routes in UniFi Design Center, then **order the USW-Pro-48-POE**
-- [ ] Ping pong door access: which doors get a reader (GD01, GD08, GD14 touch the area); Kisi default, UniFi Access option 2
-- [ ] Ask [[nico]]: can Autonomous unlock UniFi Access doors, or only Kisi?
-- [ ] Ping pong tables: confirm the count (5 drawn) and the kit per table (5 more cameras cut the 4TB headroom to ~15 booked hours per court per day)
-- [ ] `LOCATION_ID`: ask PodPlay for the **tenant id** once the venue exists (not the venue slug)
-- [ ] Set up the two Slack channels with PodPlay
-- [ ] Check which hardware is "already ordered" against the list above
-- [ ] Decide whether the 8 on-hand Dahuas go here (gated on 4 MP vs 6 MP: PodPlay records at 1920×1080, so ask the replay devs before paying for 6 MP)
-- [ ] Gesture scoring: live by 2027-01-14? Works with Dahua? Runs on the Mac mini?
-
 ## Sources
 PodPlay meeting 2026-11-04 (Nico; Richard on the venue side), the architect's plan set (A-2.0 ground level, issued 2026-11-11), PodPlay Operations' hardware floor plan draft (2026-11-04), and Kosmas decisions since.
