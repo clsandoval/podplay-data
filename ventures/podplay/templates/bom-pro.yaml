@@ -120,7 +120,7 @@ venue_items:
     name: Mac mini (M4) 16GB 256GB
     category: compute
     qty: 1
-    notes: "Fixed IP 192.168.32.100 on REPLAY VLAN 32, port 4000."
+    notes: "Fixed IP 192.168.32.100 on REPLAY VLAN 32; service on port 4000 inside the venue, reached from outside through the Cloudflare Tunnel (no port forward)."
 
   # Replay clip store — by court count:
   #   1–4 courts → 1TB · 5+ courts → 2TB · 20+ courts or extended retention → 4TB

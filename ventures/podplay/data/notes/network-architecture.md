@@ -1,7 +1,7 @@
 ---
 type: note
 title: Network Architecture & Sizing Rules
-tags: [networking, vlan, replay, infrastructure, ddns, sizing, ups, poe]
+tags: [networking, vlan, replay, infrastructure, cloudflare-tunnel, sizing, ups, poe]
 ---
 
 The sizing rules behind `templates/bom-*.yaml`. Every formula takes the same inputs:
@@ -48,7 +48,7 @@ Every fixed IP is a MAC-bound DHCP reservation. For an iPad the wired identity i
 | iPad C*N* | `.20 + N` | `.21 – .28` |
 | Replay camera C*N* | `.30 + N` | `.31 – .38` |
 | Apple TV C*N* | `.40 + N` | `.41 – .48` |
-| Mac mini | `.100` | the port-4000 forward target |
+| Mac mini | `.100` | the dashboard's Local IP |
 
 **REPLAY — venues of 9+ courts.** The 10-wide blocks collide at 11 courts (iPad C11 and camera C1 are both `.31`), so two of the three blocks move:
 
@@ -67,13 +67,17 @@ Every fixed IP is a MAC-bound DHCP reservation. For an iPad the wired identity i
 
 ## Replay server and WAN
 
-- **Mac mini** at `192.168.32.100`, service on **port 4000**. 1 per venue regardless of court count.
-- The gateway forwards **TCP+UDP 4000** → `192.168.32.100`. Forward is deferred until the replay service is running (no live target before then).
-- **ISP:** business plan with a **static IP** is the requirement — PH residential plans use CGNAT, which blocks all inbound. Verify: `whatismyip.com` vs the modem's WAN IP; mismatch = CGNAT = hard stop. Dynamic-but-non-CGNAT works with DDNS as a load-bearing dependency.
-- **DDNS:** a per-venue hostname on a Kosmas-controlled Cloudflare zone, A record **DNS-only (grey cloud)**, TTL 60. A cron on the Mac mini PATCHes the record every 5 min. Proxied mode won't pass port 4000.
-- **Health monitoring:** a GCP uptime check hits `http://<venue-host>:4000/health` every 5 min and alerts by email. Keep the alert policy disabled until the venue is live or it fires every 5 min.
+- **Mac mini** at `192.168.32.100`; the replay service listens on **port 4000** inside the venue only. 1 per venue regardless of court count.
+- **Inbound path = Cloudflare Tunnel** (PH standard since 2026-11-04, recommended by PodPlay). The Mac mini opens the tunnel **outward** to Cloudflare, and PodPlay's cloud reaches the Mini through it for saved clips and the dashboard's Health/Logs tabs. **No port forward, no DDNS, no public IP**, so it works behind CGNAT and Starlink. Live at Tela Park since 2026-11-05.
+- **Public hostname:** `replay-CUSTOMERNAME.<venue domain>` (currently `fnasasin.com`, on a personal Cloudflare account; a move to a Kosmas-owned account is planned, and tunnels must be recreated when it moves). Dashboard **Server URL** = `https://replay-CUSTOMERNAME.<venue domain>`, no port; **Local IP** stays `192.168.32.100` for the iPads and Apple TVs.
+- **Setup:** `setup_venue_tunnel.py` from the `venue-tunnel` repo creates the tunnel, hostname and route, installs `cloudflared` on the Mini as a boot service and tests from outside. Not yet run for real on a new venue (Helios SPARC will be first); the by-hand steps are the fallback.
+- **Firewall:** REPLAY must allow outbound TCP and UDP **7844** (the tunnel). Check before setup: `nc -vz -w 5 region1.v2.argotunnel.com 7844`.
+- **The tunnel is public**: anyone who guesses the hostname reaches the replay service. Kosmas runs a shared Cloudflare rule and a logs-cleaning Worker on every `replay-*` hostname to limit what's exposed; only PodPlay can add real login checks.
+- **ISP:** any working internet line. A static IP or non-CGNAT line is no longer required.
+- **Go-live gate:** never call a venue live until `https://replay-CUSTOMERNAME.<venue domain>/health` loads from a phone on cellular.
+- **Health monitoring:** Better Stack (free plan, 10 monitors) on the tunnel's `/health` every 3 min, email alerts. Replaced GCP 2026-10-21.
 - **Bandwidth:** gigabit strongly recommended; ~105 GB/week for a 6-court venue, scale proportionally. PH latency to US cloud (300–400 ms) is fine — nothing synchronous in the replay path.
-- **Remote admin:** Teleport (built into the UDM) from WiFiman Desktop on the console-owning UI.com account; reach the Mac mini by **IP**, not `.local` (Bonjour doesn't cross the tunnel). Works behind CGNAT — no port-forward or DDNS needed for admin. Tailscale on the Mac mini (`tailscaled` daemon variant, node tagged so its key never expires) is the backup path. Never port-forward SSH/VNC.
+- **Remote admin:** Teleport (built into the UDM) from WiFiman Desktop on the console-owning UI.com account; reach the Mac mini by **IP**, not `.local` (Bonjour doesn't cross Teleport). Works behind CGNAT. Teleport is the only path; there's no Tailscale backup. Never port-forward SSH/VNC.
 
 ---
 
